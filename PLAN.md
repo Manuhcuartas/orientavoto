@@ -199,6 +199,12 @@ Preparación multiidioma (tarea 2.6):
 - `src/i18n/index.ts` exporta `locales` y `localize(texto, locale)` (contenido de `data/` con caída a `es`). Las páginas aún leen `.es` directamente; el cambio a `localize` es un paso de `docs/IDIOMAS.md`.
 - Comprobado con un experimento (revertido): un envoltorio `src/pages/ca/privacidad.astro` que importa la página en castellano genera `/ca/privacidad/` con `<html lang="ca">`. Los enlaces del menú necesitarán `getRelativeLocaleUrl`.
 
+Pruebas visuales (tarea 3.1):
+- `tests/e2e/visual.spec.ts`: 8 pantallas (inicio, provincia, primera afirmación, resultados con el juego fijo de respuestas, desglose, partidos, metodología, privacidad) × 3 proyectos, a página completa. `crypto.getRandomValues` se sustituye con `addInitScript` por un PRNG con semilla.
+- **Capturas por plataforma**: `-darwin` (generadas en local) y `-linux` (CI). Las fuentes del sistema difieren y una sola referencia no sirve para ambos.
+- En CI, un paso previo ejecuta las visuales con `--update-snapshots=missing` y sube las referencias Linux como artefacto `visual-baselines-linux`. Si falta alguna (pantalla nueva), se descarga con `gh run download <id> -n visual-baselines-linux`, se revisa y se sube al repo. Las existentes nunca se sobrescriben: un cambio visual sigue fallando.
+- Para actualizar tras un cambio visual intencionado: `npm run test:e2e:update` en local (macOS) y, para Linux, borrar las `-linux.png` afectadas, subir y recoger las nuevas del artefacto.
+
 ---
 
 ## Fase 0 — Cimientos (2–3 nov)
@@ -484,7 +490,7 @@ Preparación multiidioma (tarea 2.6):
 
 ## Fase 3 — Calidad (13–16 nov) · Hito: criterios de calidad cumplidos + congelación de contenido
 
-### [ ] 3.1 · Pruebas visuales
+### [x] 3.1 · Pruebas visuales
 - **Modelo:** Sonnet · **Esfuerzo:** medio · **Requiere:** 2.4
 - **Ficheros:** `tests/e2e/visual.spec.ts`, capturas de referencia.
 - **Qué hacer:**
