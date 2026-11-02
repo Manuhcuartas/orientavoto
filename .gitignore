@@ -1,0 +1,25 @@
+# dependencias
+node_modules/
+
+# build
+dist/
+.astro/
+
+# tests
+coverage/
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+
+# entorno
+.env
+.env.*
+!.env.example
+
+# logs
+npm-debug.log*
+
+# sistema / editores
+.DS_Store
+.idea/
