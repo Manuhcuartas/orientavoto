@@ -209,6 +209,12 @@ Accesibilidad automática (tarea 3.2):
 - `tests/e2e/a11y.spec.ts`: axe con `wcag2a, wcag2aa, wcag21a, wcag21aa` en las cuatro páginas estáticas y en cada estado del cuestionario (provincia, provincia con error, afirmación con explicación abierta e «importante», respuesta marcada al volver, resultados con avisos, todo saltado, desglose con todo abierto). **0 violaciones** sin cambios en los componentes.
 - Comprobado aparte que axe sí detecta violaciones inyectadas (`button-name`, `image-alt`), para que el 0 no sea un falso negativo.
 
+Revisión manual de accesibilidad (tarea 3.3):
+- Checklist en `docs/ACCESIBILIDAD.md`. Teclado, reflow a 320 px y zoom al 200 % quedan como e2e en `a11y.spec.ts`.
+- **Corregido:** `<main tabindex="-1">` (sin contorno) para que «Saltar al contenido» mueva el foco también en Safari/VoiceOver.
+- **Corregido:** con menos de 500 px de alto (zoom 200 % en portátil, móvil en horizontal) la barra de respuestas deja de ser `fixed` y va justo debajo del enunciado; antes tapaba un tercio de la pantalla. `AnswerBar` solo añade `padding-bottom` al `body` mientras la barra es `fixed`.
+- **Pendiente del responsable del proyecto:** VoiceOver (iOS) y TalkBack (Android) en dispositivos reales, con la lista de comprobaciones de `docs/ACCESIBILIDAD.md`.
+
 ---
 
 ## Fase 0 — Cimientos (2–3 nov)
@@ -508,7 +514,7 @@ Accesibilidad automática (tarea 3.2):
 - **Qué hacer:** axe con las etiquetas `wcag2a, wcag2aa, wcag21a, wcag21aa` en cada página y en cada paso del cuestionario.
 - **Aceptación:** 0 violaciones.
 
-### [ ] 3.3 · Revisión manual de accesibilidad
+### [x] 3.3 · Revisión manual de accesibilidad
 - **Modelo:** Sonnet · **Esfuerzo:** medio · **Requiere:** 3.2
 - **Ficheros:** `docs/ACCESIBILIDAD.md` y las correcciones necesarias.
 - **Qué hacer:**

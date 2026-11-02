@@ -20,7 +20,8 @@ const ANSWERS = [
 
 /**
  * Fixed at the bottom of the screen (thumb zone). The page gets a matching
- * bottom padding so the bar never covers content or the footer.
+ * bottom padding so the bar never covers content or the footer. On short
+ * viewports the CSS puts the bar in the normal flow instead (no padding then).
  */
 export function AnswerBar({ t, value, important, onAnswer, onSkip, onToggleImportant }: Props) {
   const bar = useRef<HTMLDivElement>(null);
@@ -29,13 +30,16 @@ export function AnswerBar({ t, value, important, onAnswer, onSkip, onToggleImpor
     const element = bar.current;
     if (!element) return;
     const pad = () => {
-      document.body.style.paddingBottom = `${element.offsetHeight}px`;
+      const fixed = getComputedStyle(element).position === 'fixed';
+      document.body.style.paddingBottom = fixed ? `${element.offsetHeight}px` : '';
     };
     pad();
     const observer = new ResizeObserver(pad);
     observer.observe(element);
+    window.addEventListener('resize', pad);
     return () => {
       observer.disconnect();
+      window.removeEventListener('resize', pad);
       document.body.style.paddingBottom = '';
     };
   }, []);

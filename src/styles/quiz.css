@@ -103,6 +103,24 @@
   color: var(--color-text);
 }
 
+/*
+ * Short viewports (landscape phones, 200 % zoom on a laptop): a fixed bar would cover a
+ * third of the screen and the statement under it. There it goes into the normal flow,
+ * right below the statement.
+ */
+@media (max-height: 31.25rem) {
+  .answer-bar {
+    position: static;
+    margin-top: var(--space-4);
+    padding-inline: 0;
+    border-bottom: var(--border-width) solid var(--color-border);
+  }
+
+  .answer-bar .container {
+    padding-inline: 0;
+  }
+}
+
 /* Very narrow screens (320 px): three answers in a row still fit without overflowing. */
 @media (max-width: 359px) {
   .answer-bar .container {

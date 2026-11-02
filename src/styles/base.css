@@ -80,8 +80,9 @@ textarea {
   outline-offset: var(--focus-offset);
 }
 
-/* Headings that receive focus programmatically on a step change are not controls. */
-h1[tabindex="-1"]:focus {
+/* Elements that receive focus programmatically (step headings, <main> via the skip link) are not controls. */
+h1[tabindex="-1"]:focus,
+main[tabindex="-1"]:focus {
   outline: none;
 }
 
