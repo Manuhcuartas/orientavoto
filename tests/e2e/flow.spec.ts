@@ -103,7 +103,7 @@ test.describe('quiz flow', () => {
     await start(page, 'Madrid');
     for (let i = 0; i < 25; i++) await answer(page, 'De acuerdo');
 
-    expect(page.url()).toMatch(/\/cuestionario\/$/);
+    expect(page.url()).toMatch(/\/cuestionario\/#\/resultados$/);
     expect(await context.cookies()).toEqual([]);
     expect(await page.evaluate(() => [localStorage.length, sessionStorage.length])).toEqual([0, 0]);
   });
@@ -170,5 +170,65 @@ test.describe('breakdown', () => {
     await openBreakdown(page, 'Huesca');
     await page.locator('details.breakdown__item').evaluateAll((ds) => ds.forEach((d) => ((d as HTMLDetailsElement).open = true)));
     expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(320);
+  });
+});
+
+test.describe('browser back button', () => {
+  const meta = (page: Page) => page.locator('.statement__meta');
+
+  test('steps back and forward through the quiz; the URL only names the step', async ({ page }) => {
+    await start(page, 'Madrid');
+    await expect(page).toHaveURL(/\/cuestionario\/#\/afirmacion\/1$/);
+    await answer(page, 'De acuerdo', { important: true });
+    await answer(page, 'En desacuerdo');
+    await expect(page).toHaveURL(/#\/afirmacion\/3$/);
+
+    await page.goBack();
+    await expect(meta(page)).toContainText('Afirmación 2 de 25');
+    await expect(page.getByRole('button', { name: 'En desacuerdo', exact: true })).toHaveAttribute('aria-pressed', 'true');
+    await page.goBack();
+    await expect(meta(page)).toContainText('Afirmación 1 de 25');
+    await expect(page.getByRole('button', { name: 'Importante para mí' })).toHaveAttribute('aria-pressed', 'true');
+    await page.goBack();
+    await expect(page.getByRole('heading', { level: 1, name: '¿Dónde votas?' })).toBeVisible();
+    await expect(page).toHaveURL(/\/cuestionario\/$/);
+
+    await page.goForward();
+    await expect(meta(page)).toContainText('Afirmación 1 de 25');
+  });
+
+  test('results and breakdown are history entries too', async ({ page }) => {
+    await start(page, 'Madrid');
+    for (let i = 0; i < 25; i++) await answer(page, 'Neutral');
+    await expect(page).toHaveURL(/#\/resultados$/);
+    await page.getByRole('button', { name: 'Ver el desglose por afirmación' }).click();
+    await expect(page).toHaveURL(/#\/desglose$/);
+
+    await page.goBack();
+    await expect(page.getByRole('heading', { level: 1, name: 'Tus resultados' })).toBeVisible();
+    await page.goBack();
+    await expect(meta(page)).toContainText('Afirmación 25 de 25');
+  });
+
+  test('every URL in the flow is one of the allowed step hashes', async ({ page }) => {
+    const urls: string[] = [];
+    page.on('framenavigated', (f) => urls.push(f.url()));
+    await start(page, 'Madrid');
+    for (let i = 0; i < 25; i++) await answer(page, i % 2 ? 'De acuerdo' : 'Saltar', { important: i === 3 });
+    await page.getByRole('button', { name: 'Ver el desglose por afirmación' }).click();
+    urls.push(page.url());
+    for (const url of urls) expect(new URL(url).hash).toMatch(/^(|#\/afirmacion\/\d+|#\/resultados|#\/desglose)$/);
+  });
+
+  test('reloading with a hash but no state starts over at the province step', async ({ page }) => {
+    await start(page, 'Madrid');
+    await answer(page, 'De acuerdo');
+    await page.reload();
+    await expect(page.getByRole('heading', { level: 1, name: '¿Dónde votas?' })).toBeVisible();
+    await expect(page).toHaveURL(/\/cuestionario\/$/);
+
+    await page.goto('/cuestionario/#/resultados');
+    await expect(page.getByRole('heading', { level: 1, name: '¿Dónde votas?' })).toBeVisible();
+    await expect(page).toHaveURL(/\/cuestionario\/$/);
   });
 });

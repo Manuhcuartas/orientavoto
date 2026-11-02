@@ -27,6 +27,7 @@ test.describe('party list', () => {
 
   test('where each party runs, alone and in coalition', async ({ page }) => {
     await page.goto('/partidos/');
+    await expect(page.locator('.party-card')).toHaveCount(8);
     const card = (siglas: string) => page.locator('.party-card', { has: page.locator('.party-badge', { hasText: siglas }) });
     await expect(card('PFD')).toContainText('Se presenta en solitario en todas las circunscripciones salvo Ceuta y Melilla.');
     await expect(card('PFC')).toContainText('Se presenta en solitario en las 52 circunscripciones.');
@@ -37,6 +38,7 @@ test.describe('party list', () => {
 
   test('filtering by constituency keeps parties that run there alone or in coalition', async ({ page }) => {
     await page.goto('/partidos/');
+    await expect(page.locator('.party-card')).toHaveCount(8);
     await page.getByRole('combobox', { name: 'Filtrar por circunscripción' }).selectOption({ label: 'Huesca' });
     await expect(page.getByText('7 partidos se presentan en Huesca, solos o en coalición.')).toBeVisible();
     expect((await badges(page)).sort()).toEqual(['PFA', 'PFB', 'PFC', 'PFD', 'PFE', 'PFF', 'PRFX']);
@@ -47,6 +49,7 @@ test.describe('party list', () => {
 
   test('every card has the same structure and style', async ({ page }) => {
     await page.goto('/partidos/');
+    await expect(page.locator('.party-card')).toHaveCount(8);
     const styles = await page.locator('.party-card').evaluateAll((cards) =>
       cards.map((c) => {
         const s = getComputedStyle(c);

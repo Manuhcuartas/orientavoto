@@ -17,6 +17,25 @@ import { StatementStep, type StatementView } from './StatementStep';
 
 export type Step = 'provincia' | 'afirmaciones' | 'resultados' | 'desglose';
 
+/**
+ * The URL hash only says which step is shown, never any answer:
+ * `#/afirmacion/7`, `#/resultados`, `#/desglose`; the province step has no hash.
+ */
+export function hashFor(step: Step, index: number): string {
+  if (step === 'afirmaciones') return `#/afirmacion/${index + 1}`;
+  if (step === 'resultados' || step === 'desglose') return `#/${step}`;
+  return '';
+}
+
+export function parseHash(hash: string): { step: Step; index: number } | null {
+  if (hash === '' || hash === '#' || hash === '#/') return { step: 'provincia', index: 0 };
+  const statement = /^#\/afirmacion\/(\d+)$/.exec(hash);
+  if (statement) return { step: 'afirmaciones', index: Number(statement[1]) - 1 };
+  if (hash === '#/resultados') return { step: 'resultados', index: 0 };
+  if (hash === '#/desglose') return { step: 'desglose', index: 0 };
+  return null;
+}
+
 interface Props {
   locale: string;
   constituencies: readonly ConstituencyOption[];
@@ -86,9 +105,44 @@ export default function Quiz({ locale, constituencies, statements, entities, bal
     return () => window.removeEventListener('beforeunload', warn);
   }, [unfinished]);
 
+  /** Changes step from the UI and adds a history entry, so the browser's back button steps back. */
+  const go = (nextStep: Step, nextIndex = index) => {
+    setStep(nextStep);
+    setIndex(nextIndex);
+    const url = hashFor(nextStep, nextIndex) || location.pathname;
+    if (url !== (location.hash || location.pathname)) history.pushState(null, '', url);
+  };
+
+  // Browser back/forward: show the step in the hash if the user has reached it;
+  // otherwise (e.g. a reload, which loses the answers) start again at the province step.
+  const reached = useRef({ constituencyChosen: false, answered: 0 });
+  reached.current = { constituencyChosen: constituency !== undefined, answered: Object.keys(values).length };
+  useEffect(() => {
+    const show = () => {
+      const target = parseHash(location.hash);
+      const { constituencyChosen, answered } = reached.current;
+      const allowed =
+        target !== null &&
+        (target.step === 'provincia' ||
+          (target.step === 'afirmaciones' && constituencyChosen && target.index >= 0 && target.index <= Math.min(answered, total - 1)) ||
+          ((target.step === 'resultados' || target.step === 'desglose') && answered === total));
+      if (target && allowed) {
+        setStep(target.step);
+        if (target.step === 'afirmaciones') setIndex(target.index);
+      } else {
+        setStep('provincia');
+        history.replaceState(null, '', location.pathname);
+      }
+    };
+    // A hash on first load means a reload or a pasted link: there is no state to show, so start over.
+    if (location.hash) history.replaceState(null, '', location.pathname);
+    window.addEventListener('popstate', show);
+    return () => window.removeEventListener('popstate', show);
+  }, []);
+
   const next = () => {
-    if (index < total - 1) setIndex(index + 1);
-    else setStep('resultados');
+    if (index < total - 1) go('afirmaciones', index + 1);
+    else go('resultados');
   };
 
   const record = (value: AnswerValue | null) => {
@@ -98,16 +152,15 @@ export default function Quiz({ locale, constituencies, statements, entities, bal
   };
 
   const back = () => {
-    if (index > 0) setIndex(index - 1);
-    else setStep('provincia');
+    if (index > 0) go('afirmaciones', index - 1);
+    else go('provincia');
   };
 
   const restart = () => {
     setValues({});
     setImportant({});
     setConstituency(undefined);
-    setIndex(0);
-    setStep('provincia');
+    go('provincia', 0);
   };
 
   const constituencyName =
@@ -126,7 +179,7 @@ export default function Quiz({ locale, constituencies, statements, entities, bal
           initial={constituency}
           onContinue={(codigo) => {
             setConstituency(codigo);
-            setStep('afirmaciones');
+            go('afirmaciones');
           }}
         />
       )}
@@ -155,7 +208,7 @@ export default function Quiz({ locale, constituencies, statements, entities, bal
           constituencyName={constituencyName}
           minimoRespuestas={config.minimoRespuestas}
           umbralCoberturaMinima={config.umbralCoberturaMinima}
-          onBreakdown={() => setStep('desglose')}
+          onBreakdown={() => go('desglose')}
           onRestart={restart}
         />
       )}
@@ -167,7 +220,7 @@ export default function Quiz({ locale, constituencies, statements, entities, bal
           entities={breakdownOrder}
           values={values}
           important={important}
-          onBack={() => setStep('resultados')}
+          onBack={() => go('resultados')}
         />
       )}
     </div>

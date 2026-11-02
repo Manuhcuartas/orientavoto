@@ -189,6 +189,11 @@ Privacidad y CSP (tarea 2.4):
 - `.notice` y `.pending` pasan a `base.css` para todas las páginas.
 - **Pendientes legales en `/privacidad/`:** papel de Cloudflare como encargado, conservación de registros y transferencias; identidad y contacto del responsable y derechos de las personas usuarias. Todo el texto lleva «[REVISIÓN LEGAL PENDIENTE]».
 
+Botón «atrás» (tarea 2.5):
+- Cada cambio de paso desde la interfaz hace `history.pushState` con `#/afirmacion/N`, `#/resultados` o `#/desglose` (la provincia, sin hash). `popstate` muestra ese paso si ya se ha alcanzado (afirmación N solo si las anteriores tienen respuesta; resultados y desglose solo con las 25 respondidas); si no, vuelve a la provincia y limpia el hash con `replaceState`.
+- Un hash en la primera carga (recarga o enlace pegado) se limpia: no hay estado que mostrar y se empieza en la provincia.
+- «Anterior» también añade una entrada al historial (no hace `history.back()`), así que el «atrás» del navegador siempre deshace el último paso visto.
+
 ---
 
 ## Fase 0 — Cimientos (2–3 nov)
@@ -453,7 +458,7 @@ Privacidad y CSP (tarea 2.4):
   - `document.cookie` está vacío y `localStorage`/`sessionStorage` tienen longitud 0.
   - La consola no muestra violaciones de CSP.
 
-### [ ] 2.5 · Botón «atrás» del navegador (recortable)
+### [x] 2.5 · Botón «atrás» del navegador (recortable)
 - **Modelo:** Sonnet · **Esfuerzo:** medio · **Requiere:** 1.5
 - **Ficheros:** `src/components/Quiz.tsx`, `tests/e2e/flow.spec.ts`.
 - **Qué hacer:**
