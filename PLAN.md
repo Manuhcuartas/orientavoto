@@ -107,6 +107,12 @@ Validación (tarea 0.4):
 - Errores añadidos al listado de la tarea: `entidad` distinta del nombre del fichero, fichero de posiciones de una entidad inexistente, posición sobre una afirmación inexistente (en cualquier fichero, no solo coaliciones), id compartido entre partido y coalición, afirmación repetida en un fichero, candidatura repetida en una circunscripción y falta de alguna de las 52 en `circunscripciones.json`.
 - El aviso de cobertura solo se calcula para entidades que aparecen en `candidaturas.json` (las coaliciones, con sus overrides sobre el partido de referencia). Con el dataset ficticio avisa de E (72 %) y F (40 %).
 
+Algoritmo de afinidad (tarea 1.1):
+- La **cobertura se calcula sobre las afirmaciones respondidas** por la persona (no sobre las 25): `considered / answered`, que es el «calculado sobre X de Y». Por eso puede diferir de la cobertura del aviso de `npm run validate`, que es sobre el total.
+- Interfaz: `Answers` = `{ [idAfirmacion]: { value: -1|0|1|null, important } }` (`null` o ausente = saltada; `null` conserva la marca de importante al volver atrás). Las posiciones son `{ [idAfirmacion]: { posicion } }`, así que las entidades de `getBallot` (1.2) encajan tal cual si `positions` es un mapa por id de afirmación.
+- Si no se puede comparar ninguna afirmación (todas saltadas o sin posición), `percent` es `null` y la entidad va a `insufficient`. Con todo saltado, todas van ahí y `lowAnswerCount` es `true`; la pantalla de resultados (1.6) debe tratar ese caso.
+- Ranking: primero se baraja con `rng` y luego se ordena de forma estable por el porcentaje redondeado. `affinity.ts` lleva un Fisher–Yates privado con un `TODO(1.2)` para sustituirlo por `shuffle.ts`.
+
 ---
 
 ## Fase 0 — Cimientos (2–3 nov)
@@ -201,7 +207,7 @@ Validación (tarea 0.4):
 
 ## Fase 1 — MVP funcional (4–9 nov) · Hito: flujo completo en móvil con datos ficticios
 
-### [ ] 1.1 · Algoritmo de afinidad
+### [x] 1.1 · Algoritmo de afinidad
 - **Modelo:** Opus · **Esfuerzo:** alto · **Requiere:** 0.2
 - **Ficheros:** `src/lib/affinity.ts`, `tests/unit/affinity.test.ts`.
 - **Qué hacer:**
