@@ -177,5 +177,29 @@
     "pendienteQuienes": "[PENDIENTE: quién está detrás del proyecto, cómo se financia y su independencia respecto a partidos y medios.]",
     "correcciones": "Si encuentras un error en una posición, una fuente o un texto, escríbenos a {contacto}. Revisamos cada aviso y corregimos lo que corresponda.",
     "pendienteCorrecciones": "[PENDIENTE: plazo de respuesta y cómo se publican las correcciones.]"
+  },
+  "privacidad": {
+    "titulo": "Privacidad",
+    "revision": "[REVISIÓN LEGAL PENDIENTE] Este texto es un borrador técnico y debe revisarlo asesoría legal antes de publicarse.",
+    "resumen": "Resumen: no recogemos ningún dato. Tus respuestas nunca salen de tu navegador.",
+    "respuestasTitulo": "Tus respuestas",
+    "respuestas": "Las respuestas, la circunscripción que eliges y las afirmaciones que marcas como importantes solo existen en la memoria de tu navegador mientras usas el cuestionario. El cálculo de resultados se hace en tu dispositivo. No se envían a ningún servidor, no se guardan y no aparecen en la dirección de la página. Si recargas o cierras la página, desaparecen.",
+    "cookiesTitulo": "Cookies y almacenamiento",
+    "cookies": "No usamos cookies, ni almacenamiento local (localStorage, sessionStorage, IndexedDB), ni ninguna otra forma de guardar información en tu dispositivo.",
+    "tercerosTitulo": "Analítica y terceros",
+    "terceros": "No hay analítica, ni píxeles de seguimiento, ni fuentes, scripts o imágenes de otras webs. Todo lo que carga la página viene de este mismo sitio.",
+    "alojamientoTitulo": "Alojamiento",
+    "alojamiento": "La web está alojada en Cloudflare Pages. Como cualquier servidor web, Cloudflare recibe las peticiones necesarias para entregarte las páginas (por ejemplo, tu dirección IP y el tipo de navegador), pero no tus respuestas, que nunca se envían. La analítica de Cloudflare está desactivada.",
+    "pendienteAlojamiento": "[PENDIENTE LEGAL: papel de Cloudflare como encargado del tratamiento, conservación de sus registros técnicos y transferencias internacionales.]",
+    "enlacesTitulo": "Enlaces a fuentes",
+    "enlaces": "Las fuentes del desglose enlazan a otras webs y se abren en otra pestaña. Al pulsarlas sales de esta herramienta y se aplica la política de privacidad de esa web. Los enlaces no le indican de dónde vienes.",
+    "comprobarTitulo": "Cómo comprobarlo",
+    "comprobarIntro": "No tienes que fiarte de nosotros: puedes verificarlo en tu navegador.",
+    "comprobarRed": "Abre las herramientas de desarrollo (F12), ve a la pestaña «Red» y responde el cuestionario: después de cargar la página no aparece ninguna petición nueva.",
+    "comprobarAlmacenamiento": "En la pestaña «Aplicación» (o «Almacenamiento») verás que no hay cookies ni datos guardados para este sitio.",
+    "comprobarCsp": "La política de seguridad de contenido de la página incluye «connect-src none»: el navegador bloquea cualquier intento de enviar datos desde la página, aunque alguien lo intentara.",
+    "responsableTitulo": "Responsable y contacto",
+    "pendienteResponsable": "[PENDIENTE LEGAL: identidad y datos de contacto del responsable, y derechos de las personas usuarias.]",
+    "contacto": "Para cualquier duda sobre privacidad: {contacto}."
   }
 }

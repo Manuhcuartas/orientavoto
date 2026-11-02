@@ -181,6 +181,14 @@ Metodología (tarea 2.3):
   4. Quién está detrás del proyecto, financiación e independencia.
   5. Plazo de respuesta a correcciones y cómo se publican.
 
+Privacidad y CSP (tarea 2.4):
+- **CSP nativa de Astro 7** (`security.csp` en `astro.config.mjs`): cada página lleva un `<meta http-equiv="content-security-policy">` con `default-src 'self'; connect-src 'none'; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'` y las huellas SHA-256 de sus scripts y estilos en línea.
+- `public/_headers` añade una cabecera `Content-Security-Policy` con lo que no depende de huellas (`connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'`). **No lleva `default-src`, `script-src` ni `style-src`**: bloquearían los scripts en línea, cuyas huellas solo están en el `<meta>`. Ambas políticas se aplican a la vez.
+- Los estilos `style="…"` solo se ponen desde Preact en el cliente (CSSOM), que la CSP no bloquea; el HTML prerenderizado no tiene atributos `style`.
+- `markdown.syntaxHighlight: false`: Shiki usa estilos en línea incompatibles con la CSP y el sitio no tiene bloques de código.
+- `.notice` y `.pending` pasan a `base.css` para todas las páginas.
+- **Pendientes legales en `/privacidad/`:** papel de Cloudflare como encargado, conservación de registros y transferencias; identidad y contacto del responsable y derechos de las personas usuarias. Todo el texto lleva «[REVISIÓN LEGAL PENDIENTE]».
+
 ---
 
 ## Fase 0 — Cimientos (2–3 nov)
@@ -429,7 +437,7 @@ Metodología (tarea 2.3):
   - El ejemplo coincide con `affinity.ts`.
   - La sesión termina con la lista de `[PENDIENTE]`.
 
-### [ ] 2.4 · Privacidad, CSP y test de privacidad
+### [x] 2.4 · Privacidad, CSP y test de privacidad
 - **Modelo:** Sonnet · **Esfuerzo:** medio · **Requiere:** 1.6
 - **Ficheros:** `src/pages/privacidad.astro`, `astro.config.mjs`, `public/_headers`, `tests/e2e/privacy.spec.ts`.
 - **Qué hacer:**

@@ -1,0 +1,44 @@
+---
+// Privacy policy draft: static HTML, no JS. Pending legal review.
+import Base from '../layouts/Base.astro';
+import { createTranslator } from '../i18n';
+import { dataset } from '../lib/data';
+
+const t = createTranslator(Astro.currentLocale);
+---
+
+<Base title={t('privacidad.titulo')} description={t('privacidad.resumen')}>
+  <article class="prose">
+    <h1>{t('privacidad.titulo')}</h1>
+    <p class="pending">{t('privacidad.revision')}</p>
+    <p class="notice notice--strong">{t('privacidad.resumen')}</p>
+
+    <h2>{t('privacidad.respuestasTitulo')}</h2>
+    <p>{t('privacidad.respuestas')}</p>
+
+    <h2>{t('privacidad.cookiesTitulo')}</h2>
+    <p>{t('privacidad.cookies')}</p>
+
+    <h2>{t('privacidad.tercerosTitulo')}</h2>
+    <p>{t('privacidad.terceros')}</p>
+
+    <h2>{t('privacidad.alojamientoTitulo')}</h2>
+    <p>{t('privacidad.alojamiento')}</p>
+    <p class="pending">{t('privacidad.pendienteAlojamiento')}</p>
+
+    <h2>{t('privacidad.enlacesTitulo')}</h2>
+    <p>{t('privacidad.enlaces')}</p>
+
+    <h2>{t('privacidad.comprobarTitulo')}</h2>
+    <p>{t('privacidad.comprobarIntro')}</p>
+    <ol>
+      <li>{t('privacidad.comprobarRed')}</li>
+      <li>{t('privacidad.comprobarAlmacenamiento')}</li>
+      <li>{t('privacidad.comprobarCsp')}</li>
+    </ol>
+
+    <h2>{t('privacidad.responsableTitulo')}</h2>
+    <p class="pending">{t('privacidad.pendienteResponsable')}</p>
+    <p>{t('privacidad.contacto', { contacto: dataset.meta.contactoCorrecciones })}</p>
+  </article>
+</Base>

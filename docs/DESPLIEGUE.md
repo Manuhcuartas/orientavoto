@@ -93,19 +93,20 @@ La herramienta promete no recoger ningún dato. Cloudflare ofrece analítica que
 Tras el primer despliegue correcto, abre una terminal y ejecuta (con la URL que te dio Cloudflare, del tipo `https://orientavoto.pages.dev`):
 
 ```bash
-curl -sI https://orientavoto.pages.dev | grep -iE 'referrer-policy|x-content-type-options|x-frame-options|permissions-policy'
+curl -sI https://orientavoto.pages.dev | grep -iE 'content-security-policy|referrer-policy|x-content-type-options|x-frame-options|permissions-policy'
 ```
 
-Deben aparecer las cuatro cabeceras:
+Deben aparecer las cinco cabeceras:
 
 ```
+content-security-policy: connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'
 referrer-policy: no-referrer
 x-content-type-options: nosniff
 x-frame-options: DENY
 permissions-policy: accelerometer=(), …
 ```
 
-Salen del fichero `public/_headers`, que el build copia a `dist/_headers`. La política de seguridad de contenido (CSP) se añade en la tarea 2.4.
+Salen del fichero `public/_headers`, que el build copia a `dist/_headers`. Además, cada página lleva en su HTML una etiqueta `<meta http-equiv="content-security-policy">` con el resto de la política (`default-src 'self'` y las huellas de sus scripts y estilos), que genera Astro.
 
 ## 6. Publicar con datos reales (tarea 4.2)
 

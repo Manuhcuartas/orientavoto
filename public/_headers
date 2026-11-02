@@ -1,6 +1,10 @@
 # Security headers for Cloudflare Pages (copied as-is to dist/_headers).
-# The Content-Security-Policy is added in task 2.4.
+# Each page also carries Astro's CSP <meta> with the hashes of its inline scripts and
+# styles (astro.config.mjs). This header adds what a <meta> cannot (frame-ancestors) and
+# repeats `connect-src 'none'` so anyone can verify it with `curl -I`. It sets no
+# script-src/style-src/default-src: those live in the <meta>, where the hashes are.
 /*
+  Content-Security-Policy: connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'
   Referrer-Policy: no-referrer
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
