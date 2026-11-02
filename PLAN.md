@@ -153,6 +153,11 @@ Resultados (tarea 1.6):
 - Con todo saltado, todas las candidaturas van a «No hay datos suficientes» y aparece el aviso de pocas respuestas (caso previsto en la 1.1).
 - El desglose es un marcador provisional que sustituye la 2.1.
 
+E2E (tarea 1.7):
+- Playwright prueba **el build de producción** (`astro build` + `astro preview` en el puerto 4400), nunca el servidor de desarrollo. En local reutiliza un servidor ya levantado en ese puerto.
+- El caso «saltadas e importantes» reutiliza el juego de respuestas calculado a mano de `tests/unit/results.test.ts`, así que los porcentajes se comprueban de punta a punta.
+- En CI, el job `e2e` depende de `check`, instala Chromium con `--with-deps` y sube `playwright-report/` y `test-results/` solo si falla.
+
 ---
 
 ## Fase 0 — Cimientos (2–3 nov)
@@ -344,7 +349,7 @@ Resultados (tarea 1.6):
   - Los empates cambian de orden entre recargas.
   - Comprobación visual en los 3 tamaños.
 
-### [ ] 1.7 · E2E del flujo con Playwright
+### [x] 1.7 · E2E del flujo con Playwright
 - **Modelo:** Sonnet · **Esfuerzo:** medio · **Requiere:** 1.6
 - **Ficheros:** `playwright.config.ts`, `tests/e2e/flow.spec.ts`, `.github/workflows/ci.yml`.
 - **Qué hacer:**
