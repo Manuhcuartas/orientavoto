@@ -1,0 +1,96 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "entidad": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "description": "Id del partido o coalición; coincide con el nombre del fichero."
+    },
+    "posiciones": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "afirmacion": {
+            "type": "string",
+            "pattern": "^a\\d{2}$",
+            "description": "Identificador de afirmación, p. ej. «a01»."
+          },
+          "posicion": {
+            "type": "string",
+            "enum": [
+              "a_favor",
+              "neutral",
+              "en_contra",
+              "sin_posicion"
+            ],
+            "description": "«sin_posicion» también necesita fuente: el programa consultado donde el tema no aparece."
+          },
+          "justificacion": {
+            "type": "object",
+            "properties": {
+              "es": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "es"
+            ],
+            "additionalProperties": false
+          },
+          "fuentes": {
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "url": {
+                  "type": "string",
+                  "format": "uri",
+                  "pattern": "^https://"
+                },
+                "tipo": {
+                  "type": "string",
+                  "enum": [
+                    "programa_electoral",
+                    "votacion_congreso",
+                    "declaracion_publica",
+                    "otro"
+                  ]
+                },
+                "titulo": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "fecha": {
+                  "type": "string",
+                  "format": "date",
+                  "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+                }
+              },
+              "required": [
+                "url",
+                "tipo",
+                "titulo"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "afirmacion",
+          "posicion",
+          "justificacion",
+          "fuentes"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "entidad",
+    "posiciones"
+  ],
+  "additionalProperties": false
+}

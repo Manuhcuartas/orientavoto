@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "ficticio": {
+      "type": "boolean",
+      "description": "true mientras los datos sean ficticios. Bloquea el build de producción."
+    },
+    "eleccion": {
+      "type": "object",
+      "properties": {
+        "es": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "es"
+      ],
+      "additionalProperties": false
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "actualizado": {
+      "type": "string",
+      "format": "date",
+      "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+    },
+    "umbralAvisoCobertura": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Por debajo de esta cobertura se muestra un aviso (0–1)."
+    },
+    "umbralCoberturaMinima": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Por debajo de esta cobertura el partido sale del ranking (0–1)."
+    },
+    "minimoRespuestas": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9007199254740991,
+      "description": "Con menos respuestas, los resultados llevan aviso de baja fiabilidad."
+    },
+    "contactoCorrecciones": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "ficticio",
+    "eleccion",
+    "version",
+    "actualizado",
+    "umbralAvisoCobertura",
+    "umbralCoberturaMinima",
+    "minimoRespuestas",
+    "contactoCorrecciones"
+  ],
+  "additionalProperties": false
+}

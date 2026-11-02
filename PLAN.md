@@ -89,6 +89,13 @@ Notas sobre las posiciones:
 - Una coalición solo tiene fichero si sobrescribe alguna posición.
 - `sin_posicion` también necesita fuente: el programa consultado donde el tema no aparece.
 
+Decisiones de esquema (tarea 0.2):
+- Objetos **estrictos**: una clave desconocida (p. ej. una errata) es un error. Por eso los JSON no llevan `$schema`; el autocompletado viene de `.vscode/settings.json`.
+- `justificacion.es` puede ser `""` (la 0.4 lo trata como aviso). En el resto de textos `{ es }`, `es` no puede estar vacío.
+- `comunidad` es un id kebab-case (`castilla-y-leon`), no un texto localizado. `fuentes[].titulo` es un texto plano (el título original del documento).
+- Los ids de afirmación siguen el formato `a01`.
+- `@types/node` 24.19.2 añadido como devDependency (aprobado) para los scripts.
+
 ---
 
 ## Fase 0 — Cimientos (2–3 nov)
@@ -109,7 +116,7 @@ Notas sobre las posiciones:
   - `npm run lint`, `npm run typecheck` y `npm test` (0 tests) pasan.
   - Primer commit hecho.
 
-### [ ] 0.2 · Esquemas de datos (Zod) y JSON Schema
+### [x] 0.2 · Esquemas de datos (Zod) y JSON Schema
 - **Modelo:** Opus · **Esfuerzo:** medio · **Requiere:** 0.1
 - **Ficheros:** `src/data/schema.ts`, `scripts/generate-schemas.ts`, `schemas/*.schema.json`, `.vscode/settings.json` (`json.schemas` → `data/**`), `tests/unit/schema.test.ts`.
 - **Qué hacer:**

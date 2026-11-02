@@ -1,0 +1,11 @@
+{
+  "json.schemas": [
+    { "fileMatch": ["/data/meta.json"], "url": "./schemas/meta.schema.json" },
+    { "fileMatch": ["/data/circunscripciones.json"], "url": "./schemas/circunscripciones.schema.json" },
+    { "fileMatch": ["/data/afirmaciones.json"], "url": "./schemas/afirmaciones.schema.json" },
+    { "fileMatch": ["/data/partidos.json"], "url": "./schemas/partidos.schema.json" },
+    { "fileMatch": ["/data/coaliciones.json"], "url": "./schemas/coaliciones.schema.json" },
+    { "fileMatch": ["/data/candidaturas.json"], "url": "./schemas/candidaturas.schema.json" },
+    { "fileMatch": ["/data/posiciones/*.json"], "url": "./schemas/posiciones.schema.json" }
+  ]
+}

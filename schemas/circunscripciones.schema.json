@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "codigo": {
+        "type": "string",
+        "pattern": "^(?:0[1-9]|[1-4]\\d|5[0-2])$",
+        "description": "Código INE de provincia, de «01» a «52» (51 Ceuta, 52 Melilla)."
+      },
+      "nombre": {
+        "type": "object",
+        "properties": {
+          "es": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "es"
+        ],
+        "additionalProperties": false
+      },
+      "comunidad": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+        "description": "Identificador de la comunidad autónoma, p. ej. «castilla-y-leon»."
+      }
+    },
+    "required": [
+      "codigo",
+      "nombre",
+      "comunidad"
+    ],
+    "additionalProperties": false
+  }
+}

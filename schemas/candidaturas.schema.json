@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "propertyNames": {
+    "type": "string",
+    "pattern": "^(?:0[1-9]|[1-4]\\d|5[0-2])$",
+    "description": "Código INE de provincia, de «01» a «52» (51 Ceuta, 52 Melilla)."
+  },
+  "additionalProperties": {
+    "type": "array",
+    "items": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "partido": {
+              "type": "string",
+              "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+              "description": "Identificador en kebab-case y minúsculas, p. ej. «partido-a»."
+            }
+          },
+          "required": [
+            "partido"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "coalicion": {
+              "type": "string",
+              "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+              "description": "Identificador en kebab-case y minúsculas, p. ej. «partido-a»."
+            }
+          },
+          "required": [
+            "coalicion"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    }
+  }
+}

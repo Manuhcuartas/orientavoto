@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+        "description": "Identificador en kebab-case y minúsculas, p. ej. «partido-a»."
+      },
+      "nombre": {
+        "type": "object",
+        "properties": {
+          "es": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "es"
+        ],
+        "additionalProperties": false
+      },
+      "siglas": {
+        "type": "string",
+        "minLength": 1
+      },
+      "ambito": {
+        "type": "string",
+        "enum": [
+          "estatal",
+          "autonomico"
+        ],
+        "description": "«estatal» o «autonomico». Sin provincia elegida solo salen los estatales."
+      },
+      "color": {
+        "description": "Solo se usa como marca pequeña junto a las siglas.",
+        "type": "string",
+        "pattern": "^#[0-9A-Fa-f]{6}$"
+      },
+      "logo": {
+        "type": "string",
+        "pattern": "^logos\\/[a-z0-9-]+\\.(?:svg|png|webp)$"
+      },
+      "web": {
+        "type": "string",
+        "format": "uri",
+        "pattern": "^https://"
+      }
+    },
+    "required": [
+      "id",
+      "nombre",
+      "siglas",
+      "ambito"
+    ],
+    "additionalProperties": false
+  }
+}
