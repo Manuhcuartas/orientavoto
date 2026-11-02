@@ -99,5 +99,22 @@
     "declaracion_publica": "Declaración pública",
     "otro": "Otra fuente",
     "nuevaPestana": "(se abre en otra pestaña)"
+  },
+  "partidos": {
+    "titulo": "Partidos y candidaturas",
+    "intro": "Todos los partidos incluidos en la herramienta, con dónde se presentan. El orden es aleatorio y cambia en cada visita.",
+    "filtroEtiqueta": "Filtrar por circunscripción",
+    "filtroTodas": "Todas las circunscripciones",
+    "recuento": "{numero} partidos.",
+    "recuentoProvincia": "{numero} partidos se presentan en {provincia}, solos o en coalición.",
+    "ambitoEstatal": "Ámbito estatal",
+    "ambitoAutonomico": "Ámbito autonómico",
+    "solitarioTodas": "Se presenta en solitario en las {total} circunscripciones.",
+    "solitarioSalvo": "Se presenta en solitario en todas las circunscripciones salvo {lista}.",
+    "solitarioEn": "Se presenta en solitario en {lista}.",
+    "noSolitario": "No se presenta en solitario.",
+    "coalicion": "En coalición como «{nombre}» ({siglas}) en {lista}.",
+    "web": "Web del partido",
+    "sinJs": "Este listado necesita JavaScript: los partidos se muestran en orden aleatorio en cada visita, como garantía de neutralidad."
   }
 }

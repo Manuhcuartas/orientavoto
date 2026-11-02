@@ -1,0 +1,50 @@
+---
+import Base from '../layouts/Base.astro';
+import PartyList, { type PartyCard } from '../components/PartyList';
+import '../styles/quiz.css';
+import { createTranslator, defaultLocale } from '../i18n';
+import { dataset } from '../lib/data';
+
+const locale = Astro.currentLocale ?? defaultLocale;
+const t = createTranslator(locale);
+
+const collator = new Intl.Collator(locale);
+const constituencies = dataset.constituencies
+  .map((c) => ({ codigo: c.codigo, nombre: c.nombre.es }))
+  .sort((a, b) => collator.compare(a.nombre, b.nombre));
+
+// Where each party runs alone and inside which coalitions (from candidaturas.json).
+const soloCodes = new Map<string, string[]>();
+const coalitionCodes = new Map<string, string[]>();
+for (const [code, list] of Object.entries(dataset.candidacies)) {
+  for (const c of list) {
+    const [map, key] = 'partido' in c ? [soloCodes, c.partido] : [coalitionCodes, c.coalicion];
+    map.set(key, [...(map.get(key) ?? []), code]);
+  }
+}
+
+const parties: PartyCard[] = dataset.parties.map((p) => ({
+  id: p.id,
+  nombre: p.nombre.es,
+  siglas: p.siglas,
+  color: p.color,
+  ambito: p.ambito,
+  ...(p.web && { web: p.web }),
+  solo: soloCodes.get(p.id) ?? [],
+  coalitions: dataset.coalitions
+    .filter((c) => c.incluye.includes(p.id))
+    .map((c) => ({ nombre: c.nombre.es, siglas: c.siglas, codes: coalitionCodes.get(c.id) ?? [] })),
+}));
+---
+
+<Base title={t('partidos.titulo')}>
+  <div class="prose">
+    <h1>{t('partidos.titulo')}</h1>
+    <p>{t('partidos.intro')}</p>
+  </div>
+  <noscript>
+    <p class="notice">{t('partidos.sinJs')}</p>
+  </noscript>
+  <!-- client:only: no server-rendered (fixed) order of parties in the HTML. -->
+  <PartyList client:only="preact" locale={locale} parties={parties} constituencies={constituencies} />
+</Base>

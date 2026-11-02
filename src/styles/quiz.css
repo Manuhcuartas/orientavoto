@@ -367,3 +367,29 @@
 .sources__date {
   color: var(--color-text-muted);
 }
+
+/* --- Party list: identical cards ------------------------------------------ */
+
+.party-list {
+  display: grid;
+  gap: var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 48rem) {
+  .party-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.party-card {
+  padding: var(--space-4);
+  border: var(--border-width) solid var(--color-border-subtle);
+  border-radius: var(--radius);
+}
+
+.party-card p {
+  margin-bottom: var(--space-2);
+}

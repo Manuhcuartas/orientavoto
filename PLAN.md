@@ -160,11 +160,16 @@ E2E (tarea 1.7):
 - `playwright.config.ts` arranca el preview con `exec … astro preview --ignore-lock` y `reuseExistingServer: false`: Astro 7 manda `preview` a segundo plano cuando detecta un agente de IA y dejaba procesos huérfanos en el puerto que servían un build antiguo.
 
 Desglose (tarea 2.1):
-- `entities` lleva ya las **posiciones completas** (justificación recortada, fuentes con fecha formateada en el build y `origen`) y, en coaliciones, `referencia` (nombre del partido del que heredan). El HTML del cuestionario pasa a ~123 KB sin comprimir / ~11 KB gzip con los datos ficticios; con datos reales más largos habrá que vigilarlo en la 3.4.
+- `entities` lleva ya las **posiciones completas** (justificación recortada, fuentes con fecha formateada en el build y `origen`) y, en coaliciones, `referencia` (nombre del partido del que heredan). El HTML del cuestionario pasa a ~157 KB sin comprimir / ~10 KB gzip con los datos ficticios; con datos reales más largos habrá que vigilarlo en la 3.4.
 - Orden de partidos: `shuffle(ballot)` con `useMemo` sobre la papeleta en `Quiz`: una vez por visita y provincia, igual en todas las afirmaciones.
 - Cada afirmación es un `<details>` cuyo `<summary>` contiene un `<h2>` con el texto y «Tu respuesta: …» (+ «★ Importante para ti»). El marcador abierto/cerrado es texto (▸/▾).
 - Posición = icono (✓ = ✗ ?) **más** texto; en coaliciones, «Posición propia de la coalición» o «Posición heredada de …». Justificación vacía → «Sin justificación.».
 - Enlaces de fuentes: `target="_blank" rel="noopener noreferrer"` y «(se abre en otra pestaña)» oculto para lectores de pantalla. Los e2e comprueban `https`, `rel`, `target`, el orden en 5 visitas y la ausencia de scroll a 320 px.
+
+Listado de partidos (tarea 2.2):
+- La isla es `client:only="preact"`: el HTML no contiene ninguna tarjeta (lo comprueba un e2e), solo el `<noscript>` explicando por qué hace falta JS.
+- Se listan los **partidos** (no las coaliciones); cada tarjeta dice dónde se presenta en solitario y en qué coaliciones y provincias. Con 26 o más circunscripciones se enumeran las excepciones («todas salvo Ceuta y Melilla»).
+- El filtro por circunscripción conserva el orden barajado y muestra los partidos presentes allí solos o en coalición, con el recuento en una región `aria-live`.
 
 ---
 
@@ -386,7 +391,7 @@ Desglose (tarea 2.1):
   - Sin scroll horizontal a 320 px.
   - El orden cambia entre visitas (e2e: en 5 cargas aparecen al menos 2 órdenes distintos).
 
-### [ ] 2.2 · Listado de partidos
+### [x] 2.2 · Listado de partidos
 - **Modelo:** Sonnet · **Esfuerzo:** bajo · **Requiere:** 1.2, 1.3
 - **Ficheros:** `src/pages/partidos.astro`, `src/components/PartyList.tsx`.
 - **Qué hacer:**
