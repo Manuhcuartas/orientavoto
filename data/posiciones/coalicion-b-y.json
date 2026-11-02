@@ -1,0 +1,35 @@
+{
+  "entidad": "coalicion-b-y",
+  "posiciones": [
+    {
+      "afirmacion": "a05",
+      "posicion": "a_favor",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): la Coalición B + Y se declara a favor de la afirmación 5."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/coalicion-b-y/programa-electoral#a05",
+          "tipo": "programa_electoral",
+          "titulo": "Programa electoral de ejemplo (ficticio)",
+          "fecha": "2026-10-26"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a18",
+      "posicion": "en_contra",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): la Coalición B + Y se declara en contra de la afirmación 18."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/coalicion-b-y/otro#a18",
+          "tipo": "otro",
+          "titulo": "Documento de ejemplo (ficticio)",
+          "fecha": "2026-09-11"
+        }
+      ]
+    }
+  ]
+}

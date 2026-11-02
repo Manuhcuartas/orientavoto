@@ -1,0 +1,257 @@
+[
+  {
+    "id": "a01",
+    "texto": {
+      "es": "Afirmación de ejemplo 1 (ficticia): Texto de relleno de ejemplo sin."
+    },
+    "tema": {
+      "es": "Tema 1"
+    },
+    "explicacion": {
+      "es": "Explicación de ejemplo (ficticia) de la afirmación 1: contexto de relleno que se muestra en un desplegable opcional."
+    }
+  },
+  {
+    "id": "a02",
+    "texto": {
+      "es": "Afirmación de ejemplo 2 (ficticia): Texto de relleno de ejemplo sin contenido político real, escrito solo para."
+    },
+    "tema": {
+      "es": "Tema 2"
+    }
+  },
+  {
+    "id": "a03",
+    "texto": {
+      "es": "Afirmación de ejemplo 3 (ficticia): Texto de relleno de ejemplo sin contenido político real, escrito solo para comprobar cómo se ve una afirmación de esta longitud en pantallas."
+    },
+    "tema": {
+      "es": "Tema 3"
+    },
+    "explicacion": {
+      "es": "Explicación de ejemplo (ficticia) de la afirmación 3: contexto de relleno que se muestra en un desplegable opcional."
+    }
+  },
+  {
+    "id": "a04",
+    "texto": {
+      "es": "Afirmación de ejemplo 4 (ficticia): Texto de relleno de ejemplo sin contenido político real, escrito solo para comprobar cómo se ve una afirmación de esta longitud en pantallas pequeñas y grandes, con varias líneas de texto, saltos de línea."
+    },
+    "tema": {
+      "es": "Tema 4"
+    }
+  },
+  {
+    "id": "a05",
+    "texto": {
+      "es": "Afirmación de ejemplo 5 (ficticia): Texto de relleno de ejemplo sin contenido político real."
+    },
+    "tema": {
+      "es": "Tema 5"
+    }
+  },
+  {
+    "id": "a06",
+    "texto": {
+      "es": "Afirmación de ejemplo 6 (ficticia): Texto de relleno de ejemplo sin contenido político real, escrito solo para comprobar cómo se ve una."
+    },
+    "tema": {
+      "es": "Tema 1"
+    },
+    "explicacion": {
+      "es": "Explicación de ejemplo (ficticia) de la afirmación 6: contexto de relleno que se muestra en un desplegable opcional."
+    }
+  },
+  {
+    "id": "a07",
+    "texto": {
+      "es": "Afirmación de ejemplo 7 (ficticia): Texto de relleno de ejemplo sin contenido político real, escrito solo para comprobar cómo se ve una afirmación de esta longitud en pantallas pequeñas y grandes, con varias."
+    },
+    "tema": {
+      "es": "Tema 2"
+    }
+  },
+  {
+    "id": "a08",
+    "texto": {
+      "es": "Afirmación de ejemplo 8 (ficticia): Texto de relleno de."
+    },
+    "tema": {
+      "es": "Tema 3"
+    },
+    "explicacion": {
+      "es": "Explicación de ejemplo (ficticia) de la afirmación 8: contexto de relleno que se muestra en un desplegable opcional."
+    }
+  },
+  {
+    "id": "a09",
+    "texto": {
+      "es": "Afirmación de ejemplo 9 (ficticia): Texto de relleno de ejemplo sin contenido político real, escrito solo para comprobar cómo se ve una afirmación de esta."
+    },
+    "tema": {
+      "es": "Tema 4"
+    }
+  },
+  {
+    "id": "a10",
+    "texto": {
+      "es": "Afirmación de ejemplo 10 (ficticia): Texto de relleno de ejemplo sin contenido político real, escrito solo para comprobar cómo se ve una afirmación de esta longitud en pantallas pequeñas y grandes, con varias líneas de texto, saltos de línea."
+    },
+    "tema": {
+      "es": "Tema 5"
+    }
+  },
+  {
+    "id": "a11",
+    "texto": {
+      "es": "Afirmación de ejemplo 11 (ficticia): Texto de relleno de ejemplo sin."
+    },
+    "tema": {
+      "es": "Tema 1"
+    },
+    "explicacion": {
+      "es": "Explicación de ejemplo (ficticia) de la afirmación 11: contexto de relleno que se muestra en un desplegable opcional."
+    }
+  },
+  {
+    "id": "a12",
+    "texto": {
+      "es": "Afirmación de ejemplo 12 (ficticia): Texto de relleno de ejemplo sin contenido político real, escrito solo para."
+    },
+    "tema": {
+      "es": "Tema 2"
+    }
+  },
+  {
+    "id": "a13",
+    "texto": {
+      "es": "Afirmación de ejemplo 13 (ficticia): Texto de relleno de ejemplo sin contenido político real, escrito solo para comprobar cómo se ve una afirmación de esta longitud en pantallas."
+    },
+    "tema": {
+      "es": "Tema 3"
+    },
+    "explicacion": {
+      "es": "Explicación de ejemplo (ficticia) de la afirmación 13: contexto de relleno que se muestra en un desplegable opcional."
+    }
+  },
+  {
+    "id": "a14",
+    "texto": {
+      "es": "Afirmación de ejemplo 14 (ficticia): Texto de relleno de ejemplo sin contenido político real, escrito solo para comprobar cómo se ve una afirmación de esta longitud en pantallas pequeñas y grandes, con varias líneas de texto, saltos de línea."
+    },
+    "tema": {
+      "es": "Tema 4"
+    }
+  },
+  {
+    "id": "a15",
+    "texto": {
+      "es": "Afirmación de ejemplo 15 (ficticia): Texto de relleno de ejemplo sin contenido político real."
+    },
+    "tema": {
+      "es": "Tema 5"
+    }
+  },
+  {
+    "id": "a16",
+    "texto": {
+      "es": "Afirmación de ejemplo 16 (ficticia): Texto de relleno de ejemplo sin contenido político real, escrito solo para comprobar cómo se ve una."
+    },
+    "tema": {
+      "es": "Tema 1"
+    },
+    "explicacion": {
+      "es": "Explicación de ejemplo (ficticia) de la afirmación 16: contexto de relleno que se muestra en un desplegable opcional."
+    }
+  },
+  {
+    "id": "a17",
+    "texto": {
+      "es": "Afirmación de ejemplo 17 (ficticia): Texto de relleno de ejemplo sin contenido político real, escrito solo para comprobar cómo se ve una afirmación de esta longitud en pantallas pequeñas y grandes, con varias."
+    },
+    "tema": {
+      "es": "Tema 2"
+    }
+  },
+  {
+    "id": "a18",
+    "texto": {
+      "es": "Afirmación de ejemplo 18 (ficticia): Texto de relleno de."
+    },
+    "tema": {
+      "es": "Tema 3"
+    },
+    "explicacion": {
+      "es": "Explicación de ejemplo (ficticia) de la afirmación 18: contexto de relleno que se muestra en un desplegable opcional."
+    }
+  },
+  {
+    "id": "a19",
+    "texto": {
+      "es": "Afirmación de ejemplo 19 (ficticia): Texto de relleno de ejemplo sin contenido político real, escrito solo para comprobar cómo se ve una afirmación de esta."
+    },
+    "tema": {
+      "es": "Tema 4"
+    }
+  },
+  {
+    "id": "a20",
+    "texto": {
+      "es": "Afirmación de ejemplo 20 (ficticia): Texto de relleno de ejemplo sin contenido político real, escrito solo para comprobar cómo se ve una afirmación de esta longitud en pantallas pequeñas y grandes, con varias líneas de texto, saltos de línea."
+    },
+    "tema": {
+      "es": "Tema 5"
+    }
+  },
+  {
+    "id": "a21",
+    "texto": {
+      "es": "Afirmación de ejemplo 21 (ficticia): Texto de relleno de ejemplo sin."
+    },
+    "tema": {
+      "es": "Tema 1"
+    },
+    "explicacion": {
+      "es": "Explicación de ejemplo (ficticia) de la afirmación 21: contexto de relleno que se muestra en un desplegable opcional."
+    }
+  },
+  {
+    "id": "a22",
+    "texto": {
+      "es": "Afirmación de ejemplo 22 (ficticia): Texto de relleno de ejemplo sin contenido político real, escrito solo para."
+    },
+    "tema": {
+      "es": "Tema 2"
+    }
+  },
+  {
+    "id": "a23",
+    "texto": {
+      "es": "Afirmación de ejemplo 23 (ficticia): Texto de relleno de ejemplo sin contenido político real, escrito solo para comprobar cómo se ve una afirmación de esta longitud en pantallas."
+    },
+    "tema": {
+      "es": "Tema 3"
+    },
+    "explicacion": {
+      "es": "Explicación de ejemplo (ficticia) de la afirmación 23: contexto de relleno que se muestra en un desplegable opcional."
+    }
+  },
+  {
+    "id": "a24",
+    "texto": {
+      "es": "Afirmación de ejemplo 24 (ficticia): Texto de relleno de ejemplo sin contenido político real, escrito solo para comprobar cómo se ve una afirmación de esta longitud en pantallas pequeñas y grandes, con varias líneas de texto, saltos de línea."
+    },
+    "tema": {
+      "es": "Tema 4"
+    }
+  },
+  {
+    "id": "a25",
+    "texto": {
+      "es": "Afirmación de ejemplo 25 (ficticia): Texto de relleno de ejemplo sin contenido político real."
+    },
+    "tema": {
+      "es": "Tema 5"
+    }
+  }
+]

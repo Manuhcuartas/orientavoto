@@ -1,0 +1,411 @@
+{
+  "entidad": "partido-b",
+  "posiciones": [
+    {
+      "afirmacion": "a01",
+      "posicion": "a_favor",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido B se declara a favor de la afirmación 1."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-b/votacion-congreso#a01",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación de ejemplo en el Congreso (ficticia)",
+          "fecha": "2026-09-09"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a02",
+      "posicion": "a_favor",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido B se declara a favor de la afirmación 2."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-b/otro#a02",
+          "tipo": "otro",
+          "titulo": "Documento de ejemplo (ficticio)",
+          "fecha": "2026-09-23"
+        },
+        {
+          "url": "https://example.org/ficticio/partido-b/programa-electoral#a02",
+          "tipo": "programa_electoral",
+          "titulo": "Programa electoral de ejemplo (ficticio)"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a03",
+      "posicion": "en_contra",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido B se declara en contra de la afirmación 3."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-b/votacion-congreso#a03",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación de ejemplo en el Congreso (ficticia)",
+          "fecha": "2026-09-06"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a04",
+      "posicion": "neutral",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido B se declara neutral respecto a la afirmación 4."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-b/programa-electoral#a04",
+          "tipo": "programa_electoral",
+          "titulo": "Programa electoral de ejemplo (ficticio)"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a05",
+      "posicion": "en_contra",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido B se declara en contra de la afirmación 5."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-b/programa-electoral#a05",
+          "tipo": "programa_electoral",
+          "titulo": "Programa electoral de ejemplo (ficticio)",
+          "fecha": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a06",
+      "posicion": "a_favor",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido B se declara a favor de la afirmación 6."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-b/programa-electoral#a06",
+          "tipo": "programa_electoral",
+          "titulo": "Programa electoral de ejemplo (ficticio)",
+          "fecha": "2026-10-26"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a07",
+      "posicion": "a_favor",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido B se declara a favor de la afirmación 7."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-b/programa-electoral#a07",
+          "tipo": "programa_electoral",
+          "titulo": "Programa electoral de ejemplo (ficticio)"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a08",
+      "posicion": "neutral",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido B se declara neutral respecto a la afirmación 8."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-b/declaracion-publica#a08",
+          "tipo": "declaracion_publica",
+          "titulo": "Declaración pública de ejemplo (ficticia)"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a09",
+      "posicion": "en_contra",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido B se declara en contra de la afirmación 9."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-b/programa-electoral#a09",
+          "tipo": "programa_electoral",
+          "titulo": "Programa electoral de ejemplo (ficticio)"
+        },
+        {
+          "url": "https://example.org/ficticio/partido-b/votacion-congreso#a09",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación de ejemplo en el Congreso (ficticia)"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a10",
+      "posicion": "en_contra",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido B se declara en contra de la afirmación 10."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-b/votacion-congreso#a10",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación de ejemplo en el Congreso (ficticia)",
+          "fecha": "2026-10-19"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a11",
+      "posicion": "en_contra",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido B se declara en contra de la afirmación 11."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-b/votacion-congreso#a11",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación de ejemplo en el Congreso (ficticia)",
+          "fecha": "2026-10-14"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a12",
+      "posicion": "en_contra",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido B se declara en contra de la afirmación 12."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-b/programa-electoral#a12",
+          "tipo": "programa_electoral",
+          "titulo": "Programa electoral de ejemplo (ficticio)",
+          "fecha": "2026-09-15"
+        },
+        {
+          "url": "https://example.org/ficticio/partido-b/votacion-congreso#a12",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación de ejemplo en el Congreso (ficticia)"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a13",
+      "posicion": "neutral",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido B se declara neutral respecto a la afirmación 13."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-b/otro#a13",
+          "tipo": "otro",
+          "titulo": "Documento de ejemplo (ficticio)",
+          "fecha": "2026-10-04"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a14",
+      "posicion": "neutral",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido B se declara neutral respecto a la afirmación 14."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-b/votacion-congreso#a14",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación de ejemplo en el Congreso (ficticia)",
+          "fecha": "2026-10-16"
+        },
+        {
+          "url": "https://example.org/ficticio/partido-b/declaracion-publica#a14",
+          "tipo": "declaracion_publica",
+          "titulo": "Declaración pública de ejemplo (ficticia)"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a15",
+      "posicion": "a_favor",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido B se declara a favor de la afirmación 15."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-b/votacion-congreso#a15",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación de ejemplo en el Congreso (ficticia)",
+          "fecha": "2026-10-21"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a16",
+      "posicion": "a_favor",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido B se declara a favor de la afirmación 16."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-b/declaracion-publica#a16",
+          "tipo": "declaracion_publica",
+          "titulo": "Declaración pública de ejemplo (ficticia)"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a17",
+      "posicion": "neutral",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido B se declara neutral respecto a la afirmación 17."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-b/programa-electoral#a17",
+          "tipo": "programa_electoral",
+          "titulo": "Programa electoral de ejemplo (ficticio)",
+          "fecha": "2026-09-14"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a18",
+      "posicion": "neutral",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido B se declara neutral respecto a la afirmación 18."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-b/programa-electoral#a18",
+          "tipo": "programa_electoral",
+          "titulo": "Programa electoral de ejemplo (ficticio)",
+          "fecha": "2026-10-12"
+        },
+        {
+          "url": "https://example.org/ficticio/partido-b/votacion-congreso#a18",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación de ejemplo en el Congreso (ficticia)",
+          "fecha": "2026-10-08"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a19",
+      "posicion": "neutral",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido B se declara neutral respecto a la afirmación 19."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-b/programa-electoral#a19",
+          "tipo": "programa_electoral",
+          "titulo": "Programa electoral de ejemplo (ficticio)"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a20",
+      "posicion": "neutral",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido B se declara neutral respecto a la afirmación 20."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-b/programa-electoral#a20",
+          "tipo": "programa_electoral",
+          "titulo": "Programa electoral de ejemplo (ficticio)",
+          "fecha": "2026-10-02"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a21",
+      "posicion": "neutral",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido B se declara neutral respecto a la afirmación 21."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-b/programa-electoral#a21",
+          "tipo": "programa_electoral",
+          "titulo": "Programa electoral de ejemplo (ficticio)",
+          "fecha": "2026-09-25"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a22",
+      "posicion": "en_contra",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido B se declara en contra de la afirmación 22."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-b/otro#a22",
+          "tipo": "otro",
+          "titulo": "Documento de ejemplo (ficticio)",
+          "fecha": "2026-10-06"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a23",
+      "posicion": "neutral",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido B se declara neutral respecto a la afirmación 23."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-b/votacion-congreso#a23",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación de ejemplo en el Congreso (ficticia)",
+          "fecha": "2026-10-20"
+        },
+        {
+          "url": "https://example.org/ficticio/partido-b/declaracion-publica#a23",
+          "tipo": "declaracion_publica",
+          "titulo": "Declaración pública de ejemplo (ficticia)",
+          "fecha": "2026-10-10"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a24",
+      "posicion": "en_contra",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido B se declara en contra de la afirmación 24."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-b/otro#a24",
+          "tipo": "otro",
+          "titulo": "Documento de ejemplo (ficticio)",
+          "fecha": "2026-10-06"
+        },
+        {
+          "url": "https://example.org/ficticio/partido-b/programa-electoral#a24",
+          "tipo": "programa_electoral",
+          "titulo": "Programa electoral de ejemplo (ficticio)",
+          "fecha": "2026-09-20"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a25",
+      "posicion": "a_favor",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido B se declara a favor de la afirmación 25."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-b/otro#a25",
+          "tipo": "otro",
+          "titulo": "Documento de ejemplo (ficticio)"
+        }
+      ]
+    }
+  ]
+}

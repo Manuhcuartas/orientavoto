@@ -1,0 +1,35 @@
+{
+  "entidad": "coalicion-a-x",
+  "posiciones": [
+    {
+      "afirmacion": "a03",
+      "posicion": "en_contra",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): la Coalición A + X se declara en contra de la afirmación 3."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/coalicion-a-x/declaracion-publica#a03",
+          "tipo": "declaracion_publica",
+          "titulo": "Declaración pública de ejemplo (ficticia)",
+          "fecha": "2026-09-26"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a10",
+      "posicion": "en_contra",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): la Coalición A + X se declara en contra de la afirmación 10."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/coalicion-a-x/programa-electoral#a10",
+          "tipo": "programa_electoral",
+          "titulo": "Programa electoral de ejemplo (ficticio)",
+          "fecha": "2026-10-25"
+        }
+      ]
+    }
+  ]
+}

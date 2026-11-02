@@ -96,6 +96,12 @@ Decisiones de esquema (tarea 0.2):
 - Los ids de afirmación siguen el formato `a01`.
 - `@types/node` 24.19.2 añadido como devDependency (aprobado) para los scripts.
 
+Dataset ficticio (tarea 0.3), datos útiles para los tests de otras tareas:
+- Partido E tiene **7/25** `sin_posicion` (28 %, cobertura 72 %), no un 20 %: con un 20 % la cobertura sería del 80 % y no provocaría el aviso (< 75 %). F tiene 15/25 (cobertura 40 %). C tiene 1 (a25).
+- X va en coalición con A (`coalicion-a-x`) en Aragón (22, 44, 50); Y, con B (`coalicion-b-y`) en Extremadura (06, 10). Ni X ni Y se presentan solos.
+- Overrides: `coalicion-a-x` en a03 y a10; `coalicion-b-y` en a05 y a18 (siempre distintos de la postura heredada).
+- Siglas ficticias: PFA…PFF, PRFX, PRFY, CFAX, CFBY. Afirmaciones con explicación: a01, a03, a06, a08, a11, a13, a16, a18, a21, a23. Las más largas (~242 caracteres): a04, a10, a14, a20, a24.
+
 ---
 
 ## Fase 0 — Cimientos (2–3 nov)
@@ -128,7 +134,7 @@ Decisiones de esquema (tarea 0.2):
   - Los tests rechazan: id con mayúsculas, URL `http:`, `posicion` inválida, fuentes vacías y `es` ausente.
   - Ejecutar `npm run schemas` dos veces no produce diff.
 
-### [ ] 0.3 · Dataset ficticio
+### [x] 0.3 · Dataset ficticio
 - **Modelo:** Sonnet · **Esfuerzo:** bajo · **Requiere:** 0.2
 - **Ficheros:** `data/*.json`, `data/posiciones/*.json`.
 - **Qué hacer:**

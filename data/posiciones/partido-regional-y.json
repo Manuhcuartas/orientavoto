@@ -1,0 +1,431 @@
+{
+  "entidad": "partido-regional-y",
+  "posiciones": [
+    {
+      "afirmacion": "a01",
+      "posicion": "en_contra",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido Regional Y se declara en contra de la afirmación 1."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-regional-y/otro#a01",
+          "tipo": "otro",
+          "titulo": "Documento de ejemplo (ficticio)",
+          "fecha": "2026-10-03"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a02",
+      "posicion": "a_favor",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido Regional Y se declara a favor de la afirmación 2."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-regional-y/programa-electoral#a02",
+          "tipo": "programa_electoral",
+          "titulo": "Programa electoral de ejemplo (ficticio)",
+          "fecha": "2026-09-07"
+        },
+        {
+          "url": "https://example.org/ficticio/partido-regional-y/votacion-congreso#a02",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación de ejemplo en el Congreso (ficticia)",
+          "fecha": "2026-09-26"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a03",
+      "posicion": "a_favor",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido Regional Y se declara a favor de la afirmación 3."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-regional-y/otro#a03",
+          "tipo": "otro",
+          "titulo": "Documento de ejemplo (ficticio)"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a04",
+      "posicion": "neutral",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido Regional Y se declara neutral respecto a la afirmación 4."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-regional-y/otro#a04",
+          "tipo": "otro",
+          "titulo": "Documento de ejemplo (ficticio)",
+          "fecha": "2026-09-14"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a05",
+      "posicion": "a_favor",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido Regional Y se declara a favor de la afirmación 5."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-regional-y/votacion-congreso#a05",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación de ejemplo en el Congreso (ficticia)",
+          "fecha": "2026-09-26"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a06",
+      "posicion": "en_contra",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido Regional Y se declara en contra de la afirmación 6."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-regional-y/votacion-congreso#a06",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación de ejemplo en el Congreso (ficticia)",
+          "fecha": "2026-09-02"
+        },
+        {
+          "url": "https://example.org/ficticio/partido-regional-y/declaracion-publica#a06",
+          "tipo": "declaracion_publica",
+          "titulo": "Declaración pública de ejemplo (ficticia)"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a07",
+      "posicion": "neutral",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido Regional Y se declara neutral respecto a la afirmación 7."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-regional-y/votacion-congreso#a07",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación de ejemplo en el Congreso (ficticia)"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a08",
+      "posicion": "a_favor",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido Regional Y se declara a favor de la afirmación 8."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-regional-y/otro#a08",
+          "tipo": "otro",
+          "titulo": "Documento de ejemplo (ficticio)"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a09",
+      "posicion": "neutral",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido Regional Y se declara neutral respecto a la afirmación 9."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-regional-y/votacion-congreso#a09",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación de ejemplo en el Congreso (ficticia)"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a10",
+      "posicion": "en_contra",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido Regional Y se declara en contra de la afirmación 10."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-regional-y/programa-electoral#a10",
+          "tipo": "programa_electoral",
+          "titulo": "Programa electoral de ejemplo (ficticio)"
+        },
+        {
+          "url": "https://example.org/ficticio/partido-regional-y/votacion-congreso#a10",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación de ejemplo en el Congreso (ficticia)",
+          "fecha": "2026-10-13"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a11",
+      "posicion": "en_contra",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido Regional Y se declara en contra de la afirmación 11."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-regional-y/votacion-congreso#a11",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación de ejemplo en el Congreso (ficticia)",
+          "fecha": "2026-09-08"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a12",
+      "posicion": "a_favor",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido Regional Y se declara a favor de la afirmación 12."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-regional-y/programa-electoral#a12",
+          "tipo": "programa_electoral",
+          "titulo": "Programa electoral de ejemplo (ficticio)"
+        },
+        {
+          "url": "https://example.org/ficticio/partido-regional-y/votacion-congreso#a12",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación de ejemplo en el Congreso (ficticia)",
+          "fecha": "2026-10-07"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a13",
+      "posicion": "a_favor",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido Regional Y se declara a favor de la afirmación 13."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-regional-y/declaracion-publica#a13",
+          "tipo": "declaracion_publica",
+          "titulo": "Declaración pública de ejemplo (ficticia)"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a14",
+      "posicion": "a_favor",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido Regional Y se declara a favor de la afirmación 14."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-regional-y/programa-electoral#a14",
+          "tipo": "programa_electoral",
+          "titulo": "Programa electoral de ejemplo (ficticio)",
+          "fecha": "2026-09-05"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a15",
+      "posicion": "neutral",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido Regional Y se declara neutral respecto a la afirmación 15."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-regional-y/programa-electoral#a15",
+          "tipo": "programa_electoral",
+          "titulo": "Programa electoral de ejemplo (ficticio)",
+          "fecha": "2026-10-06"
+        },
+        {
+          "url": "https://example.org/ficticio/partido-regional-y/votacion-congreso#a15",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación de ejemplo en el Congreso (ficticia)"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a16",
+      "posicion": "neutral",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido Regional Y se declara neutral respecto a la afirmación 16."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-regional-y/programa-electoral#a16",
+          "tipo": "programa_electoral",
+          "titulo": "Programa electoral de ejemplo (ficticio)",
+          "fecha": "2026-09-22"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a17",
+      "posicion": "neutral",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido Regional Y se declara neutral respecto a la afirmación 17."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-regional-y/declaracion-publica#a17",
+          "tipo": "declaracion_publica",
+          "titulo": "Declaración pública de ejemplo (ficticia)"
+        },
+        {
+          "url": "https://example.org/ficticio/partido-regional-y/otro#a17",
+          "tipo": "otro",
+          "titulo": "Documento de ejemplo (ficticio)",
+          "fecha": "2026-09-12"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a18",
+      "posicion": "en_contra",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido Regional Y se declara en contra de la afirmación 18."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-regional-y/votacion-congreso#a18",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación de ejemplo en el Congreso (ficticia)",
+          "fecha": "2026-10-24"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a19",
+      "posicion": "neutral",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido Regional Y se declara neutral respecto a la afirmación 19."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-regional-y/programa-electoral#a19",
+          "tipo": "programa_electoral",
+          "titulo": "Programa electoral de ejemplo (ficticio)",
+          "fecha": "2026-09-01"
+        },
+        {
+          "url": "https://example.org/ficticio/partido-regional-y/votacion-congreso#a19",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación de ejemplo en el Congreso (ficticia)",
+          "fecha": "2026-10-07"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a20",
+      "posicion": "a_favor",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido Regional Y se declara a favor de la afirmación 20."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-regional-y/otro#a20",
+          "tipo": "otro",
+          "titulo": "Documento de ejemplo (ficticio)"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a21",
+      "posicion": "a_favor",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido Regional Y se declara a favor de la afirmación 21."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-regional-y/votacion-congreso#a21",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación de ejemplo en el Congreso (ficticia)"
+        },
+        {
+          "url": "https://example.org/ficticio/partido-regional-y/declaracion-publica#a21",
+          "tipo": "declaracion_publica",
+          "titulo": "Declaración pública de ejemplo (ficticia)"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a22",
+      "posicion": "a_favor",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido Regional Y se declara a favor de la afirmación 22."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-regional-y/otro#a22",
+          "tipo": "otro",
+          "titulo": "Documento de ejemplo (ficticio)",
+          "fecha": "2026-10-16"
+        },
+        {
+          "url": "https://example.org/ficticio/partido-regional-y/programa-electoral#a22",
+          "tipo": "programa_electoral",
+          "titulo": "Programa electoral de ejemplo (ficticio)",
+          "fecha": "2026-09-13"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a23",
+      "posicion": "a_favor",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido Regional Y se declara a favor de la afirmación 23."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-regional-y/otro#a23",
+          "tipo": "otro",
+          "titulo": "Documento de ejemplo (ficticio)",
+          "fecha": "2026-10-02"
+        },
+        {
+          "url": "https://example.org/ficticio/partido-regional-y/programa-electoral#a23",
+          "tipo": "programa_electoral",
+          "titulo": "Programa electoral de ejemplo (ficticio)"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a24",
+      "posicion": "neutral",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido Regional Y se declara neutral respecto a la afirmación 24."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-regional-y/programa-electoral#a24",
+          "tipo": "programa_electoral",
+          "titulo": "Programa electoral de ejemplo (ficticio)",
+          "fecha": "2026-10-15"
+        },
+        {
+          "url": "https://example.org/ficticio/partido-regional-y/votacion-congreso#a24",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación de ejemplo en el Congreso (ficticia)"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a25",
+      "posicion": "neutral",
+      "justificacion": {
+        "es": "Justificación de ejemplo (ficticia): Partido Regional Y se declara neutral respecto a la afirmación 25."
+      },
+      "fuentes": [
+        {
+          "url": "https://example.org/ficticio/partido-regional-y/otro#a25",
+          "tipo": "otro",
+          "titulo": "Documento de ejemplo (ficticio)",
+          "fecha": "2026-09-21"
+        }
+      ]
+    }
+  ]
+}
