@@ -1,0 +1,280 @@
+---
+// Methodology: static HTML, no JS. Thresholds come from data/meta.json and the
+// worked example is computed at build time with src/lib/affinity.ts, so the page
+// cannot drift from the real calculation.
+import Base from '../layouts/Base.astro';
+import { createTranslator, defaultLocale, type MessageKey } from '../i18n';
+import type { Stance } from '../data/schema';
+import { IMPORTANT_WEIGHT, scoreEntity, type Answer, type AnswerValue, type PositionMap } from '../lib/affinity';
+import { dataset } from '../lib/data';
+
+const locale = Astro.currentLocale ?? defaultLocale;
+const t = createTranslator(locale);
+const { meta } = dataset;
+const pct = (ratio: number) => Math.round(ratio * 100);
+
+// --- Points table: generated from the same formula ---------------------------
+const ROWS: { value: AnswerValue; label: MessageKey }[] = [
+  { value: 1, label: 'afirmaciones.deAcuerdo' },
+  { value: 0, label: 'afirmaciones.neutral' },
+  { value: -1, label: 'afirmaciones.enDesacuerdo' },
+];
+const COLUMNS: { stance: Exclude<Stance, 'sin_posicion'>; label: MessageKey }[] = [
+  { stance: 'a_favor', label: 'posicion.a_favor' },
+  { stance: 'neutral', label: 'posicion.neutral' },
+  { stance: 'en_contra', label: 'posicion.en_contra' },
+];
+const cellPoints = (value: AnswerValue, stance: Stance) =>
+  scoreEntity({ x: { value, important: false } }, { x: { posicion: stance } }).points;
+
+// --- Worked example ------------------------------------------------------------
+const answers: Record<string, Answer> = {
+  e1: { value: 1, important: true },
+  e2: { value: 0, important: false },
+  e3: { value: -1, important: false },
+  e4: { value: null, important: false },
+};
+const exampleEntities: { name: MessageKey; positions: PositionMap }[] = [
+  {
+    name: 'metodologia.candidaturaEjemplo1',
+    positions: { e1: { posicion: 'a_favor' }, e2: { posicion: 'en_contra' }, e3: { posicion: 'en_contra' }, e4: { posicion: 'a_favor' } },
+  },
+  {
+    name: 'metodologia.candidaturaEjemplo2',
+    positions: { e1: { posicion: 'en_contra' }, e2: { posicion: 'neutral' }, e3: { posicion: 'sin_posicion' }, e4: { posicion: 'a_favor' } },
+  },
+];
+const answerLabel = (value: AnswerValue | null) =>
+  value === null ? t('metodologia.ejemploSaltada') : t(ROWS.find((r) => r.value === value)?.label ?? 'metodologia.ejemploSaltada');
+const example = exampleEntities.map((e) => {
+  const total = scoreEntity(answers, e.positions);
+  const rows = Object.entries(answers).map(([id, answer], i) => {
+    const stance = e.positions[id]?.posicion ?? 'sin_posicion';
+    const single = scoreEntity({ [id]: answer }, e.positions);
+    return {
+      label: answer.important ? t('metodologia.ejemploImportante', { numero: i + 1 }) : String(i + 1),
+      answer: answerLabel(answer.value),
+      stance: t(`posicion.${stance}` satisfies MessageKey),
+      points: single.considered === 0 ? t('metodologia.ejemploFuera') : `${single.points} / ${single.max}`,
+    };
+  });
+  return { name: t(e.name), total, rows, lowCoverage: total.coverage < meta.umbralAvisoCobertura };
+});
+---
+
+<Base title={t('metodologia.titulo')} description={t('metodologia.intro')}>
+  <article class="prose methodology">
+    <h1>{t('metodologia.titulo')}</h1>
+    <p>{t('metodologia.intro')}</p>
+
+    <h2>{t('metodologia.calculoTitulo')}</h2>
+
+    <h3>{t('metodologia.formulaTitulo')}</h3>
+    <p>{t('metodologia.formulaTexto')}</p>
+    <p class="methodology__formula">{t('metodologia.formula')}</p>
+    <p>{t('metodologia.formulaMaximo')}</p>
+    <p class="methodology__formula">{t('metodologia.formulaPorcentaje')}</p>
+    <p>{t('metodologia.formulaRedondeo')}</p>
+
+    <h3>{t('metodologia.tablaTitulo')}</h3>
+    <div class="table-scroll">
+      <table>
+        <caption>{t('metodologia.tablaLeyenda')}</caption>
+        <thead>
+          <tr>
+            <th scope="col">{t('metodologia.tablaTuRespuesta')}</th>
+            {COLUMNS.map((c) => <th scope="col">{t(c.label)}</th>)}
+          </tr>
+        </thead>
+        <tbody>
+          {
+            ROWS.map((r) => (
+              <tr>
+                <th scope="row">{t(r.label)}</th>
+                {COLUMNS.map((c) => (
+                  <td>{cellPoints(r.value, c.stance)}</td>
+                ))}
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+
+    <h3>{t('metodologia.importantesTitulo')}</h3>
+    <p>{t('metodologia.importantesTexto', { peso: IMPORTANT_WEIGHT })}</p>
+
+    <h3>{t('metodologia.saltadasTitulo')}</h3>
+    <p>{t('metodologia.saltadasTexto')}</p>
+
+    <h3>{t('metodologia.sinPosicionTitulo')}</h3>
+    <p>{t('metodologia.sinPosicionTexto')}</p>
+    <ul>
+      <li>{t('metodologia.umbralAviso', { umbral: pct(meta.umbralAvisoCobertura) })}</li>
+      <li>{t('metodologia.umbralMinimo', { umbral: pct(meta.umbralCoberturaMinima) })}</li>
+      <li>{t('metodologia.pocasRespuestas', { minimo: meta.minimoRespuestas })}</li>
+    </ul>
+
+    <h3>{t('metodologia.empatesTitulo')}</h3>
+    <p>{t('metodologia.empatesTexto')}</p>
+    <p>{t('metodologia.aleatorioTexto')}</p>
+
+    <h2>{t('metodologia.ejemploTitulo')}</h2>
+    <p>{t('metodologia.ejemploIntro')}</p>
+    {
+      example.map((e) => (
+        <section class="methodology__example">
+          <h3>{e.name}</h3>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">{t('metodologia.ejemploAfirmacion')}</th>
+                  <th scope="col">{t('metodologia.ejemploRespuesta')}</th>
+                  <th scope="col">{t('metodologia.ejemploPosicion')}</th>
+                  <th scope="col">{t('metodologia.ejemploPuntos')}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {e.rows.map((r) => (
+                  <tr>
+                    <th scope="row">{r.label}</th>
+                    <td>{r.answer}</td>
+                    <td>{r.stance}</td>
+                    <td>{r.points}</td>
+                  </tr>
+                ))}
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th scope="row" colspan="3">
+                    {t('metodologia.ejemploTotal')}
+                  </th>
+                  <td>
+                    {e.total.points} / {e.total.max}
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <p>
+            {t('metodologia.ejemploResultado', {
+              candidatura: e.name,
+              puntos: e.total.points,
+              maximo: e.total.max,
+              porcentaje: Math.round(e.total.percent ?? 0),
+              consideradas: e.total.considered,
+              respondidas: e.total.answered,
+            })}
+          </p>
+          {e.lowCoverage && (
+            <p class="notice">
+              {t('metodologia.ejemploAviso', {
+                candidatura: e.name,
+                consideradas: e.total.considered,
+                respondidas: e.total.answered,
+                cobertura: pct(e.total.coverage),
+                umbral: pct(meta.umbralAvisoCobertura),
+              })}
+            </p>
+          )}
+        </section>
+      ))
+    }
+
+    <h2>{t('metodologia.posicionesTitulo')}</h2>
+    <p>{t('metodologia.posicionesTexto')}</p>
+    <p>{t('metodologia.tiposFuente')}</p>
+    <ul>
+      <li>{t('metodologia.tipoPrograma')}</li>
+      <li>{t('metodologia.tipoVotacion')}</li>
+      <li>{t('metodologia.tipoDeclaracion')}</li>
+      <li>{t('metodologia.tipoOtro')}</li>
+    </ul>
+    <p>{t('metodologia.coaliciones')}</p>
+    <p class="pending">{t('metodologia.pendienteProceso')}</p>
+    <p class="pending">{t('metodologia.pendienteAfirmaciones')}</p>
+    <p class="pending">{t('metodologia.pendientePartidos')}</p>
+
+    <h2>{t('metodologia.noEsTitulo')}</h2>
+    <ul>
+      <li>{t('metodologia.noEsRecomendacion')}</li>
+      <li>{t('metodologia.noEsEncuesta')}</li>
+      <li>{t('metodologia.noEsUtil')}</li>
+      <li>{t('metodologia.noEsCompleta')}</li>
+      <li>{t('metodologia.noEsDatos')}</li>
+    </ul>
+
+    <h2>{t('metodologia.quienesTitulo')}</h2>
+    <p class="pending">{t('metodologia.pendienteQuienes')}</p>
+    <p>{t('metodologia.correcciones', { contacto: meta.contactoCorrecciones })}</p>
+    <p class="pending">{t('metodologia.pendienteCorrecciones')}</p>
+  </article>
+</Base>
+
+<style>
+  .methodology__formula {
+    padding: var(--space-3) var(--space-4);
+    border: var(--border-width) solid var(--color-border-subtle);
+    border-radius: var(--radius);
+    font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+    overflow-wrap: anywhere;
+  }
+
+  .methodology__example {
+    margin-bottom: var(--space-5);
+  }
+
+  .table-scroll {
+    margin-bottom: var(--space-4);
+    overflow-x: auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  caption {
+    margin-bottom: var(--space-2);
+    color: var(--color-text-muted);
+    text-align: left;
+  }
+
+  th,
+  td {
+    padding: var(--space-2) var(--space-3);
+    border: var(--border-width) solid var(--color-border-subtle);
+    text-align: left;
+  }
+
+  thead th,
+  tfoot th,
+  tfoot td {
+    font-weight: var(--font-weight-bold);
+  }
+
+  td {
+    font-variant-numeric: tabular-nums;
+  }
+
+  td:last-child {
+    white-space: nowrap;
+  }
+
+  /* Phones: four columns fit without horizontal scrolling. */
+  @media (max-width: 30rem) {
+    th,
+    td {
+      padding: var(--space-2) var(--space-1);
+      font-size: var(--font-size-sm);
+    }
+  }
+
+  /* Placeholders for the project owner: visibly marked, never mistaken for final text. */
+  .pending {
+    padding: var(--space-2) var(--space-3);
+    border: 2px dashed var(--color-text);
+    font-weight: var(--font-weight-bold);
+  }
+</style>

@@ -171,6 +171,16 @@ Listado de partidos (tarea 2.2):
 - Se listan los **partidos** (no las coaliciones); cada tarjeta dice dónde se presenta en solitario y en qué coaliciones y provincias. Con 26 o más circunscripciones se enumeran las excepciones («todas salvo Ceuta y Melilla»).
 - El filtro por circunscripción conserva el orden barajado y muestra los partidos presentes allí solos o en coalición, con el recuento en una región `aria-live`.
 
+Metodología (tarea 2.3):
+- Los textos están en `es.json` (`metodologia.*`), no en Markdown, para poder interpolar umbrales de `meta.json` y resultados del ejemplo.
+- La tabla 3×3 y el ejemplo resuelto se calculan en el build con `scoreEntity`; un e2e compara el ejemplo con `affinity.ts` y comprueba que la página no lleva `<script>` y que los encabezados no saltan niveles.
+- Los `[PENDIENTE: …]` se muestran con borde discontinuo para que nunca pasen por texto definitivo. **Pendientes para el responsable del proyecto:**
+  1. Quién determina las posiciones, cómo se revisan, qué fuente prevalece si programa y votaciones no coinciden y fecha de corte.
+  2. Cómo se eligieron las afirmaciones y los temas.
+  3. Qué candidaturas se incluyen y con qué criterio.
+  4. Quién está detrás del proyecto, financiación e independencia.
+  5. Plazo de respuesta a correcciones y cómo se publican.
+
 ---
 
 ## Fase 0 — Cimientos (2–3 nov)
@@ -402,7 +412,7 @@ Listado de partidos (tarea 2.2):
   - El orden cambia entre recargas.
   - Todas las tarjetas son idénticas en estilo.
 
-### [ ] 2.3 · Página de metodología
+### [x] 2.3 · Página de metodología
 - **Modelo:** Opus · **Esfuerzo:** medio · **Requiere:** 1.1
 - **Ficheros:** `src/pages/metodologia.astro`, `src/i18n/es.json` o `src/content/es/metodologia.md`.
 - **Qué hacer:**
