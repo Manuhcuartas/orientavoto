@@ -127,6 +127,13 @@ Base visual e i18n (tarea 1.3):
 - El banner de datos ficticios va arriba en todas las páginas pero **no es `sticky`**: ocuparía altura en móvil y chocaría con el criterio de la 1.5 (responder sin scroll a 375×812). Va invertido (blanco sobre casi negro) para destacar sin color.
 - Los enlaces del menú llevan barra final (`/partidos/`) porque Cloudflare Pages sirve los directorios así y se evita una redirección. La página actual se marca con `aria-current` (subrayado + negrita, no color).
 
+Cuestionario (tarea 1.4):
+- **Las islas reciben los datos como props**, ya parseados en el build (`cuestionario.astro` → `Quiz`). Así el JS del cliente no incluye Zod ni los JSON en bruto: hoy son ~12,6 KB gzip en total. Las tareas 1.5–2.1 deben seguir el mismo patrón (pasar afirmaciones y papeletas como props, no importar `data.ts` en un `.tsx`).
+- El selector arranca en «Elige una opción» (deshabilitada). «Prefiero no indicarla» es una opción explícita justo debajo, para que nadie acabe sin provincia sin haberlo decidido. Si se pulsa «Continuar» sin elegir, aparece un error en texto (`role="alert"`, `aria-invalid`) y el foco vuelve al selector.
+- Al cambiar de paso, el foco va al `<h1>` del paso nuevo (con `tabindex="-1"`); en la carga inicial no se mueve. Cada paso tiene su propio `<h1>`.
+- Los estilos compartidos `.button`, `.button--secondary`, `.field`, `.field__hint`, `.field__error` y `.prose` están en `base.css`.
+- El paso de afirmaciones es un marcador provisional (texto y botón «Anterior») que sustituye la 1.5.
+
 ---
 
 ## Fase 0 — Cimientos (2–3 nov)
@@ -270,7 +277,7 @@ Base visual e i18n (tarea 1.3):
   - A 320 y 375 px no hay scroll horizontal.
   - Navegación con Tab en orden lógico y con foco visible.
 
-### [ ] 1.4 · Inicio, página del cuestionario y selector de circunscripción
+### [x] 1.4 · Inicio, página del cuestionario y selector de circunscripción
 - **Modelo:** Sonnet · **Esfuerzo:** medio · **Requiere:** 1.2, 1.3
 - **Ficheros:** `src/pages/index.astro`, `src/pages/cuestionario.astro`, `src/components/Quiz.tsx` (máquina de pasos: provincia → afirmaciones → resultados → desglose), `src/components/ProvinceStep.tsx`.
 - **Qué hacer:**

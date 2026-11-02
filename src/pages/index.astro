@@ -1,9 +1,39 @@
 ---
-// Página provisional (tarea 0.1), ya con el layout común (tarea 1.3). Se sustituye en la tarea 1.4.
+// Home: static HTML, no island JS.
 import Base from '../layouts/Base.astro';
-import { t } from '../i18n';
+import { createTranslator } from '../i18n';
+import { dataset } from '../lib/data';
+
+const t = createTranslator(Astro.currentLocale);
+const { meta, statements } = dataset;
 ---
 
-<Base>
-  <h1>{t('sitio.nombre')}</h1>
+<Base description={t('inicio.titulo')}>
+  <div class="prose">
+    <p class="home__election">{meta.eleccion.es}</p>
+    <h1>{t('inicio.titulo')}</h1>
+    <p>{t('inicio.descripcion', { numero: statements.length })}</p>
+
+    <h2>{t('inicio.caracteristicasTitulo')}</h2>
+    <ul>
+      <li>{t('inicio.duracion')}</li>
+      <li>{t('inicio.anonimo')}</li>
+      <li>{t('inicio.sinRecomendaciones')}</li>
+    </ul>
+
+    <a class="button home__start" href="/cuestionario/">{t('inicio.empezar')}</a>
+  </div>
 </Base>
+
+<style>
+  .home__election {
+    margin-bottom: var(--space-2);
+    color: var(--color-text-muted);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .home__start {
+    margin-top: var(--space-2);
+    min-width: 12rem;
+  }
+</style>

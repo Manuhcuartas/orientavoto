@@ -18,5 +18,33 @@
     "descripcion": "Herramienta independiente de orientación. No recomienda el voto ni guarda tus respuestas.",
     "datos": "Datos: versión {version}, actualizados el {fecha}.",
     "correcciones": "Correcciones: {contacto}"
+  },
+  "inicio": {
+    "titulo": "Compara tus opiniones con las candidaturas",
+    "descripcion": "Responde a {numero} afirmaciones sobre temas políticos y mira cuánto coinciden tus respuestas con las posiciones de cada candidatura de tu circunscripción, con el desglose y las fuentes de cada posición.",
+    "caracteristicasTitulo": "Antes de empezar",
+    "duracion": "Te llevará unos 5 minutos.",
+    "anonimo": "Es anónimo: tus respuestas no salen de tu navegador, no se guardan y desaparecen al cerrar o recargar la página.",
+    "sinRecomendaciones": "No recomienda el voto: muestra coincidencias, no a quién votar.",
+    "empezar": "Empezar"
+  },
+  "cuestionario": {
+    "titulo": "Cuestionario",
+    "sinJs": "El cuestionario necesita JavaScript para calcular los resultados en tu navegador. Actívalo para continuar; tus respuestas nunca se envían a ningún sitio.",
+    "continuar": "Continuar",
+    "anterior": "Anterior"
+  },
+  "provincia": {
+    "titulo": "¿Dónde votas?",
+    "ayuda": "Así te mostramos las candidaturas que aparecen en tu papeleta. Este dato no se guarda ni se envía.",
+    "etiqueta": "Circunscripción (provincia)",
+    "placeholder": "Elige una opción",
+    "ninguna": "Prefiero no indicarla",
+    "ningunaAyuda": "Si prefieres no indicarla, verás solo los partidos que se presentan en toda España.",
+    "error": "Elige tu circunscripción o «Prefiero no indicarla»."
+  },
+  "afirmaciones": {
+    "provisional": "Afirmaciones",
+    "provisionalTexto": "Este paso se completa en la siguiente tarea. Circunscripción elegida: {provincia}."
   }
 }
