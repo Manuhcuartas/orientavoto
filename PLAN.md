@@ -102,6 +102,11 @@ Dataset ficticio (tarea 0.3), datos útiles para los tests de otras tareas:
 - Overrides: `coalicion-a-x` en a03 y a10; `coalicion-b-y` en a05 y a18 (siempre distintos de la postura heredada).
 - Siglas ficticias: PFA…PFF, PRFX, PRFY, CFAX, CFBY. Afirmaciones con explicación: a01, a03, a06, a08, a11, a13, a16, a18, a21, a23. Las más largas (~242 caracteres): a04, a10, a14, a20, a24.
 
+Validación (tarea 0.4):
+- `validateDataset` recibe los JSON en bruto (`RawDataset`) para poder informar también de los fallos de esquema; leer los ficheros es cosa del CLI. Si un fichero no pasa el esquema, se omiten las reglas cruzadas que dependen de él para no generar ruido.
+- Errores añadidos al listado de la tarea: `entidad` distinta del nombre del fichero, fichero de posiciones de una entidad inexistente, posición sobre una afirmación inexistente (en cualquier fichero, no solo coaliciones), id compartido entre partido y coalición, afirmación repetida en un fichero, candidatura repetida en una circunscripción y falta de alguna de las 52 en `circunscripciones.json`.
+- El aviso de cobertura solo se calcula para entidades que aparecen en `candidaturas.json` (las coaliciones, con sus overrides sobre el partido de referencia). Con el dataset ficticio avisa de E (72 %) y F (40 %).
+
 ---
 
 ## Fase 0 — Cimientos (2–3 nov)
@@ -152,7 +157,7 @@ Dataset ficticio (tarea 0.3), datos útiles para los tests de otras tareas:
   - Ningún nombre de partido real ni texto político real.
   - Todos los nombres y textos llevan «ficticio/a» o «ejemplo».
 
-### [ ] 0.4 · Script de validación de datos
+### [x] 0.4 · Script de validación de datos
 - **Modelo:** Sonnet · **Esfuerzo:** medio · **Requiere:** 0.3
 - **Ficheros:** `src/data/validate.ts` (función pura `validateDataset(dataset, { production }) → { errors, warnings }`), `scripts/validate.ts` (CLI), `tests/unit/validate.test.ts`.
 - **Errores (bloquean):**
