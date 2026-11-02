@@ -26,8 +26,19 @@ export type Params = Readonly<Record<string, string | number>>;
 
 export const defaultLocale = 'es';
 
-/** Locales with a UI catalog. Keep in sync with `i18n.locales` in astro.config.mjs. */
+/** Locales with a UI catalog. Keep in sync with `i18n.locales` in astro.config.mjs (see docs/IDIOMAS.md). */
 export const catalogs: Readonly<Record<string, Catalog>> = { es };
+
+export const locales: readonly string[] = Object.keys(catalogs);
+
+/**
+ * Picks a content text (`{ es, … }` maps in data/) for a locale, falling back to `es`.
+ * Today data/ only has `es`; when a locale is added to the schema, pages use this
+ * instead of reading `.es` directly.
+ */
+export function localize(text: Readonly<{ es: string } & Partial<Record<string, string>>>, locale: string | undefined): string {
+  return (locale && text[locale]) || text.es;
+}
 
 /** Thrown in dev and tests; in production the key itself is shown instead of breaking the page. */
 const strictMissingKeys = import.meta.env.DEV || import.meta.env.MODE === 'test';

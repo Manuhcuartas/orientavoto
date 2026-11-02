@@ -194,6 +194,11 @@ Botón «atrás» (tarea 2.5):
 - Un hash en la primera carga (recarga o enlace pegado) se limpia: no hay estado que mostrar y se empieza en la provincia.
 - «Anterior» también añade una entrada al historial (no hace `history.back()`), así que el «atrás» del navegador siempre deshace el último paso visto.
 
+Preparación multiidioma (tarea 2.6):
+- Test «no hard-coded visible text» sobre `src/components`, `src/layouts` y `src/pages`: los `.tsx` se analizan con el compilador de TypeScript (texto JSX y atributos `aria-label`, `alt`, `title`, `placeholder`); los `.astro`, con una expresión regular tras quitar frontmatter, estilos y comentarios. Se permiten iconos y puntuación, no palabras.
+- `src/i18n/index.ts` exporta `locales` y `localize(texto, locale)` (contenido de `data/` con caída a `es`). Las páginas aún leen `.es` directamente; el cambio a `localize` es un paso de `docs/IDIOMAS.md`.
+- Comprobado con un experimento (revertido): un envoltorio `src/pages/ca/privacidad.astro` que importa la página en castellano genera `/ca/privacidad/` con `<html lang="ca">`. Los enlaces del menú necesitarán `getRelativeLocaleUrl`.
+
 ---
 
 ## Fase 0 — Cimientos (2–3 nov)
@@ -468,7 +473,7 @@ Botón «atrás» (tarea 2.5):
   - El «atrás» del navegador retrocede de paso.
   - La URL nunca contiene respuestas.
 
-### [ ] 2.6 · Preparación multiidioma
+### [x] 2.6 · Preparación multiidioma
 - **Modelo:** Sonnet · **Esfuerzo:** bajo · **Requiere:** 1.3, 2.3
 - **Ficheros:** `src/i18n/index.ts`, `tests/unit/i18n.test.ts`, `docs/IDIOMAS.md`.
 - **Qué hacer:**
