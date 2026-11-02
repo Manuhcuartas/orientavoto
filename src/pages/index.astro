@@ -1,15 +1,9 @@
 ---
-// Página provisional (tarea 0.1). Se sustituye en la tarea 1.4.
+// Página provisional (tarea 0.1), ya con el layout común (tarea 1.3). Se sustituye en la tarea 1.4.
+import Base from '../layouts/Base.astro';
+import { t } from '../i18n';
 ---
 
-<html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Orientavoto</title>
-  </head>
-  <body>
-    <h1>Orientavoto</h1>
-    <p>Página provisional.</p>
-  </body>
-</html>
+<Base>
+  <h1>{t('sitio.nombre')}</h1>
+</Base>

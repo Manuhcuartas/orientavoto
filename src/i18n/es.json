@@ -1,0 +1,22 @@
+{
+  "sitio": {
+    "nombre": "Orientavoto",
+    "tituloPagina": "{titulo} · Orientavoto",
+    "saltarAlContenido": "Saltar al contenido"
+  },
+  "nav": {
+    "etiqueta": "Principal",
+    "inicio": "Inicio",
+    "partidos": "Partidos",
+    "metodologia": "Metodología",
+    "privacidad": "Privacidad"
+  },
+  "banner": {
+    "ficticio": "DATOS FICTICIOS — NO USAR PARA DECIDIR EL VOTO"
+  },
+  "pie": {
+    "descripcion": "Herramienta independiente de orientación. No recomienda el voto ni guarda tus respuestas.",
+    "datos": "Datos: versión {version}, actualizados el {fecha}.",
+    "correcciones": "Correcciones: {contacto}"
+  }
+}

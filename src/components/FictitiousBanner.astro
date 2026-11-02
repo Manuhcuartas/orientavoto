@@ -1,0 +1,28 @@
+---
+// Shown on every page while `meta.ficticio` is true. Inverted (white on near-black)
+// so it stands out without using colour.
+import { createTranslator } from '../i18n';
+import { dataset } from '../lib/data';
+
+const t = createTranslator(Astro.currentLocale);
+---
+
+{
+  dataset.meta.ficticio && (
+    <p class="fictitious-banner" role="note">
+      {t('banner.ficticio')}
+    </p>
+  )
+}
+
+<style>
+  .fictitious-banner {
+    margin: 0;
+    padding: var(--space-2) var(--gutter);
+    background: var(--color-inverse);
+    color: var(--color-on-inverse);
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+    letter-spacing: 0.02em;
+  }
+</style>

@@ -121,6 +121,12 @@ Candidaturas (tarea 1.2):
 - Sin provincia salen **todos** los partidos estatales de `partidos.json`, sin mirar dónde se presentan.
 - El PRNG con semilla para tests está en `tests/unit/helpers/rng.ts`.
 
+Base visual e i18n (tarea 1.3):
+- `es.json` es **anidado** y las claves se usan con puntos (`t('nav.inicio')`). `MessageKey` se deriva del JSON, así que una clave inexistente es un error de tipos; en tiempo de ejecución lanza en dev y tests y en producción muestra la clave.
+- `t` usa el idioma por defecto; en páginas con idioma, `createTranslator(Astro.currentLocale)`. Para añadir un idioma: su JSON en `src/i18n/` y registrarlo en `catalogs` y en `astro.config.mjs` (lo detalla la 2.6).
+- El banner de datos ficticios va arriba en todas las páginas pero **no es `sticky`**: ocuparía altura en móvil y chocaría con el criterio de la 1.5 (responder sin scroll a 375×812). Va invertido (blanco sobre casi negro) para destacar sin color.
+- Los enlaces del menú llevan barra final (`/partidos/`) porque Cloudflare Pages sirve los directorios así y se evita una redirección. La página actual se marca con `aria-current` (subrayado + negrita, no color).
+
 ---
 
 ## Fase 0 — Cimientos (2–3 nov)
@@ -249,7 +255,7 @@ Candidaturas (tarea 1.2):
   - Ceuta no incluye a D.
   - El barajado es una permutación, no muta la entrada y con un rng con semilla da un resultado reproducible.
 
-### [ ] 1.3 · Base visual, i18n y layout
+### [x] 1.3 · Base visual, i18n y layout
 - **Modelo:** Sonnet · **Esfuerzo:** medio · **Requiere:** 0.1
 - **Ficheros:** `src/styles/tokens.css`, `src/styles/base.css`, `src/i18n/es.json`, `src/i18n/index.ts`, `src/layouts/Base.astro`, `src/components/FictitiousBanner.astro`, `tests/unit/i18n.test.ts`.
 - **Qué hacer:**

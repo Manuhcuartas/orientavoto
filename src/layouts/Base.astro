@@ -1,0 +1,77 @@
+---
+// Shared page shell: <html lang>, header with navigation, fictitious-data banner and footer.
+import '../styles/tokens.css';
+import '../styles/base.css';
+import FictitiousBanner from '../components/FictitiousBanner.astro';
+import { createTranslator, defaultLocale, type MessageKey } from '../i18n';
+import { dataset } from '../lib/data';
+
+interface Props {
+  /** Page title; the site name is appended. Omit on the home page. */
+  title?: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+const locale = Astro.currentLocale ?? defaultLocale;
+const t = createTranslator(locale);
+
+const nav: { href: string; label: MessageKey }[] = [
+  { href: '/', label: 'nav.inicio' },
+  { href: '/partidos/', label: 'nav.partidos' },
+  { href: '/metodologia/', label: 'nav.metodologia' },
+  { href: '/privacidad/', label: 'nav.privacidad' },
+];
+const withSlash = (path: string) => (path.endsWith('/') ? path : `${path}/`);
+const current = withSlash(Astro.url.pathname);
+
+const { meta } = dataset;
+const updated = new Intl.DateTimeFormat(locale, { dateStyle: 'long', timeZone: 'UTC' }).format(
+  new Date(`${meta.actualizado}T00:00:00Z`),
+);
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title ? t('sitio.tituloPagina', { titulo: title }) : t('sitio.nombre')}</title>
+    {description && <meta name="description" content={description} />}
+    <meta name="referrer" content="no-referrer" />
+  </head>
+  <body>
+    <a class="skip-link visually-hidden" href="#contenido">{t('sitio.saltarAlContenido')}</a>
+    <FictitiousBanner />
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="site-name" href="/">{t('sitio.nombre')}</a>
+        <nav class="site-nav" aria-label={t('nav.etiqueta')}>
+          <ul>
+            {
+              nav.map(({ href, label }) => (
+                <li>
+                  <a href={href} aria-current={current === href ? 'page' : undefined}>
+                    {t(label)}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="contenido" class="site-main">
+      <div class="container">
+        <slot />
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <p>{t('pie.descripcion')}</p>
+        <p>{t('pie.datos', { version: meta.version, fecha: updated })}</p>
+        <p>{t('pie.correcciones', { contacto: meta.contactoCorrecciones })}</p>
+      </div>
+    </footer>
+  </body>
+</html>
