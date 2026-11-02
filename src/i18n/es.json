@@ -76,8 +76,28 @@
     "volverAEmpezar": "Volver a empezar"
   },
   "desglose": {
-    "provisional": "Desglose",
-    "provisionalTexto": "Este paso se completa en la tarea 2.1.",
+    "titulo": "Desglose por afirmación",
+    "intro": "Para cada afirmación, tu respuesta y la posición de cada candidatura, con su justificación y sus fuentes. Las candidaturas aparecen en orden aleatorio.",
+    "tuRespuesta": "Tu respuesta: {respuesta}",
+    "saltada": "Saltada",
+    "importante": "Importante para ti",
+    "sinJustificacion": "Sin justificación.",
+    "propia": "Posición propia de la coalición.",
+    "heredada": "Posición heredada de {partido}.",
+    "fuentes": "Fuentes",
     "volver": "Volver a los resultados"
+  },
+  "posicion": {
+    "a_favor": "A favor",
+    "neutral": "Neutral",
+    "en_contra": "En contra",
+    "sin_posicion": "Sin posición conocida"
+  },
+  "fuente": {
+    "programa_electoral": "Programa electoral",
+    "votacion_congreso": "Votación en el Congreso",
+    "declaracion_publica": "Declaración pública",
+    "otro": "Otra fuente",
+    "nuevaPestana": "(se abre en otra pestaña)"
   }
 }

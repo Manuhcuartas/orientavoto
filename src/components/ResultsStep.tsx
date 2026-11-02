@@ -1,8 +1,19 @@
+import type { Stance } from '../data/schema';
 import type { Translate } from '../i18n';
-import type { InsufficientEntity, PositionMap, RankedEntity, Ranking } from '../lib/affinity';
+import type { InsufficientEntity, RankedEntity, Ranking } from '../lib/affinity';
 import { PartyBadge } from './PartyBadge';
+import type { SourceView } from './SourceList';
 
-/** A ballot entity as the island receives it: texts localized, positions reduced to the stance. */
+/** An effective position as the island receives it (texts localized). */
+export interface PositionView {
+  posicion: Stance;
+  justificacion: string;
+  fuentes: SourceView[];
+  /** `heredada` when a coalition takes it from its reference party. */
+  origen: 'propia' | 'heredada';
+}
+
+/** A ballot entity as the island receives it, texts localized. */
 export interface ResultEntity {
   id: string;
   tipo: 'partido' | 'coalicion';
@@ -11,7 +22,10 @@ export interface ResultEntity {
   color: string | undefined;
   /** Coalitions: names of the included parties. Parties: empty. */
   incluye: string[];
-  positions: PositionMap;
+  /** Coalitions: name of the party whose positions it inherits. */
+  referencia?: string;
+  /** Effective positions by statement id. */
+  positions: Readonly<Partial<Record<string, PositionView>>>;
 }
 
 interface Props {

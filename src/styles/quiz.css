@@ -256,3 +256,114 @@
   gap: var(--space-3);
   align-items: center;
 }
+
+/* --- Breakdown ----------------------------------------------------------- */
+
+.breakdown {
+  max-width: var(--width-content);
+}
+
+.breakdown__item {
+  border-top: var(--border-width) solid var(--color-border-subtle);
+}
+
+.breakdown__item:last-of-type {
+  border-bottom: var(--border-width) solid var(--color-border-subtle);
+}
+
+.breakdown__item > summary {
+  display: block;
+  min-height: var(--tap-min);
+  padding-block: var(--space-3);
+  cursor: pointer;
+  list-style: none;
+}
+
+.breakdown__item > summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Open/closed marker as text, not colour. */
+.breakdown__item > summary .breakdown__statement::before {
+  content: '▸ ';
+}
+
+.breakdown__item[open] > summary .breakdown__statement::before {
+  content: '▾ ';
+}
+
+.breakdown__statement {
+  margin: 0;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height);
+}
+
+.breakdown__answer {
+  margin: var(--space-1) 0 0;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.breakdown__entities {
+  margin: 0;
+  padding: 0 0 var(--space-4);
+  list-style: none;
+}
+
+.breakdown__entity {
+  padding: var(--space-4) 0 var(--space-2) var(--space-3);
+  border-left: 2px solid var(--color-border-subtle);
+}
+
+.breakdown__entity + .breakdown__entity {
+  margin-top: var(--space-2);
+}
+
+.breakdown__entity p {
+  margin-bottom: var(--space-2);
+}
+
+.breakdown__stance {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: var(--font-weight-bold);
+}
+
+.breakdown__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: var(--border-width) solid var(--color-text);
+  border-radius: 50%;
+  font-size: var(--font-size-sm);
+}
+
+.breakdown__footer {
+  margin-top: var(--space-5);
+}
+
+.sources {
+  margin: 0 0 var(--space-2);
+  padding-left: var(--space-4);
+  font-size: var(--font-size-sm);
+}
+
+.sources li + li {
+  margin-top: var(--space-2);
+}
+
+.sources a {
+  display: inline-block;
+  padding-block: var(--space-1);
+}
+
+.sources__type {
+  font-weight: var(--font-weight-bold);
+}
+
+.sources__date {
+  color: var(--color-text-muted);
+}

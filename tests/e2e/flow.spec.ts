@@ -108,3 +108,67 @@ test.describe('quiz flow', () => {
     expect(await page.evaluate(() => [localStorage.length, sessionStorage.length])).toEqual([0, 0]);
   });
 });
+
+test.describe('breakdown', () => {
+  async function openBreakdown(page: Page, province: string) {
+    await start(page, province);
+    for (let i = 0; i < 25; i++) await answer(page, i === 2 ? 'Saltar' : 'De acuerdo', { important: i === 0 });
+    await page.getByRole('button', { name: 'Ver el desglose por afirmación' }).click();
+    await expect(page.getByRole('heading', { level: 1, name: 'Desglose por afirmación' })).toBeFocused();
+  }
+
+  test('shows the answer, every party with stance, justification and safe source links', async ({ page }) => {
+    await openBreakdown(page, 'Huesca');
+    const items = page.locator('details.breakdown__item');
+    await expect(items).toHaveCount(25);
+
+    const first = items.nth(0);
+    await first.locator('summary').click();
+    await expect(first.getByText('Tu respuesta: De acuerdo · ★ Importante para ti')).toBeVisible();
+    await expect(first.locator('.breakdown__entity')).toHaveCount(6);
+    await expect(first.locator('.breakdown__stance').first()).toHaveText(/^(✓|=|✗|\?)(A favor|Neutral|En contra|Sin posición conocida)$/);
+
+    await expect(items.nth(2).locator('summary')).toContainText('Tu respuesta: Saltada');
+
+    // a03 is overridden by the coalition; a01 is inherited from partido-a.
+    await items.nth(2).locator('summary').click();
+    const coalitionOn = (item: number) => items.nth(item).locator('.breakdown__entity', { hasText: 'CFAX' });
+    await expect(coalitionOn(2)).toContainText('Posición propia de la coalición.');
+    await expect(coalitionOn(0)).toContainText('Posición heredada de Partido A (ficticio).');
+
+    for (let i = 0; i < 25; i++) await items.nth(i).evaluate((d) => ((d as HTMLDetailsElement).open = true));
+    const links = await page.locator('.sources a').evaluateAll((as) =>
+      as.map((a) => ({ href: a.getAttribute('href'), rel: a.getAttribute('rel'), target: a.getAttribute('target'), sr: a.querySelector('.visually-hidden')?.textContent })),
+    );
+    expect(links.length).toBeGreaterThan(100);
+    for (const link of links) {
+      expect(link.href).toMatch(/^https:\/\//);
+      expect(link.rel).toBe('noopener noreferrer');
+      expect(link.target).toBe('_blank');
+      expect(link.sr).toContain('(se abre en otra pestaña)');
+    }
+  });
+
+  test('party order is shuffled per visit (at least 2 orders in 5 loads)', async ({ page }) => {
+    const orders = new Set<string>();
+    for (let visit = 0; visit < 5; visit++) {
+      await openBreakdown(page, 'Madrid');
+      const first = page.locator('details.breakdown__item').first();
+      await first.locator('summary').click();
+      const order = await first.locator('.party-badge').allTextContents();
+      // Same order in every statement within the visit.
+      const last = page.locator('details.breakdown__item').last();
+      await last.locator('summary').click();
+      expect(await last.locator('.party-badge').allTextContents()).toEqual(order);
+      orders.add(order.join(','));
+    }
+    expect(orders.size).toBeGreaterThanOrEqual(2);
+  });
+
+  test('no horizontal scroll at 320 px with every statement open', async ({ page }) => {
+    await page.setViewportSize({ width: 320, height: 640 });
+    await openBreakdown(page, 'Huesca');
+    await page.locator('details.breakdown__item').evaluateAll((ds) => ds.forEach((d) => ((d as HTMLDetailsElement).open = true)));
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(320);
+  });
+});

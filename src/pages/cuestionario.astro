@@ -11,6 +11,8 @@ const locale = Astro.currentLocale ?? defaultLocale;
 const t = createTranslator(locale);
 
 const collator = new Intl.Collator(locale);
+const dateFormat = new Intl.DateTimeFormat(locale, { dateStyle: 'long', timeZone: 'UTC' });
+const formatDate = (iso: string) => dateFormat.format(new Date(`${iso}T00:00:00Z`));
 const constituencies = dataset.constituencies
   .map((c) => ({ codigo: c.codigo, nombre: c.nombre.es }))
   .sort((a, b) => collator.compare(a.nombre, b.nombre));
@@ -23,7 +25,7 @@ const statements = dataset.statements.map((s) => ({
 }));
 
 // Ballots resolved at build time. Entities are shared across constituencies, so they
-// travel once (by id) with their positions reduced to the stance the score needs.
+// travel once (by id) with their effective positions, texts localized.
 const entities: Record<string, ResultEntity> = {};
 const toIds = (ballot: BallotEntity[]) =>
   ballot.map((e) => {
@@ -34,8 +36,28 @@ const toIds = (ballot: BallotEntity[]) =>
       siglas: e.siglas,
       color: e.color,
       incluye: e.incluye.map((p) => p.nombre.es),
+      ...(e.referencia && { referencia: e.referencia.nombre.es }),
       positions: Object.fromEntries(
-        Object.entries(e.positions).flatMap(([id, p]) => (p ? [[id, { posicion: p.posicion }]] : [])),
+        Object.entries(e.positions).flatMap(([id, p]) =>
+          p
+            ? [
+                [
+                  id,
+                  {
+                    posicion: p.posicion,
+                    justificacion: p.justificacion.es.trim(),
+                    origen: p.origen,
+                    fuentes: p.fuentes.map((f) => ({
+                      url: f.url,
+                      tipo: f.tipo,
+                      titulo: f.titulo,
+                      ...(f.fecha && { fecha: formatDate(f.fecha) }),
+                    })),
+                  },
+                ],
+              ]
+            : [],
+        ),
       ),
     };
     return e.id;

@@ -157,6 +157,14 @@ E2E (tarea 1.7):
 - Playwright prueba **el build de producción** (`astro build` + `astro preview` en el puerto 4400), nunca el servidor de desarrollo. En local reutiliza un servidor ya levantado en ese puerto.
 - El caso «saltadas e importantes» reutiliza el juego de respuestas calculado a mano de `tests/unit/results.test.ts`, así que los porcentajes se comprueban de punta a punta.
 - En CI, el job `e2e` depende de `check`, instala Chromium con `--with-deps` y sube `playwright-report/` y `test-results/` solo si falla.
+- `playwright.config.ts` arranca el preview con `exec … astro preview --ignore-lock` y `reuseExistingServer: false`: Astro 7 manda `preview` a segundo plano cuando detecta un agente de IA y dejaba procesos huérfanos en el puerto que servían un build antiguo.
+
+Desglose (tarea 2.1):
+- `entities` lleva ya las **posiciones completas** (justificación recortada, fuentes con fecha formateada en el build y `origen`) y, en coaliciones, `referencia` (nombre del partido del que heredan). El HTML del cuestionario pasa a ~123 KB sin comprimir / ~11 KB gzip con los datos ficticios; con datos reales más largos habrá que vigilarlo en la 3.4.
+- Orden de partidos: `shuffle(ballot)` con `useMemo` sobre la papeleta en `Quiz`: una vez por visita y provincia, igual en todas las afirmaciones.
+- Cada afirmación es un `<details>` cuyo `<summary>` contiene un `<h2>` con el texto y «Tu respuesta: …» (+ «★ Importante para ti»). El marcador abierto/cerrado es texto (▸/▾).
+- Posición = icono (✓ = ✗ ?) **más** texto; en coaliciones, «Posición propia de la coalición» o «Posición heredada de …». Justificación vacía → «Sin justificación.».
+- Enlaces de fuentes: `target="_blank" rel="noopener noreferrer"` y «(se abre en otra pestaña)» oculto para lectores de pantalla. Los e2e comprueban `https`, `rel`, `target`, el orden en 5 visitas y la ausencia de scroll a 320 px.
 
 ---
 
@@ -363,7 +371,7 @@ E2E (tarea 1.7):
 
 ## Fase 2 — Transparencia (10–12 nov) · Hito: todas las funciones completas
 
-### [ ] 2.1 · Desglose por afirmación con fuentes
+### [x] 2.1 · Desglose por afirmación con fuentes
 - **Modelo:** Sonnet · **Esfuerzo:** medio · **Requiere:** 1.6
 - **Ficheros:** `src/components/BreakdownStep.tsx`, `src/components/SourceList.tsx`.
 - **Qué hacer:** por cada afirmación (plegable con `<details>`):

@@ -20,9 +20,12 @@ export default defineConfig({
     { name: 'desktop', use: { ...devices['Desktop Chrome'], viewport: { width: 1280, height: 800 } } },
   ],
   webServer: {
-    command: `npm run build && npx astro preview --port ${PORT}`,
+    // `exec` so the preview server is the process Playwright stops. `--ignore-lock` keeps it in the
+    // foreground: Astro otherwise backgrounds `preview` when it detects an AI agent, leaving an orphan.
+    command: `npm run build && exec ./node_modules/.bin/astro preview --port ${PORT} --ignore-lock`,
     url: `http://localhost:${PORT}`,
-    reuseExistingServer: !process.env.CI,
+    // Always a fresh build: reusing a server left on the port would test stale code.
+    reuseExistingServer: false,
     timeout: 120_000,
     stdout: 'ignore',
   },

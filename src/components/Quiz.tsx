@@ -9,7 +9,8 @@
 import { useEffect, useMemo, useRef, useState } from 'preact/hooks';
 import { createTranslator } from '../i18n';
 import { answersFrom, rankEntities, type AnswerValue, type RankingConfig } from '../lib/affinity';
-import { cryptoRng } from '../lib/shuffle';
+import { cryptoRng, shuffle } from '../lib/shuffle';
+import { BreakdownStep } from './BreakdownStep';
 import { ProvinceStep, type ConstituencyOption } from './ProvinceStep';
 import { ResultsStep, type ResultEntity } from './ResultsStep';
 import { StatementStep, type StatementView } from './StatementStep';
@@ -49,11 +50,16 @@ export default function Quiz({ locale, constituencies, statements, entities, bal
 
   // Computed once per set of answers, so ties keep their random order while the
   // user moves between results and breakdown, and get a new one on every visit.
-  const ranking = useMemo(() => {
+  const ballot = useMemo(() => {
     const ids = constituency ? (ballots[constituency] ?? []) : stateWide;
-    const ballot = ids.flatMap((id) => entities[id] ?? []);
-    return rankEntities(ballot, answersFrom(values, important), config, cryptoRng);
-  }, [constituency, values, important]);
+    return ids.flatMap((id) => entities[id] ?? []);
+  }, [constituency]);
+  const ranking = useMemo(
+    () => rankEntities(ballot, answersFrom(values, important), config, cryptoRng),
+    [ballot, values, important],
+  );
+  // Breakdown order: shuffled once per visit and ballot, identical in every statement.
+  const breakdownOrder = useMemo(() => shuffle(ballot), [ballot]);
 
   // On every step or statement change (not on first load), move focus to the
   // new heading and announce the position, for keyboard and screen reader users.
@@ -154,15 +160,15 @@ export default function Quiz({ locale, constituencies, statements, entities, bal
         />
       )}
 
-      {/* Placeholder until task 2.1 builds the breakdown step. */}
       {step === 'desglose' && (
-        <section>
-          <h1 tabIndex={-1}>{t('desglose.provisional')}</h1>
-          <p>{t('desglose.provisionalTexto')}</p>
-          <button type="button" class="button button--secondary" onClick={() => setStep('resultados')}>
-            {t('desglose.volver')}
-          </button>
-        </section>
+        <BreakdownStep
+          t={t}
+          statements={statements}
+          entities={breakdownOrder}
+          values={values}
+          important={important}
+          onBack={() => setStep('resultados')}
+        />
       )}
     </div>
   );
