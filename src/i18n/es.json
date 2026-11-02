@@ -44,7 +44,19 @@
     "error": "Elige tu circunscripción o «Prefiero no indicarla»."
   },
   "afirmaciones": {
-    "provisional": "Afirmaciones",
-    "provisionalTexto": "Este paso se completa en la siguiente tarea. Circunscripción elegida: {provincia}."
+    "contador": "Afirmación {actual} de {total}",
+    "tema": "Tema: {tema}",
+    "masInformacion": "Más información",
+    "respuesta": "Tu respuesta",
+    "deAcuerdo": "De acuerdo",
+    "neutral": "Neutral",
+    "enDesacuerdo": "En desacuerdo",
+    "saltar": "Saltar",
+    "importante": "Importante para mí",
+    "opciones": "Opciones de esta afirmación"
+  },
+  "resultados": {
+    "provisional": "Resultados",
+    "provisionalTexto": "Este paso se completa en la tarea 1.6. Has respondido {respondidas} de {total} afirmaciones."
   }
 }

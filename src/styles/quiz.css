@@ -1,0 +1,149 @@
+/* Quiz steps (imported by cuestionario.astro). Mobile-first, monochrome. */
+
+/* --- Statement step ------------------------------------------------------ */
+
+.statement {
+  max-width: var(--width-content);
+}
+
+.statement__top {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.statement__back {
+  flex: none;
+  padding-inline: var(--space-3);
+}
+
+.statement__meta {
+  margin: 0 0 var(--space-2);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+}
+
+/* The statement is the step's h1, but at reading size: it can be ~250 characters. */
+.statement__text {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--space-4);
+}
+
+.statement__more summary {
+  display: flex;
+  align-items: center;
+  min-height: var(--tap-min);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.statement__more p {
+  margin-top: var(--space-2);
+}
+
+/* --- Progress bar -------------------------------------------------------- */
+
+.progress {
+  flex: 1;
+  height: 0.5rem;
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.progress__fill {
+  height: 100%;
+  background: var(--color-inverse);
+}
+
+/* --- Answer bar: fixed at the bottom, in the thumb zone ------------------- */
+
+.answer-bar {
+  position: fixed;
+  inset-inline: 0;
+  bottom: 0;
+  z-index: 5;
+  padding-block: var(--space-3) calc(var(--space-3) + env(safe-area-inset-bottom, 0px));
+  border-top: var(--border-width) solid var(--color-border);
+  background: var(--color-bg);
+}
+
+.answer-bar__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  max-width: var(--width-content);
+}
+
+.answer-bar__row {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.answer-bar__row--options {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.answer-bar__row--answers > .button {
+  flex: 1 1 0;
+  min-width: 0;
+  flex-wrap: wrap;
+  padding-inline: var(--space-2);
+  text-align: center;
+}
+
+/* Not chosen: outlined. Chosen (when coming back): filled + check mark. */
+.answer-bar__row--answers > .button[aria-pressed='false'] {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* Very narrow screens (320 px): three answers in a row still fit without overflowing. */
+@media (max-width: 359px) {
+  .answer-bar .container {
+    padding-inline: var(--space-2);
+  }
+
+  .answer-bar__row {
+    gap: var(--space-1);
+  }
+
+  .answer-bar__row--answers > .button {
+    padding-inline: var(--space-1);
+    font-weight: normal;
+  }
+}
+
+.toggle,
+.link-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--tap-min);
+  padding-inline: var(--space-3);
+  border: var(--border-width) solid transparent;
+  border-radius: var(--radius);
+  background: none;
+  cursor: pointer;
+}
+
+.toggle {
+  border-color: var(--color-border);
+}
+
+.toggle[aria-pressed='true'] {
+  border-color: var(--color-inverse);
+  background: var(--color-inverse);
+  color: var(--color-on-inverse);
+  font-weight: var(--font-weight-bold);
+}
+
+.link-button {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}

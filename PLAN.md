@@ -134,6 +134,16 @@ Cuestionario (tarea 1.4):
 - Los estilos compartidos `.button`, `.button--secondary`, `.field`, `.field__hint`, `.field__error` y `.prose` están en `base.css`.
 - El paso de afirmaciones es un marcador provisional (texto y botón «Anterior») que sustituye la 1.5.
 
+Paso de afirmaciones (tarea 1.5):
+- Estado en `Quiz`: `values` (`{ [id]: -1|0|1|null }`, `null` = saltada, ausente = no alcanzada) e `important` (`{ [id]: boolean }`), por separado para que la marca de importante se conserve aunque se salte. La 1.6 los combina en el `Answers` de `affinity.ts`.
+- La **barra de respuestas es `position: fixed` abajo** en todos los tamaños. Un `ResizeObserver` pone en `body` un `padding-bottom` igual a su altura para que nunca tape contenido ni el pie, y lo quita al salir del paso.
+- La afirmación es el `<h1>` del paso, a tamaño de lectura (`--font-size-lg`); el foco va a él en cada cambio. Los `h1[tabindex="-1"]` no muestran contorno al recibir el foco por programa (no son controles).
+- Con 375×812, la afirmación más larga (a04, 241 caracteres) termina en y=486 y la barra empieza en y=665: se responde sin scroll.
+- Por debajo de 360 px la barra reduce márgenes y los botones de respuesta pasan a peso normal para que «En desacuerdo» quepa sin desbordar. La respuesta elegida se marca con relleno + ✓ + `aria-pressed`, no solo con color.
+- Los estilos del cuestionario están en `src/styles/quiz.css` (importado desde `cuestionario.astro`).
+- El aviso `beforeunload` se activa con al menos una respuesta mientras se está en provincia o afirmaciones; en resultados ya no.
+- Resultados es un marcador provisional («Has respondido X de 25») que sustituye la 1.6.
+
 ---
 
 ## Fase 0 — Cimientos (2–3 nov)
@@ -289,7 +299,7 @@ Cuestionario (tarea 1.4):
   - No se escribe nada en cookies ni en almacenamiento (comprobarlo en DevTools).
   - Inicio sin JS de isla.
 
-### [ ] 1.5 · Paso de afirmaciones
+### [x] 1.5 · Paso de afirmaciones
 - **Modelo:** Sonnet · **Esfuerzo:** alto · **Requiere:** 1.4
 - **Ficheros:** `src/components/StatementStep.tsx`, `src/components/AnswerBar.tsx`, `src/components/ProgressBar.tsx`, `src/components/Quiz.tsx`.
 - **Qué hacer:**

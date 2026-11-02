@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import Quiz from '../components/Quiz';
+import '../styles/quiz.css';
 import { createTranslator, defaultLocale } from '../i18n';
 import { dataset } from '../lib/data';
 
@@ -11,11 +12,18 @@ const collator = new Intl.Collator(locale);
 const constituencies = dataset.constituencies
   .map((c) => ({ codigo: c.codigo, nombre: c.nombre.es }))
   .sort((a, b) => collator.compare(a.nombre, b.nombre));
+
+const statements = dataset.statements.map((s) => ({
+  id: s.id,
+  texto: s.texto.es,
+  tema: s.tema.es,
+  ...(s.explicacion && { explicacion: s.explicacion.es }),
+}));
 ---
 
 <Base title={t('cuestionario.titulo')}>
   <noscript>
     <p class="field__error">{t('cuestionario.sinJs')}</p>
   </noscript>
-  <Quiz client:load locale={locale} constituencies={constituencies} />
+  <Quiz client:load locale={locale} constituencies={constituencies} statements={statements} />
 </Base>

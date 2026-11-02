@@ -80,6 +80,11 @@ textarea {
   outline-offset: var(--focus-offset);
 }
 
+/* Headings that receive focus programmatically on a step change are not controls. */
+h1[tabindex="-1"]:focus {
+  outline: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
