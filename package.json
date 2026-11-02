@@ -13,6 +13,7 @@
     "preview": "astro preview",
     "validate": "tsx scripts/validate.ts",
     "schemas": "tsx scripts/generate-schemas.ts",
+    "size": "tsx scripts/check-size.ts",
     "lint": "eslint . --quiet",
     "typecheck": "astro check",
     "test": "vitest run --reporter=dot --silent=passed-only --passWithNoTests",

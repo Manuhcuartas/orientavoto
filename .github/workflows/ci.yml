@@ -30,6 +30,8 @@ jobs:
       - run: npm test
       # build re-runs validate (without the production guard) and generates dist/.
       - run: npm run build
+      # Performance budget per page (scripts/check-size.ts).
+      - run: npm run size
 
   e2e:
     runs-on: ubuntu-latest

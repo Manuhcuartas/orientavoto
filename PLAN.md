@@ -215,6 +215,11 @@ Revisión manual de accesibilidad (tarea 3.3):
 - **Corregido:** con menos de 500 px de alto (zoom 200 % en portátil, móvil en horizontal) la barra de respuestas deja de ser `fixed` y va justo debajo del enunciado; antes tapaba un tercio de la pantalla. `AnswerBar` solo añade `padding-bottom` al `body` mientras la barra es `fixed`.
 - **Pendiente del responsable del proyecto:** VoiceOver (iOS) y TalkBack (Android) en dispositivos reales, con la lista de comprobaciones de `docs/ACCESIBILIDAD.md`.
 
+Presupuesto de rendimiento (tarea 3.4):
+- `npm run size` (`scripts/check-size.ts`) mide por página el JS que carga (siguiendo los `import` entre chunks desde `component-url`/`renderer-url`) y el HTML + CSS, en gzip. Falla si JS > 50 KB o HTML+CSS > 40 KB. Corre en CI tras el build.
+- Con los datos ficticios: cuestionario 16,9 KB JS / 13,5 KB HTML+CSS; partidos 13,7 / 7,6; inicio, metodología y privacidad 0 KB JS. El margen del cuestionario es para el contenido real (justificaciones y fuentes viajan en el HTML).
+- **Pendiente del responsable del proyecto:** Lighthouse móvil sobre la URL de vista previa de Cloudflare (≥ 95 en rendimiento y accesibilidad). Requiere el despliegue de `docs/DESPLIEGUE.md`; en Chrome: DevTools → Lighthouse → «Móvil», categorías Rendimiento y Accesibilidad.
+
 ---
 
 ## Fase 0 — Cimientos (2–3 nov)
@@ -523,7 +528,7 @@ Revisión manual de accesibilidad (tarea 3.3):
   - Las de lector de pantalla las hace el usuario.
 - **Aceptación:** checklist rellenada y cada problema corregido o listado.
 
-### [ ] 3.4 · Presupuesto de rendimiento
+### [x] 3.4 · Presupuesto de rendimiento
 - **Modelo:** Sonnet · **Esfuerzo:** medio · **Requiere:** 2.4
 - **Ficheros:** `scripts/check-size.ts`, `package.json` (script `size`), `.github/workflows/ci.yml`.
 - **Qué hacer:** un script que falla si el JS gzip de una página supera 50 KB o si CSS + HTML de una página supera 40 KB. Se ejecuta en CI.
