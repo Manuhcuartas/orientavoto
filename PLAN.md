@@ -144,6 +144,15 @@ Paso de afirmaciones (tarea 1.5):
 - El aviso `beforeunload` se activa con al menos una respuesta mientras se está en provincia o afirmaciones; en resultados ya no.
 - Resultados es un marcador provisional («Has respondido X de 25») que sustituye la 1.6.
 
+Resultados (tarea 1.6):
+- Las papeletas se resuelven en el build (`cuestionario.astro`): `entities` (cada entidad una sola vez, por id, con sus posiciones **reducidas a `posicion`**), `ballots` (ids por código INE) y `stateWide`. La 2.1 necesitará además justificación, fuentes y `origen`: hay que ampliar `entities` vigilando el tamaño del HTML (hoy 52 KB sin comprimir, 7,3 KB gzip).
+- El ranking se calcula en `Quiz` con `useMemo` sobre provincia y respuestas: los empates se barajan **una vez por visita** y conservan el orden al ir al desglose y volver.
+- `answersFrom(values, important)` (en `affinity.ts`) une el estado del cuestionario en el `Answers` del algoritmo. El juego de respuestas fijo calculado a mano está documentado en `tests/unit/results.test.ts`.
+- Cada fila: insignia (siglas + marca de color de 0,75 rem con borde), nombre, «Incluye a: …» en coaliciones, barra **gris neutra igual para todos**, porcentaje entero, «Calculado sobre X de Y afirmaciones» y aviso de cobertura si procede. La lista es `<ol>` sin números visibles; el primer puesto no tiene ningún estilo propio.
+- «Cómo se calcula» abre `/metodologia/` **en otra pestaña** (con aviso para lectores de pantalla) para no perder las respuestas, que solo viven en memoria. «Volver a empezar» borra todo el estado sin confirmación.
+- Con todo saltado, todas las candidaturas van a «No hay datos suficientes» y aparece el aviso de pocas respuestas (caso previsto en la 1.1).
+- El desglose es un marcador provisional que sustituye la 2.1.
+
 ---
 
 ## Fase 0 — Cimientos (2–3 nov)
@@ -316,7 +325,7 @@ Paso de afirmaciones (tarea 1.5):
   - Volver atrás y cambiar una respuesta actualiza el estado.
   - Comprobación visual a 375, 768 y 1280 px.
 
-### [ ] 1.6 · Pantalla de resultados
+### [x] 1.6 · Pantalla de resultados
 - **Modelo:** Sonnet · **Esfuerzo:** medio · **Requiere:** 1.1, 1.5
 - **Ficheros:** `src/components/ResultsStep.tsx`, `src/components/PartyBadge.tsx`.
 - **Qué hacer:**

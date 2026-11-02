@@ -4,6 +4,8 @@ import Quiz from '../components/Quiz';
 import '../styles/quiz.css';
 import { createTranslator, defaultLocale } from '../i18n';
 import { dataset } from '../lib/data';
+import { getBallot, type BallotEntity } from '../lib/ballot';
+import type { ResultEntity } from '../components/ResultsStep';
 
 const locale = Astro.currentLocale ?? defaultLocale;
 const t = createTranslator(locale);
@@ -19,11 +21,42 @@ const statements = dataset.statements.map((s) => ({
   tema: s.tema.es,
   ...(s.explicacion && { explicacion: s.explicacion.es }),
 }));
+
+// Ballots resolved at build time. Entities are shared across constituencies, so they
+// travel once (by id) with their positions reduced to the stance the score needs.
+const entities: Record<string, ResultEntity> = {};
+const toIds = (ballot: BallotEntity[]) =>
+  ballot.map((e) => {
+    entities[e.id] ??= {
+      id: e.id,
+      tipo: e.tipo,
+      nombre: e.nombre.es,
+      siglas: e.siglas,
+      color: e.color,
+      incluye: e.incluye.map((p) => p.nombre.es),
+      positions: Object.fromEntries(
+        Object.entries(e.positions).flatMap(([id, p]) => (p ? [[id, { posicion: p.posicion }]] : [])),
+      ),
+    };
+    return e.id;
+  });
+const ballots = Object.fromEntries(dataset.constituencies.map((c) => [c.codigo, toIds(getBallot(c.codigo))]));
+const stateWide = toIds(getBallot(null));
+const { umbralAvisoCobertura, umbralCoberturaMinima, minimoRespuestas } = dataset.meta;
 ---
 
 <Base title={t('cuestionario.titulo')}>
   <noscript>
     <p class="field__error">{t('cuestionario.sinJs')}</p>
   </noscript>
-  <Quiz client:load locale={locale} constituencies={constituencies} statements={statements} />
+  <Quiz
+    client:load
+    locale={locale}
+    constituencies={constituencies}
+    statements={statements}
+    entities={entities}
+    ballots={ballots}
+    stateWide={stateWide}
+    config={{ umbralAvisoCobertura, umbralCoberturaMinima, minimoRespuestas }}
+  />
 </Base>

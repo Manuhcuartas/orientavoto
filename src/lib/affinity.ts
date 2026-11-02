@@ -26,6 +26,21 @@ export interface Answer {
 /** User answers by statement id. A missing statement counts as skipped. */
 export type Answers = Readonly<Partial<Record<string, Answer>>>;
 
+/**
+ * Builds `Answers` from the quiz state, which keeps values and the «important»
+ * flag apart (so the flag survives skipping). Statements without a value are left out (skipped).
+ */
+export function answersFrom(
+  values: Readonly<Partial<Record<string, AnswerValue | null>>>,
+  important: Readonly<Partial<Record<string, boolean>>>,
+): Answers {
+  const answers: Record<string, Answer> = {};
+  for (const [id, value] of Object.entries(values)) {
+    if (value !== undefined) answers[id] = { value, important: important[id] ?? false };
+  }
+  return answers;
+}
+
 /** Entity stances by statement id. A missing statement counts as `sin_posicion`. */
 export type PositionMap = Readonly<Partial<Record<string, { readonly posicion: Stance }>>>;
 

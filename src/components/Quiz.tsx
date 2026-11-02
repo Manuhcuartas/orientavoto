@@ -6,10 +6,12 @@
  * Data comes in as props, already parsed at build time, so the island does not
  * bundle Zod or the raw JSON.
  */
-import { useEffect, useRef, useState } from 'preact/hooks';
+import { useEffect, useMemo, useRef, useState } from 'preact/hooks';
 import { createTranslator } from '../i18n';
-import type { AnswerValue } from '../lib/affinity';
+import { answersFrom, rankEntities, type AnswerValue, type RankingConfig } from '../lib/affinity';
+import { cryptoRng } from '../lib/shuffle';
 import { ProvinceStep, type ConstituencyOption } from './ProvinceStep';
+import { ResultsStep, type ResultEntity } from './ResultsStep';
 import { StatementStep, type StatementView } from './StatementStep';
 
 export type Step = 'provincia' | 'afirmaciones' | 'resultados' | 'desglose';
@@ -18,9 +20,16 @@ interface Props {
   locale: string;
   constituencies: readonly ConstituencyOption[];
   statements: readonly StatementView[];
+  /** Every entity that appears on some ballot, by id. */
+  entities: Readonly<Record<string, ResultEntity>>;
+  /** Entity ids on each constituency's ballot, by INE code. */
+  ballots: Readonly<Record<string, readonly string[]>>;
+  /** Entity ids shown without a constituency (state-wide parties). */
+  stateWide: readonly string[];
+  config: RankingConfig;
 }
 
-export default function Quiz({ locale, constituencies, statements }: Props) {
+export default function Quiz({ locale, constituencies, statements, entities, ballots, stateWide, config }: Props) {
   const t = createTranslator(locale);
   const total = statements.length;
 
@@ -37,6 +46,14 @@ export default function Quiz({ locale, constituencies, statements }: Props) {
   const [announcement, setAnnouncement] = useState('');
 
   const statement = statements[index];
+
+  // Computed once per set of answers, so ties keep their random order while the
+  // user moves between results and breakdown, and get a new one on every visit.
+  const ranking = useMemo(() => {
+    const ids = constituency ? (ballots[constituency] ?? []) : stateWide;
+    const ballot = ids.flatMap((id) => entities[id] ?? []);
+    return rankEntities(ballot, answersFrom(values, important), config, cryptoRng);
+  }, [constituency, values, important]);
 
   // On every step or statement change (not on first load), move focus to the
   // new heading and announce the position, for keyboard and screen reader users.
@@ -79,6 +96,17 @@ export default function Quiz({ locale, constituencies, statements }: Props) {
     else setStep('provincia');
   };
 
+  const restart = () => {
+    setValues({});
+    setImportant({});
+    setConstituency(undefined);
+    setIndex(0);
+    setStep('provincia');
+  };
+
+  const constituencyName =
+    constituency == null ? null : (constituencies.find((c) => c.codigo === constituency)?.nombre ?? null);
+
   return (
     <div ref={root}>
       <p class="visually-hidden" aria-live="polite">
@@ -113,18 +141,26 @@ export default function Quiz({ locale, constituencies, statements }: Props) {
         />
       )}
 
-      {/* Placeholder until task 1.6 builds the results step. */}
-      {(step === 'resultados' || step === 'desglose') && (
+      {step === 'resultados' && (
+        <ResultsStep
+          t={t}
+          locale={locale}
+          ranking={ranking}
+          constituencyName={constituencyName}
+          minimoRespuestas={config.minimoRespuestas}
+          umbralCoberturaMinima={config.umbralCoberturaMinima}
+          onBreakdown={() => setStep('desglose')}
+          onRestart={restart}
+        />
+      )}
+
+      {/* Placeholder until task 2.1 builds the breakdown step. */}
+      {step === 'desglose' && (
         <section>
-          <h1 tabIndex={-1}>{t('resultados.provisional')}</h1>
-          <p>
-            {t('resultados.provisionalTexto', {
-              respondidas: Object.values(values).filter((v) => v !== null).length,
-              total,
-            })}
-          </p>
-          <button type="button" class="button button--secondary" onClick={() => setStep('afirmaciones')}>
-            {t('cuestionario.anterior')}
+          <h1 tabIndex={-1}>{t('desglose.provisional')}</h1>
+          <p>{t('desglose.provisionalTexto')}</p>
+          <button type="button" class="button button--secondary" onClick={() => setStep('resultados')}>
+            {t('desglose.volver')}
           </button>
         </section>
       )}

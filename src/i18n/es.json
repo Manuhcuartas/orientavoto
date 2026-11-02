@@ -56,7 +56,28 @@
     "opciones": "Opciones de esta afirmación"
   },
   "resultados": {
-    "provisional": "Resultados",
-    "provisionalTexto": "Este paso se completa en la tarea 1.6. Has respondido {respondidas} de {total} afirmaciones."
+    "titulo": "Tus resultados",
+    "descargo": "Esto no es una recomendación de voto. Solo indica cuánto coinciden tus respuestas con las posiciones de cada candidatura.",
+    "circunscripcion": "Candidaturas que se presentan en {provincia}.",
+    "sinCircunscripcion": "Partidos que se presentan en toda España (no indicaste circunscripción).",
+    "rankingTitulo": "Coincidencia con cada candidatura",
+    "porcentaje": "{valor} %",
+    "porcentajeSr": "de coincidencia",
+    "incluye": "Incluye a: {partidos}",
+    "calculado": "Calculado sobre {consideradas} de {respondidas} afirmaciones.",
+    "avisoCobertura": "Aviso: solo conocemos su posición en {consideradas} de las {respondidas} afirmaciones que respondiste, así que este porcentaje es menos fiable.",
+    "avisoPocasRespuestas": "Has respondido {respondidas} afirmaciones. Con menos de {minimo}, los resultados son poco fiables.",
+    "insuficientesTitulo": "No hay datos suficientes",
+    "insuficientesTexto": "De estas candidaturas conocemos su posición en menos del {umbral} % de las afirmaciones que respondiste, así que no calculamos su coincidencia.",
+    "insuficienteDetalle": "Posición conocida en {consideradas} de {respondidas} afirmaciones.",
+    "verDesglose": "Ver el desglose por afirmación",
+    "metodologia": "Cómo se calcula",
+    "nuevaPestana": "(se abre en otra pestaña)",
+    "volverAEmpezar": "Volver a empezar"
+  },
+  "desglose": {
+    "provisional": "Desglose",
+    "provisionalTexto": "Este paso se completa en la tarea 2.1.",
+    "volver": "Volver a los resultados"
   }
 }
