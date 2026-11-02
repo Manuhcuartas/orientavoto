@@ -205,6 +205,10 @@ Pruebas visuales (tarea 3.1):
 - En CI, un paso previo ejecuta las visuales con `--update-snapshots=missing` y sube las referencias Linux como artefacto `visual-baselines-linux`. Si falta alguna (pantalla nueva), se descarga con `gh run download <id> -n visual-baselines-linux`, se revisa y se sube al repo. Las existentes nunca se sobrescriben: un cambio visual sigue fallando.
 - Para actualizar tras un cambio visual intencionado: `npm run test:e2e:update` en local (macOS) y, para Linux, borrar las `-linux.png` afectadas, subir y recoger las nuevas del artefacto.
 
+Accesibilidad automática (tarea 3.2):
+- `tests/e2e/a11y.spec.ts`: axe con `wcag2a, wcag2aa, wcag21a, wcag21aa` en las cuatro páginas estáticas y en cada estado del cuestionario (provincia, provincia con error, afirmación con explicación abierta e «importante», respuesta marcada al volver, resultados con avisos, todo saltado, desglose con todo abierto). **0 violaciones** sin cambios en los componentes.
+- Comprobado aparte que axe sí detecta violaciones inyectadas (`button-name`, `image-alt`), para que el 0 no sea un falso negativo.
+
 ---
 
 ## Fase 0 — Cimientos (2–3 nov)
@@ -498,7 +502,7 @@ Pruebas visuales (tarea 3.1):
   - Aleatoriedad determinista con `page.addInitScript` sustituyendo `crypto.getRandomValues`.
 - **Aceptación:** las capturas de referencia se suben al repo y `npm run test:e2e` es estable en 3 ejecuciones seguidas.
 
-### [ ] 3.2 · Accesibilidad automática
+### [x] 3.2 · Accesibilidad automática
 - **Modelo:** Sonnet · **Esfuerzo:** medio · **Requiere:** 2.4
 - **Ficheros:** `tests/e2e/a11y.spec.ts` y los componentes que haya que corregir.
 - **Qué hacer:** axe con las etiquetas `wcag2a, wcag2aa, wcag21a, wcag21aa` en cada página y en cada paso del cuestionario.
