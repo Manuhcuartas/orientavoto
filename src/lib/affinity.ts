@@ -10,6 +10,9 @@
  * - Ranking orders by the rounded percentage that is displayed; ties are random.
  */
 import type { Meta, Stance } from '../data/schema';
+import { shuffle, type Rng } from './shuffle';
+
+export type { Rng };
 
 /** −1 disagree, 0 neutral, +1 agree. */
 export type AnswerValue = -1 | 0 | 1;
@@ -25,9 +28,6 @@ export type Answers = Readonly<Partial<Record<string, Answer>>>;
 
 /** Entity stances by statement id. A missing statement counts as `sin_posicion`. */
 export type PositionMap = Readonly<Partial<Record<string, { readonly posicion: Stance }>>>;
-
-/** Returns a number in [0, 1), like `Math.random`. Injected so tests are deterministic. */
-export type Rng = () => number;
 
 export type RankingConfig = Pick<Meta, 'umbralAvisoCobertura' | 'umbralCoberturaMinima' | 'minimoRespuestas'>;
 
@@ -115,7 +115,7 @@ export function rankEntities<T extends { readonly positions: PositionMap }>(
 
   // Shuffle first and then sort stably: ties keep the random order and the
   // result does not depend on the input order.
-  for (const entity of shuffled(entities, rng)) {
+  for (const entity of shuffle(entities, rng)) {
     const score = scoreEntity(answers, entity.positions);
     if (score.percent === null || score.coverage < config.umbralCoberturaMinima) {
       insufficient.push({ entity, score });
@@ -135,17 +135,4 @@ export function rankEntities<T extends { readonly positions: PositionMap }>(
 
 function countAnswered(answers: Answers): number {
   return Object.values(answers).filter((a) => a && a.value !== null).length;
-}
-
-// TODO(1.2): replace with `shuffle` from `src/lib/shuffle.ts` once it exists.
-/** Fisher–Yates on a copy. */
-function shuffled<T>(items: readonly T[], rng: Rng): T[] {
-  const out = [...items];
-  for (let i = out.length - 1; i > 0; i--) {
-    const j = Math.min(i, Math.floor(rng() * (i + 1)));
-    const tmp = out[i] as T;
-    out[i] = out[j] as T;
-    out[j] = tmp;
-  }
-  return out;
 }

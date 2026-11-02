@@ -111,7 +111,15 @@ Algoritmo de afinidad (tarea 1.1):
 - La **cobertura se calcula sobre las afirmaciones respondidas** por la persona (no sobre las 25): `considered / answered`, que es el «calculado sobre X de Y». Por eso puede diferir de la cobertura del aviso de `npm run validate`, que es sobre el total.
 - Interfaz: `Answers` = `{ [idAfirmacion]: { value: -1|0|1|null, important } }` (`null` o ausente = saltada; `null` conserva la marca de importante al volver atrás). Las posiciones son `{ [idAfirmacion]: { posicion } }`, así que las entidades de `getBallot` (1.2) encajan tal cual si `positions` es un mapa por id de afirmación.
 - Si no se puede comparar ninguna afirmación (todas saltadas o sin posición), `percent` es `null` y la entidad va a `insufficient`. Con todo saltado, todas van ahí y `lowAnswerCount` es `true`; la pantalla de resultados (1.6) debe tratar ese caso.
-- Ranking: primero se baraja con `rng` y luego se ordena de forma estable por el porcentaje redondeado. `affinity.ts` lleva un Fisher–Yates privado con un `TODO(1.2)` para sustituirlo por `shuffle.ts`.
+- Ranking: primero se baraja con `rng` (`shuffle.ts`) y luego se ordena de forma estable por el porcentaje redondeado.
+
+Candidaturas (tarea 1.2):
+- `getBallot` devuelve las entidades **en el orden de los datos**; barajar o ordenar es cosa de quien lo llama (`shuffle` o `rankEntities`).
+- La lógica es pura en `resolveBallot(dataset, codigo)`; `getBallot(codigo)` la aplica al dataset embebido de `data.ts` (cargado con imports JSON e `import.meta.glob`).
+- Cada entidad lleva `incluye` (partidos de la coalición) y `referencia` (el partido del que hereda, para «heredada de …» en el desglose). Las posiciones se indexan por id de afirmación y cada una conserva justificación y fuentes además de `origen`.
+- Una coalición usa como marca el **color de su partido de referencia** (no tiene color propio en el esquema).
+- Sin provincia salen **todos** los partidos estatales de `partidos.json`, sin mirar dónde se presentan.
+- El PRNG con semilla para tests está en `tests/unit/helpers/rng.ts`.
 
 ---
 
@@ -225,7 +233,7 @@ Algoritmo de afinidad (tarea 1.1):
   - Empate en el porcentaje redondeado: el orden depende del rng, no del orden de entrada.
   - Propiedad: el resultado siempre está entre 0 y 100 y no depende del orden de las afirmaciones.
 
-### [ ] 1.2 · Barajado y resolución de candidaturas
+### [x] 1.2 · Barajado y resolución de candidaturas
 - **Modelo:** Sonnet · **Esfuerzo:** medio · **Requiere:** 0.3
 - **Ficheros:** `src/lib/shuffle.ts`, `src/lib/ballot.ts`, `src/lib/data.ts`, `tests/unit/shuffle.test.ts`, `tests/unit/ballot.test.ts`.
 - **Qué hacer:**
