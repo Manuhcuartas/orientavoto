@@ -1,4 +1,5 @@
 import { expect, test, type Page } from '@playwright/test';
+import { openQuiz } from './helpers';
 
 // Visual regression for every page and quiz step, in the three projects.
 // Randomness is made deterministic by replacing crypto.getRandomValues with a
@@ -26,7 +27,7 @@ test.beforeEach(async ({ page }) => {
 const shot = (page: Page, name: string) => expect(page).toHaveScreenshot(`${name}.png`, { fullPage: true, animations: 'disabled' });
 
 async function startQuiz(page: Page) {
-  await page.goto('/cuestionario/');
+  await openQuiz(page);
   await page.getByRole('combobox', { name: 'Circunscripción (provincia)' }).selectOption({ label: 'Madrid' });
   await page.getByRole('button', { name: 'Continuar' }).click();
   await expect(page.getByText('Afirmación 1 de 25 · Tema: Tema 1')).toBeVisible();
@@ -57,7 +58,7 @@ test.describe('visual', () => {
   });
 
   test('province step', async ({ page }) => {
-    await page.goto('/cuestionario/');
+    await openQuiz(page);
     await expect(page.getByRole('combobox', { name: 'Circunscripción (provincia)' })).toBeVisible();
     await shot(page, 'provincia');
   });

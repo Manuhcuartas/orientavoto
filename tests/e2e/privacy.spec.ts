@@ -1,4 +1,5 @@
 import { expect, test, type Page } from '@playwright/test';
+import { openQuiz } from './helpers';
 
 // Privacy guarantees, checked on the production build:
 // no network requests after the initial load, no cookies or storage, no CSP violations.
@@ -30,7 +31,7 @@ async function answer(page: Page, choice: Answer, important = false) {
 
 test('the full flow makes no network requests after the initial load and stores nothing', async ({ page, context }) => {
   const cspViolations = await watchCsp(page);
-  await page.goto('/cuestionario/');
+  await openQuiz(page);
   await page.waitForLoadState('networkidle');
 
   const requests: string[] = [];
@@ -54,7 +55,7 @@ test('the full flow makes no network requests after the initial load and stores 
 });
 
 test('the CSP blocks any attempt to send data', async ({ page }) => {
-  await page.goto('/cuestionario/');
+  await openQuiz(page);
   const blocked = await page.evaluate(async () => {
     try {
       await fetch('/cualquier-cosa', { method: 'POST', body: 'x' });

@@ -10,6 +10,7 @@ async function start(page: Page, province: string) {
   await page.goto('/');
   await page.getByRole('link', { name: 'Empezar' }).click();
   await expect(page).toHaveURL(/\/cuestionario\/$/);
+  await page.waitForFunction(() => document.querySelector('astro-island') && !document.querySelector('astro-island[ssr]'));
   await page.getByRole('combobox', { name: 'Circunscripción (provincia)' }).selectOption({ label: province });
   await page.getByRole('button', { name: 'Continuar' }).click();
 }

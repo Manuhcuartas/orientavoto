@@ -220,6 +220,13 @@ Presupuesto de rendimiento (tarea 3.4):
 - Con los datos ficticios: cuestionario 16,9 KB JS / 13,5 KB HTML+CSS; partidos 13,7 / 7,6; inicio, metodología y privacidad 0 KB JS. El margen del cuestionario es para el contenido real (justificaciones y fuentes viajan en el HTML).
 - **Pendiente del responsable del proyecto:** Lighthouse móvil sobre la URL de vista previa de Cloudflare (≥ 95 en rendimiento y accesibilidad). Requiere el despliegue de `docs/DESPLIEGUE.md`; en Chrome: DevTools → Lighthouse → «Móvil», categorías Rendimiento y Accesibilidad.
 
+Auditoría de neutralidad (tarea 3.5):
+- Checklist con evidencia en `docs/NEUTRALIDAD.md`; lo automatizable, en `tests/e2e/neutrality.spec.ts` (ningún partido en el HTML prerenderizado, primer puesto con los mismos estilos que el resto, el color de partido solo en la marca de la insignia).
+- **Corregido:** el pie decía «Herramienta independiente»; se quita «independiente» hasta que «Quiénes somos» lo respalde. Cambia todas las capturas visuales.
+- Excepción consciente: «Incluye a: …» sigue el orden de `data/coaliciones.json` (la denominación oficial de la coalición), no se baraja.
+- Los e2e que abren `/cuestionario/` directamente esperan a que la isla esté hidratada (`tests/e2e/helpers.ts`, `openQuiz`): antes podían elegir provincia antes de la hidratación.
+- **Para el responsable del proyecto:** orden oficial de `incluye`, volver a usar «independiente» solo si procede, colores de partidos reales y orden de las afirmaciones.
+
 ---
 
 ## Fase 0 — Cimientos (2–3 nov)
@@ -536,7 +543,7 @@ Presupuesto de rendimiento (tarea 3.4):
   - `npm run size` pasa.
   - Lighthouse móvil sobre la URL de vista previa: ≥ 95 en rendimiento y accesibilidad.
 
-### [ ] 3.5 · Auditoría de neutralidad
+### [x] 3.5 · Auditoría de neutralidad
 - **Modelo:** Opus · **Esfuerzo:** medio · **Requiere:** 2.1, 2.2
 - **Ficheros:** `docs/NEUTRALIDAD.md` y las correcciones necesarias.
 - **Qué hacer:** revisar textos, estilos y órdenes contra las «Decisiones tomadas». En concreto:

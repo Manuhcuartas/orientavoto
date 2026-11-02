@@ -15,7 +15,7 @@
     "ficticio": "DATOS FICTICIOS — NO USAR PARA DECIDIR EL VOTO"
   },
   "pie": {
-    "descripcion": "Herramienta independiente de orientación. No recomienda el voto ni guarda tus respuestas.",
+    "descripcion": "Herramienta de orientación. No recomienda el voto ni guarda tus respuestas.",
     "datos": "Datos: versión {version}, actualizados el {fecha}.",
     "correcciones": "Correcciones: {contacto}"
   },

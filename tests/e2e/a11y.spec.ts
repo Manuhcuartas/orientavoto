@@ -1,5 +1,6 @@
 import AxeBuilder from '@axe-core/playwright';
 import { expect, test, type Page } from '@playwright/test';
+import { openQuiz } from './helpers';
 
 // Automatic accessibility check (axe) on every page and every quiz step, WCAG 2.1 A/AA.
 
@@ -28,7 +29,7 @@ for (const path of ['/', '/partidos/', '/metodologia/', '/privacidad/']) {
 }
 
 test('every quiz step', async ({ page }) => {
-  await page.goto('/cuestionario/');
+  await openQuiz(page);
   await expect(page.getByRole('combobox', { name: 'Circunscripción (provincia)' })).toBeVisible();
   await expectNoViolations(page); // province step
 
@@ -55,7 +56,7 @@ test('every quiz step', async ({ page }) => {
 });
 
 test('results with everything skipped', async ({ page }) => {
-  await page.goto('/cuestionario/');
+  await openQuiz(page);
   await page.getByRole('combobox', { name: 'Circunscripción (provincia)' }).selectOption({ label: 'Prefiero no indicarla' });
   await page.getByRole('button', { name: 'Continuar' }).click();
   for (let i = 0; i < 25; i++) await answer(page, 'Saltar');
@@ -86,7 +87,7 @@ test.describe('keyboard only', () => {
   }
 
   test('the whole quiz can be completed with the keyboard, with visible focus', async ({ page }) => {
-    await page.goto('/cuestionario/');
+    await openQuiz(page);
     await expect(page.getByRole('combobox', { name: 'Circunscripción (provincia)' })).toBeVisible();
 
     await tabTo(page, /Elige una opción/);
@@ -146,7 +147,7 @@ test.describe('keyboard only', () => {
 
 test('200 % zoom (640×400): the answer bar does not cover the statement', async ({ page }) => {
   await page.setViewportSize({ width: 640, height: 400 });
-  await page.goto('/cuestionario/');
+  await openQuiz(page);
   await page.getByRole('combobox', { name: 'Circunscripción (provincia)' }).selectOption({ label: 'Madrid' });
   await page.getByRole('button', { name: 'Continuar' }).click();
   for (let i = 0; i < 3; i++) await answer(page, 'De acuerdo'); // a04, the longest statement
