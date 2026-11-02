@@ -184,7 +184,7 @@ Validación (tarea 0.4):
   - `DEPLOY_ENV=production npm run validate` falla con el mensaje de datos ficticios.
   - `npm run build` funciona de punta a punta.
 
-### [ ] 0.5 · CI, cabeceras y guía de despliegue
+### [x] 0.5 · CI, cabeceras y guía de despliegue
 - **Modelo:** Sonnet · **Esfuerzo:** bajo · **Requiere:** 0.4
 - **Ficheros:** `.github/workflows/ci.yml`, `public/_headers`, `docs/DESPLIEGUE.md`.
 - **Qué hacer:**
