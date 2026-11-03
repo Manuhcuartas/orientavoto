@@ -1,6 +1,6 @@
 # Afirmaciones candidatas y propuesta de 25 (protocolo §2.2 y §2.3)
 
-Documento de trabajo de la tarea 4.0. Preparado por Claude el 3 de noviembre de 2026 aplicando `docs/PROTOCOLO.md` §2.2 y §2.3. **Lista final de 25 cerrada el 3 de noviembre de 2026 sin esperar a los programas**, a propuesta del responsable: las afirmaciones sin fuente se descartan por el §2.2.2 y se sustituyen por candidatas con votación nominal que dividen. Pendiente de la aprobación final del responsable. Las posiciones de este documento solo sirven para elegir afirmaciones: las definitivas se codifican después, con programas y votaciones, aplicando el §3.
+Documento de trabajo de la tarea 4.0. Preparado por Claude el 3 de noviembre de 2026 aplicando `docs/PROTOCOLO.md` §2.2 y §2.3. **Lista final de 25 cerrada el 3 de noviembre de 2026 sin esperar a los programas**, a propuesta del responsable: las afirmaciones sin fuente se descartan por el §2.2.2 y se sustituyen por candidatas con votación nominal que dividen. **Aprobada por el responsable el 3 de noviembre de 2026** (§2.2.4). Las posiciones de este documento solo sirven para elegir afirmaciones: las definitivas se codifican después, con programas y votaciones, aplicando el §3.
 
 ## Estado de las fuentes a 3 de noviembre
 
