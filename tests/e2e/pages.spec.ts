@@ -74,3 +74,10 @@ test('home sends no JS and has a valid heading hierarchy', async ({ page, reques
   await page.goto('/');
   expectValidHierarchy(await headingLevels(page));
 });
+
+test('unknown URLs get a 404 page, not the home page', async ({ page }) => {
+  const response = await page.goto('/no-existe/');
+  expect(response?.status()).toBe(404);
+  await expect(page.getByRole('heading', { level: 1, name: 'Página no encontrada' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Ir al inicio' })).toHaveAttribute('href', '/');
+});

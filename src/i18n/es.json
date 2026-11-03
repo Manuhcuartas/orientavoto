@@ -201,5 +201,10 @@
     "responsableTitulo": "Responsable y contacto",
     "pendienteResponsable": "[PENDIENTE LEGAL: identidad y datos de contacto del responsable, y derechos de las personas usuarias.]",
     "contacto": "Para cualquier duda sobre privacidad: {contacto}."
+  },
+  "noEncontrada": {
+    "titulo": "Página no encontrada",
+    "texto": "La dirección que has abierto no existe o ha cambiado.",
+    "volver": "Ir al inicio"
   }
 }

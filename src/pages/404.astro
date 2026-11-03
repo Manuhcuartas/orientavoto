@@ -1,0 +1,15 @@
+---
+// Served by Cloudflare Pages (and astro preview) for unknown URLs, with status 404.
+import Base from '../layouts/Base.astro';
+import { createTranslator } from '../i18n';
+
+const t = createTranslator(Astro.currentLocale);
+---
+
+<Base title={t('noEncontrada.titulo')}>
+  <div class="prose">
+    <h1>{t('noEncontrada.titulo')}</h1>
+    <p>{t('noEncontrada.texto')}</p>
+    <a class="button" href="/">{t('noEncontrada.volver')}</a>
+  </div>
+</Base>
