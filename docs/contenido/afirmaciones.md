@@ -1,178 +1,194 @@
 # Afirmaciones candidatas y propuesta de 25 (protocolo §2.2 y §2.3)
 
-Documento de trabajo de la tarea 4.0. Preparado por Claude el 3 de noviembre de 2026 aplicando `docs/PROTOCOLO.md` §2.2 y §2.3. **Lista de 25 aprobada con reservas por el responsable el 3 de noviembre de 2026** (§2.2.4): se aprueba la lista completa tal como figura en «Propuesta de 25», con las reservas marcadas ⚠ y los casos A1–A8 todavía pendientes de decisión. Las afirmaciones ⚠ se confirman o se sustituyen por la siguiente reserva con fuente cuando haya voto nominal, texto de las mociones o programas, aplicando las mismas reglas. Las posiciones de este documento solo sirven para elegir afirmaciones: **no son las posiciones definitivas** ni se codifican en `data/` hasta después de la aprobación.
+Documento de trabajo de la tarea 4.0. Preparado por Claude el 3 de noviembre de 2026 aplicando `docs/PROTOCOLO.md` §2.2 y §2.3. **Lista final de 25 cerrada el 3 de noviembre de 2026 sin esperar a los programas**, a propuesta del responsable: las afirmaciones sin fuente se descartan por el §2.2.2 y se sustituyen por candidatas con votación nominal que dividen. Pendiente de la aprobación final del responsable. Las posiciones de este documento solo sirven para elegir afirmaciones: las definitivas se codifican después, con programas y votaciones, aplicando el §3.
 
 ## Estado de las fuentes a 3 de noviembre
 
-- **Programas del 29-N: ninguno publicado.** Según la prensa (datosclaros.es, Forbes, 18–19 de octubre) ni PSOE, PP, Vox, Frente Amplio ni Podemos han presentado su programa completo; no se ha encontrado ninguno de ERC, Junts, EH Bildu, PNV, BNG, CC, UPN, Compromís ni UPC. Faltan, por tanto, **los programas de todas las candidaturas**. Cuando se publiquen se repite la selección (antes del 11-nov) y pueden entrar afirmaciones que hoy están descartadas por falta de datos.
-- **Votaciones de la legislatura:** ficheros oficiales del portal de datos abiertos del Congreso (<https://www.congreso.es/es/opendata/votaciones>), que dan el voto de cada diputado. Cada posición marcada **✔** se ha leído en el fichero oficial (enlace en la tabla de sesiones). El voto de cada partido es el mayoritario de sus diputados (§3.1): FA = grupo SUMAR; Podemos = Belarra, Sánchez Serna, Santana y Velarde (Mixto); BNG = Rego; CC = Valido; UPN = Catalán; Compromís = Ibáñez (grupo SUMAR) y Micó (grupo SUMAR hasta el 03-07-2025 y Mixto después).
-- **Sin voto nominal publicado (⏳):** el pleno del 2 de octubre de 2026 (convalidación de los dos decretos de vivienda, derogados por 172–178 y 166–184) solo tiene en el portal el gráfico del resultado. Para esas afirmaciones el desglose por partido es el que publica la prensa, con enlace, y **no vale como fuente definitiva** (§3.1).
-- **UPC (Canarias)** la encabeza Nueva Canarias-Bloque Canarista, sin diputados: no tiene votaciones y aparece como «sin datos» en todas (ver `partidos.md`, D4).
+- **Votaciones:** todas las posiciones de este documento salen de los ficheros oficiales de votaciones nominales del Congreso (<https://www.congreso.es/es/opendata/votaciones>), uno por votación (tabla de abajo). El voto de cada partido es el mayoritario de sus diputados (§3.1): FA = grupo SUMAR; Podemos = Belarra, Sánchez Serna, Santana y Velarde (Mixto); BNG = Rego; CC = Valido; UPN = Catalán; Compromís = Ibáñez (grupo SUMAR) y Micó (grupo SUMAR hasta el 03-07-2025 y Mixto después).
+- **Mociones y PNL votadas por puntos:** el punto de cada votación se ha identificado con el texto publicado en el BOCG (regla A3).
+- **Programas del 29-N:** no se han usado para elegir (ninguno publicado el 3-nov). Se usarán al codificar las posiciones de estas 25.
+- **Pleno del 2-oct-2026** (decretos de vivienda): sigue sin voto nominal publicado; no se usa.
+- **UPC (Canarias):** sin diputados ni votaciones; «sin datos» en todas (ver `partidos.md`, D4). No cambia ningún cálculo, porque se cuenta igual en todas.
 
 ## Cómo se ha aplicado el protocolo
 
 - **Candidaturas que cuentan** (14, de `partidos.md`): PSOE, PP, Vox, Frente Amplio (FA), Podemos (POD), ERC, Junts (JxC), EH Bildu (BIL), PNV, BNG, CC, UPN (para UPN-PP), Compromís (CMP) y UPC.
-- **Posición en una votación** (§3.3): F = a favor de la afirmación, C = en contra, N = abstención, · = sin datos. Si la afirmación está redactada al revés que la iniciativa votada (por ejemplo, «suprimir» algo que se votó para crear), o si se votaron enmiendas a la totalidad, se traduce: votar a favor de devolver un texto = en contra de la medida.
-- **Descarte por cobertura** (§2.2.2): si 8 o más de las 14 candidaturas no tienen fuente.
-- **Descarte por no dividir:** si todas las que tienen fuente coinciden.
-- **Descarte por repetir** otra afirmación.
-- **Puntuación de división** (§2.2.3): el menor de los dos números «a favor» y «en contra» (cuanto más alto, más reparte). Empate: más candidaturas con fuente.
-- **Votaciones de paquete:** un decreto con varias medidas no es una votación «sustancialmente igual» a cada medida por separado (§3.1). Las afirmaciones que solo tienen ese tipo de votación se marcan **dudosas** (§3.5).
+- **Posición** (§3.3): F = a favor de la afirmación, C = en contra, N = abstención, · = sin datos o sin posición (A5). Si la afirmación está redactada al revés que la iniciativa, o se votaron enmiendas a la totalidad, se traduce (votar la devolución de un texto = en contra de la medida).
+- **Descartes** (§2.2.2): sin fuente para 8 o más candidaturas; no divide (nadie en contra o nadie a favor); repite otra.
+- **División** (§2.2.3): el menor de los números «a favor» y «en contra». Empate: más candidaturas con fuente. Si sigue el empate, se anota.
+- Reglas A1–A8 decididas el 3-nov (al final del documento).
+
+## Lista final de 25
+
+**Vivienda**
+1. V02 · Que el inquilino pueda prorrogar hasta dos años su contrato de alquiler cuando termine, con las mismas condiciones y con una subida máxima del 2 % anual. (división 4 · 13 candidaturas con fuente)
+2. V04 · Obligar a quien ocupa ilegalmente una vivienda a dejarla en 24 horas si no demuestra que tiene derecho a estar en ella. (división 4 · 13 candidaturas con fuente)
+3. V05 · Que solo las personas físicas puedan comprar viviendas, de modo que empresas, bancos y fondos de inversión no puedan hacerlo, salvo excepciones. (división 4 · 13 candidaturas con fuente)
+4. V03 · Regular por ley los alquileres de temporada y por habitaciones para que tengan las mismas protecciones que el alquiler de vivienda habitual. (división 3 · 13 candidaturas con fuente)
+5. V06 · Prohibir anunciar o alquilar viviendas de uso turístico cuya licencia o número de registro no se haya verificado. (división 3 · 13 candidaturas con fuente)
+
+**Inmigración**
+6. I03 · Delegar en Cataluña competencias del Estado en inmigración, como la gestión de permisos de residencia y trabajo. (división 4 · 12 candidaturas con fuente)
+7. I04 · Ejecutar de forma efectiva las órdenes de expulsión de los extranjeros que no tienen derecho a permanecer en España. (división 4 · 13 candidaturas con fuente)
+8. I02 · Suprimir el reparto obligatorio entre comunidades de los menores migrantes no acompañados y que cada comunidad decida cuántos acoge. (división 2 · 13 candidaturas con fuente)
+9. I05 · Endurecer los requisitos de la residencia por arraigo, la vía para obtener permiso tras varios años viviendo en España. (división 2 · 13 candidaturas con fuente)
+10. I01 · Aprobar una regularización extraordinaria de las personas extranjeras que ya viven y trabajan en España sin permiso de residencia. (división 1 · 13 candidaturas con fuente)
+
+**Economía**
+11. E01 · Volver a aplicar un impuesto extraordinario a las grandes empresas energéticas. (división 5 · 13 candidaturas con fuente)
+12. E02 · Actualizar cada año el IRPF según la inflación para compensar la subida de precios. (división 5 · 13 candidaturas con fuente)
+13. E08 · Volver a rebajar el IVA de los alimentos básicos al 2 %. (división 4 · 13 candidaturas con fuente)
+14. E04 · Que el Estado perdone parte de la deuda que las comunidades autónomas tienen con él. (división 3 · 13 candidaturas con fuente)
+15. E05 · Eximir del IVA a los autónomos que facturen menos de 85.000 euros al año. (división 2 · 12 candidaturas con fuente)
+
+**Calidad del empleo**
+16. L01 · Reducir la jornada laboral máxima a 37,5 horas semanales sin bajar el sueldo. (división 4 · 13 candidaturas con fuente)
+17. L06 · Prohibir los despidos colectivos en las empresas que trasladen su producción fuera de la Unión Europea. (división 4 · 13 candidaturas con fuente)
+18. L02 · Que la indemnización por despido improcedente pueda superar los 33 días por año cuando no compense el daño causado al trabajador. (división 3 · 13 candidaturas con fuente)
+19. L07 · Pagar con cargo a la Seguridad Social las 8 semanas del permiso parental de cuidado de hijos, que hoy no se cobran. (división 3 · 13 candidaturas con fuente)
+20. L08 · Aumentar la cuota de empleo que las empresas deben reservar a personas con discapacidad. (división 1 · 13 candidaturas con fuente)
+
+**Sanidad**
+21. S09 · Prohibir la publicidad de alimentos y bebidas poco saludables, según los criterios de la OMS, que puedan ver los menores de 18 años. (división 4 · 13 candidaturas con fuente)
+22. S10 · Aprobar una ley estatal contra las agresiones al personal sanitario, con planes de prevención obligatorios en los centros públicos y privados. (división 4 · 13 candidaturas con fuente)
+23. S01 · Mantener la reforma del copago farmacéutico de 2026, que rebaja lo que pagan por sus medicamentos los pensionistas con menos ingresos. (división 1 · 13 candidaturas con fuente)
+24. S11 · Fijar por ley un número máximo de pacientes por enfermera en los centros sanitarios. (división 1 · 13 candidaturas con fuente)
+25. S12 · Que la tarjeta sanitaria y la historia clínica de cada paciente sean válidas y accesibles en todo el Sistema Nacional de Salud. (división 1 · 13 candidaturas con fuente)
+
+Los cinco temas tienen cinco afirmaciones con fuente oficial. Las más débiles son I01, L08, S01, S11 y S12 (división 1): entran porque en su tema no queda ninguna otra candidata con fuente que divida más.
+
+**Equilibrio (§2.3):** «de acuerdo» coincide con el voto mayoritario de PSOE y FA en V02, V03, V05, V06, I03, E01, E04, L01, L02, L06 y S09; con el de PP y Vox en V04, I02, I04, I05, E02, E08 y S10; y en el resto (I01, E05, L07, L08, S01, S11, S12) los bloques se cruzan. Hay afirmaciones que proponen mantener o revertir (I02, S01).
+
+## Cambios respecto a la propuesta anterior
+
+| Antes | Ahora | Motivo |
+|---|---|---|
+| V01 (desahucios hasta 2030) | Fuera | Solo tenía el decreto de paquete del 2-oct; sin fuente válida (A1, §2.2.2) |
+| V05 (fondos, «durante unos años») | V05 con nueva redacción | Sustituida por la PL de SUMAR 122/000251 (S197-2), con voto nominal |
+| V02 (prórroga del alquiler, sin voto nominal) | V02 con fuente S175-3 | El RDL 8/2026 trata solo de la prórroga con renta limitada; se ajusta la redacción al decreto |
+| — | V06 (pisos turísticos sin licencia) | Nueva, con votación nominal; ocupa el puesto de V01 |
+| I04 (expulsiones, sin fuente) | I04 con fuente S164-2 | Punto 1 de la PNL del PP de febrero de 2026 (BOCG) |
+| E03 (salario mínimo sin IRPF) | Fuera | Divide menos (1) que E08 (4), que ha ganado fuente |
+| E05 (franquicia de IVA, punto sin identificar) | E05 con fuente S174-15 | El BOCG confirma que es el punto 2 de la moción |
+| — | E08 (IVA de alimentos al 2 %) | Tenía reserva sin fuente; el BOCG confirma el punto 1 de la moción de 13-03-2025 |
+| E02 (fuente: PNL de 2024) | E02 con fuente S174-14 | Votación más reciente (A7); FA votó en contra en ambas |
+| L03, L04, L05 (sin fuente) | L06, L07, L08 | Sustituidas por candidatas con votación nominal |
+| S02, S04, S05 (sin fuente) y S08 (no divide) | S09, S10, S11, S12 | Ídem; S08 se descarta porque nadie votó en contra |
 
 ## Votaciones usadas (ficheros oficiales)
 
-| Clave | Fecha | Sesión y votación | Iniciativa | Resultado (sí–no–abst.) |
+| Clave | Fecha | Fichero | Iniciativa | Resultado (sí–no–abst.) |
 |---|---|---|---|---|
-| S34-1 | 09-04-2024 | [Sesión 34, votación 1](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion034/20240409/Votacion001/VOT_20240409210631.json) | Toma en consideración de la PL para una regularización extraordinaria para personas extranjeras en España (ILP) | 310–33–0 |
-| S34-12 | 09-04-2024 | [Sesión 34, votación 12](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion034/20240409/Votacion012/VOT_20240409210642.json) | PNL del GP Popular «para deflactar el IRPF ajustándolo a la inflación» | 169–160–14 |
-| S59-1 | 17-09-2024 | [Sesión 59, votación 1](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion059/20240917/Votacion001/VOT_20240917204416.json) | Toma en consideración de la PL de SUMAR sobre alquiler de temporada y de habitaciones (rechazada) | 172–178–0 |
-| S86-1 | 17-12-2024 | [Sesión 86, votación 1](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion086/20241217/Votacion001/VOT_20241217205720.json) | Toma en consideración de la PL de SUMAR, ERC, EH Bildu y Mixto sobre alquileres temporales (aprobada) | 176–169–0 |
-| S89-2 | 22-01-2025 | [Sesión 89, votación 2](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion089/20250122/Votacion002/VOT_20250122154427.json) | Convalidación del RDL 10/2024, gravamen temporal energético para 2025 (derogado) | 165–183–1 |
-| S98-13 | 13-03-2025 | [Sesión 98, votación 13](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion098/20250313/Votacion013/VOT_20250313133906.json) | Moción del GP Popular «sobre el infierno fiscal…», punto 4 (exención del IRPF del salario mínimo según la prensa; comprobar el texto del punto en el BOCG) | 211–121–13 |
-| S99-1 | 18-03-2025 | [Sesión 99, votación 1](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion099/20250318/Votacion001/VOT_20250318201321.json) | Toma en consideración de la PL de Junts contra la ocupación ilegal de inmuebles | 300–44–0 |
-| S106-15 | 10-04-2025 | [Sesión 106, votación 15](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion106/20250410/Votacion015/VOT_20250410155154.json) | Convalidación del RDL 2/2025 (reubicación de menores migrantes no acompañados) | 179–170–1 |
-| S130-10 | 10-09-2025 | [Sesión 130, votación 10](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion130/20250910/Votacion010/VOT_20250910213544.json) | Enmiendas a la totalidad de devolución del proyecto de ley de reducción de la jornada (aprobadas: el proyecto decae) | 178–170–0 |
-| S131-1 | 16-09-2025 | [Sesión 131, votación 1](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion131/20250916/Votacion001/VOT_20250916211204.json) | Toma en consideración de la PL de Vox «para restringir la regularización de inmigrantes ilegales a través del arraigo» | 169–177–1 |
-| S132-3 | 17-09-2025 | [Sesión 132, votación 3](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion132/20250917/Votacion003/VOT_20250917194022.json) | PNL de SUMAR «relativa al establecimiento por ley de un despido realmente restaurativo y disuasorio» | 171–170–6 |
-| S133-1 | 23-09-2025 | [Sesión 133, votación 1](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion133/20250923/Votacion001/VOT_20250923211048.json) | Toma en consideración de la PL de PSOE y Junts de delegación en Cataluña de competencias estatales en inmigración | 173–177–0 |
-| S174-14/15 | 22-04-2026 | [votación 14](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion174/20260422/Votacion014/VOT_20260422152001.json) · [votación 15](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion174/20260422/Votacion015/VOT_20260422152002.json) | Moción del GP Popular «sobre el infierno fiscal…», puntos 1 y 2 (deflactar el IRPF y franquicia de IVA para autónomos según la prensa; no consta cuál es cuál) | 177–163–5 · 214–125–6 |
-| S179-1 | 19-05-2026 | [Sesión 179, votación 1](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion179/20260519/Votacion001/VOT_20260519203502.json) | Toma en consideración de la PL del GP Popular contra la ocupación ilegal de inmuebles | 171–164–11 |
-| S183-12 | 28-05-2026 | [Sesión 183, votación 12](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion183/20260528/Votacion012/VOT_20260528125351.json) | Convalidación del RDL 11/2026 (aportación de los usuarios en la prestación farmacéutica) | 164–33–149 |
-| S193-19 | 23-07-2026 | [Sesión 193, votación 19](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion193/20260723/Votacion019/VOT_20260723212000.json) | Enmiendas a la totalidad de devolución del proyecto de LO de medidas excepcionales de sostenibilidad financiera (condonación de deuda autonómica; rechazadas) | 170–178–0 |
-| S13-3 | 19-12-2023 | [Sesión 13, votación 3](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion013/20231219/Votacion003/VOT_20231219233110.json) | PNL del GP Socialista sobre un Pacto de Estado por la Salud Mental | 296–0–49 |
-| D-261002 | 02-10-2026 | [Sesión 203](https://www.congreso.es/es/opendata/votaciones?p_p_id=votaciones&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&targetLegislatura=XV&targetDate=02/10/2026) | Convalidación de los dos decretos de vivienda (derogados). **Sin voto nominal publicado** | 172–178 · 166–184 |
+| S13-3 | 19-12-2023 | [JSON](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion013/20231219/Votacion003/VOT_20231219233110.json) | PNL del GP Socialista sobre un Pacto de Estado por la Salud Mental | 296–0–49 |
+| S34-1 | 09-04-2024 | [JSON](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion034/20240409/Votacion001/VOT_20240409210631.json) | Toma en consideración de la PL de regularización extraordinaria para personas extranjeras (ILP) | 310–33–0 |
+| S34-12 | 09-04-2024 | [JSON](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion034/20240409/Votacion012/VOT_20240409210642.json) | PNL del GP Popular para deflactar el IRPF | 169–160–14 |
+| S59-1 | 17-09-2024 | [JSON](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion059/20240917/Votacion001/VOT_20240917204416.json) | Toma en consideración de la PL de SUMAR sobre alquiler de temporada y de habitaciones (rechazada) | 172–178–0 |
+| S69-3 | 22-10-2024 | [JSON](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion069/20241022/Votacion003/VOT_20241022211825.json) | Enmienda a la totalidad del proyecto de ley que modifica el Estatuto de los Trabajadores «en materia de extinción…» | — |
+| S80-3 | 26-11-2024 | [JSON](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion080/20241126/Votacion003/VOT_20241126173408.json) | Toma en consideración de la PL de Vox sobre tarjeta sanitaria individual e interoperabilidad de las historias clínicas (rechazada) | 32–174–134 |
+| S83-1 | 10-12-2024 | [JSON](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion083/20241210/Votacion001/VOT_20241210202031.json) | Toma en consideración de la PL (ILP) sobre ratios de enfermeras | 316–5–21 |
+| S86-1 | 17-12-2024 | [JSON](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion086/20241217/Votacion001/VOT_20241217205720.json) | Toma en consideración de la PL de SUMAR, ERC, EH Bildu y Mixto sobre alquileres temporales (aprobada) | 176–169–0 |
+| S89-2 | 22-01-2025 | [JSON](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion089/20250122/Votacion002/VOT_20250122154427.json) | Convalidación del RDL 10/2024, gravamen temporal energético (derogado) | 165–183–1 |
+| S90-2 | 11-02-2025 | [JSON](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion090/20250211/Votacion002/VOT_20250211202649.json) | Toma en consideración de la PL del GP Popular relativa a la violencia en el ámbito sanitario (rechazada) | 171–173–0 |
+| S98-8 | 13-03-2025 | [JSON](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion098/20250313/Votacion008/VOT_20250313133859.json) | Moción de Podemos (Sra. Belarra) sobre la retribución del permiso parental de 8 semanas | 186–153–7 |
+| S98-10 | 13-03-2025 | [JSON](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion098/20250313/Votacion010/VOT_20250313133902.json) | Moción del GP Popular «sobre el infierno fiscal…», punto 1: IVA de los alimentos básicos al 2 % | 170–168–7 |
+| S98-13 | 13-03-2025 | [JSON](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion098/20250313/Votacion013/VOT_20250313133906.json) | Ídem, punto 4: que quien cobra el SMI no tribute por el IRPF | 211–121–13 |
+| S106-15 | 10-04-2025 | [JSON](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion106/20250410/Votacion015/VOT_20250410155154.json) | Convalidación del RDL 2/2025 (reubicación de menores migrantes no acompañados) | 179–170–1 |
+| S129-2 | 09-09-2025 | [JSON](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion129/20250909/Votacion002/VOT_20250909221800.json) | Toma en consideración de la PL del GP Socialista sobre la cuota de reserva de empleo para personas con discapacidad | — |
+| S130-10 | 10-09-2025 | [JSON](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion130/20250910/Votacion010/VOT_20250910213544.json) | Enmiendas a la totalidad del proyecto de reducción de la jornada (aprobadas) | 178–170–0 |
+| S131-1 | 16-09-2025 | [JSON](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion131/20250916/Votacion001/VOT_20250916211204.json) | Toma en consideración de la PL de Vox para restringir la regularización por arraigo (rechazada) | 169–177–1 |
+| S132-3 | 17-09-2025 | [JSON](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion132/20250917/Votacion003/VOT_20250917194022.json) | PNL de SUMAR sobre un despido «restaurativo y disuasorio» | 171–170–6 |
+| S133-1 | 23-09-2025 | [JSON](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion133/20250923/Votacion001/VOT_20250923211048.json) | Toma en consideración de la PL de PSOE y Junts de delegación en Cataluña de competencias de inmigración (rechazada) | 173–177–0 |
+| S135-2 | 07-10-2025 | [JSON](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion135/20251007/Votacion002/VOT_20251007214330.json) | Toma en consideración de la PL de EH Bildu sobre control de la publicidad y contratación de pisos turísticos (aprobada) | 176–169–0 |
+| S162-1 | 24-02-2026 | [JSON](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion162/20260224/Votacion001/VOT_20260224201927.json) | Toma en consideración de la PL de SUMAR sobre derechos de los trabajadores en deslocalizaciones (rechazada) | 168–178–1 |
+| S164-2 | 26-02-2026 | [JSON](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion164/20260226/Votacion002/VOT_20260226153358.json) | PNL del GP Popular sobre ejecución de las órdenes de expulsión, punto 1 | 178–166–6 |
+| S174-14 | 22-04-2026 | [JSON](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion174/20260422/Votacion014/VOT_20260422152001.json) | Moción del GP Popular «sobre el infierno fiscal…», punto 1: deflactar el IRPF | 177–163–5 |
+| S174-15 | 22-04-2026 | [JSON](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion174/20260422/Votacion015/VOT_20260422152002.json) | Ídem, punto 2: franquicia de IVA para autónomos (menos de 85.000 €) | 214–125–6 |
+| S175-3 | 28-04-2026 | [JSON](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion175/20260428/Votacion003/VOT_20260428200330.json) | Convalidación del RDL 8/2026, de medidas en el alquiler (derogado) | 166–177–5 |
+| S179-1 | 19-05-2026 | [JSON](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion179/20260519/Votacion001/VOT_20260519203502.json) | Toma en consideración de la PL del GP Popular contra la ocupación ilegal de inmuebles | 171–164–11 |
+| S181-1 | 26-05-2026 | [JSON](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion181/20260526/Votacion001/VOT_20260526210640.json) | Toma en consideración de la PL de SUMAR para la promoción del consumo de alimentos y bebidas saludables (rechazada) | 166–178–5 |
+| S183-12 | 28-05-2026 | [JSON](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion183/20260528/Votacion012/VOT_20260528125351.json) | Convalidación del RDL 11/2026 (copago farmacéutico) | 164–33–149 |
+| S193-19 | 23-07-2026 | [JSON](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion193/20260723/Votacion019/VOT_20260723212000.json) | Enmiendas a la totalidad del proyecto de LO de sostenibilidad financiera de las CCAA (condonación de deuda; rechazadas) | 170–178–0 |
+| S197-2 | 15-09-2026 | [JSON](https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion197/20260915/Votacion002/VOT_20260915204523.json) | Toma en consideración de la PL de SUMAR (expte. 122/000251) de modificación de la Ley 12/2023 por el derecho a la vivienda (rechazada) | 44–175–127 |
 
-## Candidatas
+## Candidatas y descartes
 
-Columnas: PSOE · PP · VOX · FA · POD · ERC · JxC · BIL · PNV · BNG · CC · UPN · CMP · UPC. «Div.» = puntuación de división; «Cob.» = candidaturas con fuente (de 14).
+Columnas: PSOE · PP · VOX · FA · POD · ERC · JxC · BIL · PNV · BNG · CC · UPN · CMP · UPC. «Div.» = división; «Cob.» = candidaturas con fuente (de 14).
 
-### Tema 1: Vivienda
-
-| ID | Afirmación | Fuente | PSOE | PP | VOX | FA | POD | ERC | JxC | BIL | PNV | BNG | CC | UPN | CMP | UPC | Div. | Cob. | Decisión |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| V01 | Prohibir hasta 2030 los desahucios de hogares vulnerables que no tengan una alternativa de vivienda. | D-261002, primer decreto ⏳ ([eldiario.es](https://www.eldiario.es/politica/junts-pp-vox-tumban-decretos-vivienda-congreso_1_13557141.html), [Demócrata](https://www.democrata.es/politica/congreso-y-senado/el-congreso-tumba-el-decreto-de-vivienda-con-los-votos-de-pp-vox-junts-y-upn/)) | F | C | C | F | F | F | C | F | F | F | F | C | F | · | 4 | 13 | **Propuesta con reserva**: por A1 el decreto de paquete no cuenta como fuente; las posiciones de la fila son solo orientativas (prensa). Queda pendiente de programas |
-| V02 | Permitir que el inquilino prorrogue hasta dos años su contrato de alquiler, con las mismas condiciones, cuando llegue a su fin. | D-261002, segundo decreto ⏳ ([Diario en Positivo](https://www.diarioenpositivo.com/politica/economia-amp-pp-vox-junts-pnv-cc-upn-tumban-segundo-decreto-renovacion-automatica-alquileres/20261002162702093090.html)) | F | C | C | F | F | F | C | F | C | F | C | C | F | · | 6 | 13 | **Propuesta, dudosa**: sin voto nominal (A2); comprobar en el BOE que el segundo decreto trataba solo de la prórroga |
-| V03 | Regular por ley los alquileres de temporada y por habitaciones para que tengan las mismas protecciones que el alquiler de vivienda habitual. | S59-1 ✔ y S86-1 ✔ | F | C | C | F | F | F | F | F | F | F | F | C | F | · | 3 | 13 | **Propuesta**. Junts: en contra en S59-1 y a favor en S86-1; se toma la más reciente (A7) |
-| V04 | Obligar a quien ocupa ilegalmente una vivienda a dejarla en 24 horas si no demuestra que tiene derecho a estar en ella. | S179-1 ✔ | C | F | F | C | C | C | N | C | N | C | F | F | C | · | 4 | 13 | **Propuesta** |
-| V05 | Prohibir durante unos años que los grandes fondos de inversión compren viviendas. | D-261002, primer decreto ⏳ | F | C | C | F | F | F | C | F | F | F | F | C | F | · | 4 | 13 | **Propuesta con reserva** (igual que V01, por A1) |
-| V06 | Crear un impuesto del 10 % sobre los pisos turísticos. | D-261002 ⏳ | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada por ahora: no consta en cuál de los dos decretos iba. Reserva |
-| V07 | Bajar al 4 % el IVA de la construcción de vivienda protegida. | D-261002 ⏳ | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada por ahora: ídem. Reserva |
-| V08 | Mantener la Ley de Vivienda de 2023, que permite limitar el precio del alquiler en zonas tensionadas. | Ninguna votación en esta legislatura | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada: sin fuente. Reserva para cuando haya programas |
-
-Votación examinada y no usada: S99-1 (PL de Junts para agilizar desalojos de viviendas ocupadas, 300–44): **repite** V04.
-
-### Tema 2: Inmigración
+### Vivienda
 
 | ID | Afirmación | Fuente | PSOE | PP | VOX | FA | POD | ERC | JxC | BIL | PNV | BNG | CC | UPN | CMP | UPC | Div. | Cob. | Decisión |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| I01 | Aprobar una regularización extraordinaria de las personas extranjeras que ya viven y trabajan en España sin permiso de residencia. | S34-1 ✔ | F | F | C | F | F | F | F | F | F | F | F | F | F | · | 1 | 13 | **Propuesta** (solo Vox en contra; A6) |
-| I02 | Suprimir el reparto obligatorio entre comunidades de los menores migrantes no acompañados y que cada comunidad decida cuántos acoge. | S106-15 ✔ (redactada al revés: sí al decreto = en contra de la afirmación) | C | F | F | C | C | C | C | C | C | C | C | N | C | · | 2 | 13 | **Propuesta** |
-| I03 | Delegar en Cataluña competencias del Estado en inmigración, como la gestión de permisos de residencia y trabajo. | S133-1 ✔ | F | C | C | F | C | F | F | F | F | F | F | C | · | · | 4 | 12 | **Propuesta**. En el grupo SUMAR votaron en contra Alberto Ibáñez (Compromís) y Jorge Pueyo (CHA); Àgueda Micó (Compromís, Mixto), a favor (A5) |
-| I04 | Ampliar los casos en que se expulsa a extranjeros en situación irregular y acelerar las expulsiones. | No se ha encontrado una votación específica: la noticia de [The Objective](https://theobjective.com/espana/politica/2025-09-16/congreso-propuesta-vox-expulsar-inmigrantes-pp/) del 16-09-2025 corresponde a la PL de arraigo (S131-1). Hay mociones del PP con varios puntos (18-02-2026) cuyo texto hay que leer | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada por ahora: sin fuente. **Reserva 1** |
-| I05 | Endurecer los requisitos de la residencia por arraigo, la vía para obtener permiso tras varios años viviendo en España. | S131-1 ✔ | C | F | F | C | C | C | C | C | C | C | C | N | C | · | 2 | 13 | **Propuesta** |
-| I06 | Mantener el acceso a la sanidad pública de las personas extranjeras en situación irregular. | Real Decreto 180/2026 (Gobierno, sin votación en el Congreso) | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada: sin fuente. Reserva |
-| I07 | Que el Gobierno ejecute las órdenes de expulsión ya dictadas contra inmigrantes en situación irregular. | Moción del PP de febrero de 2026 ([MelillaHoy](https://melillahoy.es/el-congreso-insta-al-gobierno-a-ejecutar-de-forma-efectiva-la-expulsion-de-migrantes-gracias-a-la-abstencion-de-junts/amp/)); votada por puntos, falta identificar el punto | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada: **repite** I04 |
-| I08 | Exigir un contrato de trabajo firmado en origen como vía principal para venir a trabajar a España. | Ninguna | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada: sin fuente. Reserva |
+| V02 | Que el inquilino pueda prorrogar hasta dos años su contrato de alquiler cuando termine, con las mismas condiciones y con una subida máxima del 2 % anual. | S175-3 ✔ (RDL 8/2026: art. 1, prórroga de hasta dos años; art. 2, actualización de la renta limitada al 2 %) | F | C | C | F | F | F | C | F | N | F | F | C | F | · | 4 | 13 | **Elegida.** Redacción ajustada al decreto, que trata solo de esa prórroga con renta limitada (cumple A1) |
+| V04 | Obligar a quien ocupa ilegalmente una vivienda a dejarla en 24 horas si no demuestra que tiene derecho a estar en ella. | S179-1 ✔ | C | F | F | C | C | C | N | C | N | C | F | F | C | · | 4 | 13 | **Elegida** |
+| V05 | Que solo las personas físicas puedan comprar viviendas, de modo que empresas, bancos y fondos de inversión no puedan hacerlo, salvo excepciones. | S197-2 ✔ (contenido según la presentación del autor en el [acta del pleno](https://www.congreso.es/docu/tramit/LegXV/AT/ATCD_15_PL_20260915.pdf); leer el BOCG del expte. 122/000251 antes de codificar) | N | C | C | F | F | F | C | F | N | F | N | C | F | · | 4 | 13 | **Elegida.** Sustituye a la antigua V05 («prohibir durante unos años que los fondos compren»), que solo tenía el decreto de paquete del 2-oct |
+| V03 | Regular por ley los alquileres de temporada y por habitaciones para que tengan las mismas protecciones que el alquiler de vivienda habitual. | S86-1 ✔ (prevalece sobre S59-1 por A7: Junts pasó de en contra a a favor) | F | C | C | F | F | F | F | F | F | F | F | C | F | · | 3 | 13 | **Elegida** (empata con V06) |
+| V06 | Prohibir anunciar o alquilar viviendas de uso turístico cuya licencia o número de registro no se haya verificado. | S135-2 ✔ ([BOCG B-256-1](https://www.congreso.es/public_oficiales/L15/CONG/BOCG/B/BOCG-15-B-256-1.PDF), art. 11) | F | C | C | F | F | F | F | F | F | F | F | C | F | · | 3 | 13 | **Elegida** (empata con V03; no queda otra candidata con fuente en el tema) |
+| V01 | Prohibir hasta 2030 los desahucios de hogares vulnerables que no tengan una alternativa de vivienda. | Solo el primer decreto del 2-oct-2026 (paquete, sin voto nominal) y el RDL 16/2025 (prórroga de varias medidas) | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada: sin fuente válida por A1; más de la mitad sin datos (§2.2.2) |
+| V07 | Bajar al 4 % el IVA de la construcción de vivienda protegida. | Solo decreto de paquete | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada: sin fuente válida |
+| V08 | Mantener la Ley de Vivienda de 2023, que permite limitar el precio del alquiler en zonas tensionadas. | Solo la PL del GP Popular de 21-04-2026, que mezcla urbanismo y supresión de zonas tensionadas (paquete) | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada: sin fuente válida |
 
-### Tema 3: Economía
-
-| ID | Afirmación | Fuente | PSOE | PP | VOX | FA | POD | ERC | JxC | BIL | PNV | BNG | CC | UPN | CMP | UPC | Div. | Cob. | Decisión |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| E01 | Volver a aplicar un impuesto extraordinario a las grandes empresas energéticas. | S89-2 ✔ | F | C | C | F | F | F | C | F | C | F | N | C | F | · | 5 | 13 | **Propuesta** |
-| E02 | Actualizar cada año todos los tramos del IRPF según la inflación. | S34-12 ✔ (y moción de 2026, S174-14/15) | C | F | F | C | C | C | N | C | N | N | C | F | C | · | 3 | 13 | **Propuesta**. Posible cambio de voto de FA en 2026 (A8) |
-| E03 | Que quien cobra el salario mínimo no pague IRPF. | S98-13 ✔ (contenido del punto por confirmar en el BOCG) | C | F | F | F | F | F | N | N | F | F | F | N | F | · | 1 | 13 | **Propuesta** |
-| E04 | Que el Estado perdone parte de la deuda que las comunidades autónomas tienen con él. | S193-19 ✔ (enmiendas a la totalidad: sí = en contra) | F | C | C | F | F | F | F | F | F | F | F | C | F | · | 3 | 13 | **Propuesta** |
-| E05 | Eximir del IVA a los autónomos y pequeños negocios con ingresos anuales bajos. | S174-14 o S174-15 ✔ (falta saber cuál de los dos puntos es) | C | F | F | C/F | C | C/F | F | C/N | N/F | C/F | F | F | C | · | 5 o 3 | 13 | **Propuesta con reserva** hasta leer el texto de la moción (A8) |
-| E06 | Mantener el impuesto a las grandes fortunas. | Ninguna votación específica localizada | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada: sin fuente. Reserva |
-| E07 | Revalorizar las pensiones cada año según el IPC. | Solo decretos de paquete (2025) | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada: sin fuente válida. Reserva |
-| E08 | Bajar el IVA de los alimentos básicos al 0 %. | Solo decretos de paquete | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada: sin fuente válida. Reserva |
-
-### Tema 4: Calidad del empleo
+### Inmigración
 
 | ID | Afirmación | Fuente | PSOE | PP | VOX | FA | POD | ERC | JxC | BIL | PNV | BNG | CC | UPN | CMP | UPC | Div. | Cob. | Decisión |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| L01 | Reducir la jornada laboral máxima a 37,5 horas semanales sin bajar el sueldo. | S130-10 ✔ (enmiendas a la totalidad: sí = en contra) | F | C | C | F | F | F | C | F | F | F | F | C | F | · | 4 | 13 | **Propuesta** |
-| L02 | Que la indemnización por despido improcedente pueda superar los 33 días por año cuando no compense el daño causado al trabajador. | S132-3 ✔ | F | C | C | F | F | F | N | F | F | F | F | C | F | · | 3 | 13 | **Propuesta** |
-| L03 | Subir el salario mínimo hasta el 60 % del salario medio. | Ninguna votación (el salario mínimo lo fija el Gobierno por real decreto) | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada: sin fuente. **Reserva 1** |
-| L04 | Obligar a todas las empresas a registrar la jornada de forma digital, con acceso directo de la Inspección de Trabajo. | Ninguna votación (real decreto) | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada: sin fuente. **Reserva 2** |
-| L05 | Mantener la reforma laboral de 2021, que limita los contratos temporales. | Ninguna votación en esta legislatura | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada: sin fuente. **Reserva 3** |
-| L06 | Prohibir las prácticas no remuneradas en empresas. | Ninguna | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada: sin fuente. Reserva |
-| L07 | Permitir volver parcialmente al trabajo durante una baja médica si el trabajador lo pide. | Ninguna | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada: sin fuente. Reserva |
-| L08 | Bajar las cotizaciones sociales a las empresas que contraten a jóvenes con contrato indefinido. | Ninguna | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada: sin fuente. Reserva |
+| I03 | Delegar en Cataluña competencias del Estado en inmigración, como la gestión de permisos de residencia y trabajo. | S133-1 ✔ (en el grupo SUMAR votaron no Alberto Ibáñez, de Compromís, y Jorge Pueyo, de CHA; Àgueda Micó, de Compromís, sí) | F | C | C | F | C | F | F | F | F | F | F | C | · | · | 4 | 12 | **Elegida.** Compromís sin posición por esta votación (A5) |
+| I04 | Ejecutar de forma efectiva las órdenes de expulsión de los extranjeros que no tienen derecho a permanecer en España. | S164-2 ✔ (punto 1 de la PNL; texto en [BOCG D-467](https://www.congreso.es/public_oficiales/L15/CONG/BOCG/D/BOCG-15-D-467.PDF) y aprobado en [D-489](https://www.congreso.es/public_oficiales/L15/CONG/BOCG/D/BOCG-15-D-489.PDF)) | C | F | F | C | C | C | F | C | N | C | N | F | C | · | 4 | 13 | **Elegida.** Redacción tomada del punto 1 (une las antiguas I04 e I07) |
+| I02 | Suprimir el reparto obligatorio entre comunidades de los menores migrantes no acompañados y que cada comunidad decida cuántos acoge. | S106-15 ✔ (redactada al revés: sí al decreto = en contra) | C | F | F | C | C | C | C | C | C | C | C | N | C | · | 2 | 13 | **Elegida** |
+| I05 | Endurecer los requisitos de la residencia por arraigo, la vía para obtener permiso tras varios años viviendo en España. | S131-1 ✔ | C | F | F | C | C | C | C | C | C | C | C | N | C | · | 2 | 13 | **Elegida** |
+| I01 | Aprobar una regularización extraordinaria de las personas extranjeras que ya viven y trabajan en España sin permiso de residencia. | S34-1 ✔ | F | F | C | F | F | F | F | F | F | F | F | F | F | · | 1 | 13 | **Elegida** (no hay otra con fuente que divida más) |
+| I06 | Mantener el acceso a la sanidad pública de las personas extranjeras en situación irregular. | Real Decreto 180/2026, sin votación | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada: sin fuente |
+| I08 | Exigir un contrato de trabajo firmado en origen como vía principal para venir a trabajar a España. | Ninguna | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada: sin fuente |
 
-Votaciones examinadas y no usadas: el RDL 7/2023 del subsidio de desempleo (sesión 15, votación 3, derogado 167–176: Podemos votó en contra por un detalle de cotización de los mayores de 52 años, demasiado técnico para una afirmación) y la PNL de SUMAR sobre la jornada de febrero de 2024 (sesión 23, votación 2), que repite L01.
-
-### Tema 5: Sanidad
+### Economía
 
 | ID | Afirmación | Fuente | PSOE | PP | VOX | FA | POD | ERC | JxC | BIL | PNV | BNG | CC | UPN | CMP | UPC | Div. | Cob. | Decisión |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| S01 | Mantener la reforma del copago farmacéutico de 2026, que rebaja lo que pagan por sus medicamentos los pensionistas con menos ingresos. | S183-12 ✔ | F | N | C | F | F | N | N | F | F | F | F | F | F | · | 1 | 13 | **Propuesta** |
-| S02 | Limitar por ley que la sanidad pública se gestione a través de empresas privadas. | Proyecto de ley de gestión pública (121/000094), sin votación en el pleno antes de la disolución | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada: sin fuente. **Reserva 1** |
-| S03 | Crear una Agencia Estatal de Salud Pública. | Votaciones de 2025 aún no leídas en el portal (la prensa habla de un primer «no» de PP, Vox y Junts como protesta ajena a la agencia: [iSanidad](https://isanidad.com/324330/el-congreso-tumba-la-agencia-estatal-de-salud-publica-con-los-votos-en-contra-de-pp-vox-y-junts/); aprobada después: [El Global](https://elglobalfarma.com/politica/congreso-aprueba-agencia-estatal-salud-publica/)) | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada por ahora: falta leer las votaciones oficiales. Reserva |
-| S04 | Fijar por ley tiempos máximos de espera para operaciones y consultas, iguales en toda España. | Ninguna votación en el pleno | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada: sin fuente. **Reserva 2** |
-| S05 | Prohibir fumar en las terrazas de bares y restaurantes. | Proyecto de ley de julio de 2026, sin votación | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada: sin fuente. **Reserva 3** |
-| S06 | Que los funcionarios de MUFACE pasen a la sanidad pública y dejar de concertar su asistencia con aseguradoras privadas. | PNL rechazada en la Comisión de Sanidad (abril de 2025): no es votación nominal del pleno | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada: sin fuente válida. Reserva |
-| S07 | Incluir el dentista en la sanidad pública para toda la población. | Ninguna | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada: sin fuente. Reserva |
-| S08 | Aprobar un Pacto de Estado por la Salud Mental. | S13-3 ✔: sí de PP, PSOE, SUMAR, ERC y EH Bildu; abstención de Vox, PNV y Junts; en el Mixto, 3 sí y 5 abstenciones (voto individual pendiente de leer) | F | F | N | F | · | F | N | F | N | · | · | · | F | · | 0 | 9 | **Propuesta con reserva**: nadie vota en contra (división 0); entra solo porque faltan candidatas con datos (A6) |
+| E01 | Volver a aplicar un impuesto extraordinario a las grandes empresas energéticas. | S89-2 ✔ | F | C | C | F | F | F | C | F | C | F | N | C | F | · | 5 | 13 | **Elegida** |
+| E02 | Actualizar cada año el IRPF según la inflación para compensar la subida de precios. | S174-14 ✔ (punto 1 de la moción: [BOCG D-522](https://www.congreso.es/public_oficiales/L15/CONG/BOCG/D/BOCG-15-D-522.PDF)); prevalece sobre la PNL S34-12 por A7 | C | F | F | C | C | C | F | C | N | C | F | F | C | · | 5 | 13 | **Elegida** |
+| E08 | Volver a rebajar el IVA de los alimentos básicos al 2 %. | S98-10 ✔ (punto 1 de la moción: [BOCG D-306](https://www.congreso.es/public_oficiales/L15/CONG/BOCG/D/BOCG-15-D-306.PDF)) | C | F | F | C | C | C | N | C | C | F | C | F | C | · | 4 | 13 | **Elegida.** Antes estaba en reserva sin fuente; ahora la tiene |
+| E04 | Que el Estado perdone parte de la deuda que las comunidades autónomas tienen con él. | S193-19 ✔ (enmiendas a la totalidad: sí = en contra) | F | C | C | F | F | F | F | F | F | F | F | C | F | · | 3 | 13 | **Elegida** |
+| E05 | Eximir del IVA a los autónomos que facturen menos de 85.000 euros al año. | S174-15 ✔ (punto 2 de la moción: BOCG D-522) | C | F | F | F | C | F | F | N | F | F | F | F | · | · | 2 | 12 | **Elegida.** Compromís sin posición: Micó no, Ibáñez sí (A5) |
+| E03 | Que quien cobra el salario mínimo no pague IRPF. | S98-13 ✔ (punto 4 de la moción: BOCG D-306) | C | F | F | F | F | F | N | N | F | F | F | N | F | · | 1 | 13 | Descartada: divide menos que las cinco elegidas (§2.2.3) |
+| E06 | Mantener el impuesto a las grandes fortunas. | Ninguna votación específica | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada: sin fuente |
+| E07 | Revalorizar las pensiones cada año según el IPC. | RDL 3/2026 (revalorización y otras medidas): solo Vox en contra; además es un paquete | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada: sin fuente válida (A1) |
 
-## Propuesta de 25
+### Calidad del empleo
 
-Por tema, ordenadas por división (entre paréntesis, división y cobertura). ⚠ = entra con reserva.
+| ID | Afirmación | Fuente | PSOE | PP | VOX | FA | POD | ERC | JxC | BIL | PNV | BNG | CC | UPN | CMP | UPC | Div. | Cob. | Decisión |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| L01 | Reducir la jornada laboral máxima a 37,5 horas semanales sin bajar el sueldo. | S130-10 ✔ (enmiendas a la totalidad: sí = en contra) | F | C | C | F | F | F | C | F | F | F | F | C | F | · | 4 | 13 | **Elegida.** La PL de jornada de 35 horas (14-10-2025) **repite** esta afirmación |
+| L06 | Prohibir los despidos colectivos en las empresas que trasladen su producción fuera de la Unión Europea. | S162-1 ✔ (contenido según la prensa: [Newtral](https://www.newtral.es/empleo-sumar-congreso/20260224/); leer el BOCG antes de codificar) | F | C | C | F | F | F | C | F | F | F | N | C | F | · | 4 | 13 | **Elegida.** Nueva |
+| L02 | Que la indemnización por despido improcedente pueda superar los 33 días por año cuando no compense el daño causado al trabajador. | S132-3 ✔ | F | C | C | F | F | F | N | F | F | F | F | C | F | · | 3 | 13 | **Elegida** |
+| L07 | Pagar con cargo a la Seguridad Social las 8 semanas del permiso parental de cuidado de hijos, que hoy no se cobran. | S98-8 ✔ (texto aprobado en BOCG D-306) | C | F | C | F | F | F | N | F | F | F | C | F | F | · | 3 | 13 | **Elegida.** Nueva |
+| L08 | Aumentar la cuota de empleo que las empresas deben reservar a personas con discapacidad. | S129-2 ✔ (PL del GP Socialista «para el impulso de la inclusión laboral de las personas con discapacidad a través de la cuota de reserva de empleo»; comprobar el texto en el BOCG antes de codificar) | F | F | C | F | F | F | F | F | F | F | F | F | F | · | 1 | 13 | **Elegida.** Empata con L09; se prefiere porque su título permite redactar la medida sin ambigüedad |
+| L09 | (Reforma del Estatuto de los Trabajadores «en materia de extinción…») | S69-3 ✔: solo Vox votó la devolución | C | C | F | C | C | C | C | C | C | C | C | C | C | · | 1 | 13 | Descartada: empate con L08 y no se ha leído el texto para redactarla |
+| L03 | Subir el salario mínimo hasta el 60 % del salario medio. | Ninguna votación | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada: sin fuente |
+| L04 | Obligar a todas las empresas a registrar la jornada de forma digital, con acceso de la Inspección de Trabajo. | Ninguna votación | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada: sin fuente |
+| L05 | Mantener la reforma laboral de 2021, que limita los contratos temporales. | Ninguna votación | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada: sin fuente |
 
-**Vivienda**
-1. V02 ⚠ · Permitir que el inquilino prorrogue hasta dos años su contrato de alquiler, con las mismas condiciones, cuando llegue a su fin. (6 · 13, sin voto nominal)
-2. V04 · Obligar a quien ocupa ilegalmente una vivienda a dejarla en 24 horas si no demuestra que tiene derecho a estar en ella. (4 · 13)
-3. V01 ⚠ · Prohibir hasta 2030 los desahucios de hogares vulnerables que no tengan una alternativa de vivienda. (sin fuente válida por A1: pendiente de programas)
-4. V05 ⚠ · Prohibir durante unos años que los grandes fondos de inversión compren viviendas. (sin fuente válida por A1: pendiente de programas)
-5. V03 · Regular por ley los alquileres de temporada y por habitaciones para que tengan las mismas protecciones que el alquiler de vivienda habitual. (3 · 13)
+### Sanidad
 
-**Inmigración**
-6. I03 · Delegar en Cataluña competencias del Estado en inmigración, como la gestión de permisos de residencia y trabajo. (4 · 12)
-7. I02 · Suprimir el reparto obligatorio entre comunidades de los menores migrantes no acompañados y que cada comunidad decida cuántos acoge. (2 · 13)
-8. I05 · Endurecer los requisitos de la residencia por arraigo, la vía para obtener permiso tras varios años viviendo en España. (2 · 13)
-9. I01 · Aprobar una regularización extraordinaria de las personas extranjeras que ya viven y trabajan en España sin permiso de residencia. (1 · 13)
-10. I04 ⚠ · Ampliar los casos en que se expulsa a extranjeros en situación irregular y acelerar las expulsiones. (sin fuente todavía: pendiente de las mociones de 2026 o de los programas)
+| ID | Afirmación | Fuente | PSOE | PP | VOX | FA | POD | ERC | JxC | BIL | PNV | BNG | CC | UPN | CMP | UPC | Div. | Cob. | Decisión |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| S09 | Prohibir la publicidad de alimentos y bebidas poco saludables, según los criterios de la OMS, que puedan ver los menores de 18 años. | S181-1 ✔ ([BOCG B-324-1](https://www.congreso.es/public_oficiales/L15/CONG/BOCG/B/BOCG-15-B-324-1.PDF), art. 6) | F | C | C | F | F | F | C | F | N | F | C | F | F | · | 4 | 13 | **Elegida.** Nueva |
+| S10 | Aprobar una ley estatal contra las agresiones al personal sanitario, con planes de prevención obligatorios en los centros públicos y privados. | S90-2 ✔ ([BOCG B-160-1](https://www.congreso.es/public_oficiales/L15/CONG/BOCG/B/BOCG-15-B-160-1.PDF)) | C | F | F | C | C | C | C | C | C | C | F | F | C | · | 4 | 13 | **Elegida.** Nueva |
+| S01 | Mantener la reforma del copago farmacéutico de 2026, que rebaja lo que pagan por sus medicamentos los pensionistas con menos ingresos. | S183-12 ✔ | F | N | C | F | F | N | N | F | F | F | F | F | F | · | 1 | 13 | **Elegida** |
+| S11 | Fijar por ley un número máximo de pacientes por enfermera en los centros sanitarios. | S83-1 ✔ (ILP sobre ratios de enfermeras) | F | F | F | F | F | N | N | N | C | F | N | F | F | · | 1 | 13 | **Elegida.** Nueva |
+| S12 | Que la tarjeta sanitaria y la historia clínica de cada paciente sean válidas y accesibles en todo el Sistema Nacional de Salud. | S80-3 ✔ (PL de Vox «para la garantía, a nivel estatal, del funcionamiento efectivo de la tarjeta sanitaria individual y de la plena interoperabilidad de las historias clínicas») | C | N | F | C | C | C | C | C | C | C | C | N | C | · | 1 | 13 | **Elegida.** Nueva |
+| S08 | Aprobar un Pacto de Estado por la Salud Mental. | S13-3 ✔: nadie votó en contra | F | F | N | F | N | F | N | F | N | F | F | F | F | · | 0 | 13 | Descartada: no divide (nadie en contra) |
+| S02 | Limitar por ley que la sanidad pública se gestione a través de empresas privadas. | Proyecto de ley sin votación en el pleno | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada: sin fuente |
+| S04 | Fijar por ley tiempos máximos de espera iguales en toda España. | Ninguna votación en el pleno | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada: sin fuente |
+| S05 | Prohibir fumar en las terrazas de bares y restaurantes. | Proyecto de ley sin votación | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada: sin fuente |
+| S03 | Crear una Agencia Estatal de Salud Pública. | Solo votaciones de enmiendas del Senado (22-07-2025) | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada: sin votación sobre la medida en sí |
+| S06 | Que los funcionarios de MUFACE pasen a la sanidad pública. | PNL en comisión, no votación nominal del pleno | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada: sin fuente válida |
+| S07 | Incluir el dentista en la sanidad pública para toda la población. | Ninguna | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada: sin fuente |
 
-**Economía**
-11. E01 · Volver a aplicar un impuesto extraordinario a las grandes empresas energéticas. (5 · 13)
-12. E02 · Actualizar cada año todos los tramos del IRPF según la inflación. (3 · 13)
-13. E04 · Que el Estado perdone parte de la deuda que las comunidades autónomas tienen con él. (3 · 13)
-14. E05 ⚠ · Eximir del IVA a los autónomos y pequeños negocios con ingresos anuales bajos. (5 o 3 · 13, falta identificar el punto)
-15. E03 · Que quien cobra el salario mínimo no pague IRPF. (1 · 13)
+Otras votaciones examinadas y no usadas: S99-1 (PL de Junts sobre desalojos de viviendas ocupadas) repite V04; la PL de jornada de 35 horas (14-10-2025) repite L01; la PL del GP Popular sobre bonificaciones de cuotas en Ceuta y Melilla (11-03-2025) es de ámbito local; la PL de Vox sobre el subsidio de menores extranjeros internados (10-09-2024) es demasiado específica; las PNL y mociones con varios puntos sobre vivienda de abril de 2024, septiembre de 2025 y febrero de 2026 no se han usado porque no se ha leído aún el texto de cada punto (A3).
 
-**Calidad del empleo**
-16. L01 · Reducir la jornada laboral máxima a 37,5 horas semanales sin bajar el sueldo. (4 · 13)
-17. L02 · Que la indemnización por despido improcedente pueda superar los 33 días por año cuando no compense el daño causado al trabajador. (3 · 13)
-18. L03 ⚠ · Subir el salario mínimo hasta el 60 % del salario medio. (sin datos: pendiente de programas)
-19. L04 ⚠ · Obligar a todas las empresas a registrar la jornada de forma digital, con acceso directo de la Inspección de Trabajo. (sin datos: pendiente de programas)
-20. L05 ⚠ · Mantener la reforma laboral de 2021, que limita los contratos temporales. (sin datos: pendiente de programas)
+## Pendiente antes de codificar
 
-**Sanidad**
-21. S01 · Mantener la reforma del copago farmacéutico de 2026, que rebaja lo que pagan por sus medicamentos los pensionistas con menos ingresos. (1 · 13)
-22. S08 ⚠ · Aprobar un Pacto de Estado por la Salud Mental. (0 · 9)
-23. S02 ⚠ · Limitar por ley que la sanidad pública se gestione a través de empresas privadas. (sin datos: pendiente de programas)
-24. S04 ⚠ · Fijar por ley tiempos máximos de espera para operaciones y consultas, iguales en toda España. (sin datos: pendiente de programas)
-25. S05 ⚠ · Prohibir fumar en las terrazas de bares y restaurantes. (sin datos: pendiente de programas)
-
-**Resumen:** 13 afirmaciones tienen ya fuente oficial suficiente y dividen (V03, V04, I01, I02, I03, I05, E01, E02, E03, E04, L01, L02, S01); 2 dependen del voto nominal del 2-oct o de identificar el punto de una moción (V02, E05); S08 tiene fuente oficial pero nadie vota en contra; y 9 no tienen todavía ninguna fuente válida y quedan como reservas hasta que se publiquen los programas (V01 y V05 por A1, I04, L03, L04, L05, S02, S04, S05). Las reservas «sin datos» se han elegido en el orden de la lista de candidatas, porque el protocolo no da una regla para elegir entre afirmaciones sin fuente. Si con los programas siguen sin fuente para la mitad de las candidaturas, se descartan.
-
-### Equilibrio «cambiar / mantener» (§2.3)
-
-- Proponen mantener la situación actual o revertir un cambio: I02 (revertir el reparto obligatorio de menores), S01 y L05 (mantener).
-- Con la redacción actual, «de acuerdo» coincide con el voto de PP y Vox en V04, I02, I05, E02, E03 y E05, y con el de PSOE y FA en V01, V02, V03, V05, I01, I03, E01, E04, L01, L02 y S01. **Pendiente:** al redactar el texto final, invertir de forma neutra el sentido de dos o tres afirmaciones (como se ha hecho con I02) para que «de acuerdo» no favorezca a ningún bloque. El responsable decide cuáles.
-
-## Casos dudosos
-
-| # | Caso | Propuesta |
-|---|---|---|
-| A1 | **Decretos de paquete** (V01, V05, V06, V07: primer decreto de vivienda; E07, E08). El voto se emite sobre todo el decreto, no sobre cada medida. | Decidir por escrito si una votación de paquete cuenta como «sustancialmente igual» para cada medida que contiene (§3.1). Mientras no se decida, V01 y V05 entran con reserva y V06–V08 quedan en reserva. |
-| A2 | **Votación del 2-oct-2026 sin voto nominal publicado.** | Esperar a que el Congreso lo publique o pedirlo. Sin él, V01, V02 y V05 no tienen fuente oficial (§3.1) y se sustituyen por reservas. |
-| A3 | **Mociones votadas por puntos** (E03, E05, I07): el fichero oficial dice «Punto 4», pero no el texto del punto. | Leer el texto de cada moción en el BOCG y confirmar qué punto corresponde a cada medida antes de codificar. |
-| A4 | **Sin programas.** | Repetir la selección cuando se publiquen, antes del 11-nov. Empleo y sanidad dependen de ello: hoy solo tienen dos afirmaciones cada uno con fuente válida. |
-| A5 | **Votos divididos dentro de una candidatura** en I03: Compromís (Ibáñez en contra, Micó a favor) y CHA (Pueyo en contra, dentro del grupo SUMAR, que votó a favor). | Compromís: posición dudosa (D7 de `partidos.md`). CHA: afecta a la coalición CHA-Frente Amplio de Huesca y Zaragoza, que toma la posición de CHA (§1); se resolverá al codificar. |
-| A6 | **I01** reparte poco (solo Vox en contra) y **S08** no tiene ningún voto en contra. | Se mantienen porque no hay alternativas con fuente en su tema. Si los programas aportan otras que dividan más, las sustituyen. |
-| A7 | **Dos votaciones de la misma medida con distinto voto** (V03: Junts votó en contra en septiembre de 2024 y a favor en diciembre de 2024 de una versión con cambios). | El protocolo no dice qué votación prevalece. Propuesta: tomar la más reciente y mencionar la otra en la justificación. Decide el responsable. |
-| A8 | **E02 y E05:** en la PNL de 2024 el grupo SUMAR votó en contra de deflactar el IRPF; en la moción de 2026 votó a favor de uno de los dos puntos fiscales (según la nota del PP, el de deflactar). | Ídem A7, y confirmar con el texto de la moción (A3). |
+- Leer en el BOCG el texto de las PL de las que solo se conoce el contenido por el acta o la prensa: V05 (expte. 122/000251), L06 y L08.
+- Mirar los programas del 29-N cuando se publiquen y aplicar la tabla 3.2 a estas 25.
 
 ## Decisiones del responsable (3 de noviembre de 2026)
 
