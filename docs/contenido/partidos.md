@@ -90,7 +90,7 @@ Una entrada por candidatura de la papeleta, con su nombre oficial tal como apare
 - **Francisco Javier Ortega Smith** (elegido por Vox, en el Mixto desde el 17-07-2026): no figura ninguna candidatura suya ni de un partido nuevo en el BOE. Su escaño era de la lista de Vox, que ya está incluido. No se incluye nada más.
 - **Más Madrid, IU, Movimiento Sumar y Catalunya en Comú**: no se presentan solos; concurren dentro de Frente Amplio y sus coaliciones regionales.
 
-## 3. Casos dudosos (para el responsable)
+## 3. Casos dudosos
 
 | # | Caso | Qué dice el protocolo | Propuesta |
 |---|---|---|---|
@@ -104,6 +104,8 @@ Una entrada por candidatura de la papeleta, con su nombre oficial tal como apare
 | D8 | **Cambios de alianza respecto a 2023.** En 2023 Podemos, IU, Más Madrid, Comuns, Compromís y CHA fueron en la coalición SUMAR; ahora Podemos va solo en 40 circunscripciones y con Compromís y UPC en otras cinco; los demás, en Frente Amplio y sus coaliciones. UPN y PP fueron por separado en Navarra en 2023 y ahora van juntos. CC va con Municipalistas Primero. EH Bildu va con ERC en Navarra. | §1 mira solo el escaño al disolverse y la papeleta de 2026. | Sin efecto en la inclusión; se aplican las referencias de la tabla 2.2. |
 | D9 | **«Partido Socialista de Huelva (PSOE)»** es la denominación del PSOE en Huelva según el BOE. | §1: nombre tal como figura en la papeleta. | Mostrar ese nombre en Huelva, como el resto de federaciones. |
 | D10 | **La prensa (Newtral, 27-10-2026) publicó que el PP no concurriría en Girona, Gipuzkoa y Tarragona ni Vox en seis provincias**, pero el BOE del 3-nov los proclama en todas. | El BOE es la fuente. | Se sigue el BOE. Confirmar tras los recursos (12-nov). |
+
+**Decisión del responsable (3-nov-2026):** se adoptan las propuestas de la tabla para D1–D10, a recomendación de Claude. En concreto: Frente Amplio y sus variantes de nombre son una sola entidad con posiciones de su programa conjunto y, para votaciones, del grupo SUMAR (D1, D2); Aramés-Front Ampli se trata como variante de Frente Amplio hasta confirmar su composición (D3); UPC se incluye con posiciones de su programa o de NC-BC (D4); Coalición Canaria es una sola entidad con referencia a CC en ambas provincias (D5); «Podemos (Paz, Casa y Trabajo)» de Ceuta no se incluye hasta confirmar que es Podemos (D6); Compromís es la referencia de su coalición y, si sus diputados votan divididos, la votación no le da posición (D7 y regla A5 de `afirmaciones.md`); manda el BOE frente a la prensa (D10).
 
 ## 4. Pendientes
 

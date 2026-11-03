@@ -75,6 +75,7 @@ Modelo/esfuerzo: **Opus** = arquitectura o lógica compleja · **Sonnet** = impl
 - Afirmaciones: temas según los principales problemas del último barómetro del CIS; solo afirmaciones que dividen a los partidos; reglas de redacción de `docs/PROTOCOLO.md`.
 - Las posiciones codificadas se envían a cada partido para que las confirme o corrija con fuente en 72 horas (`docs/CORREO-PARTIDOS.md`).
 - Correcciones: respuesta en 24 horas como máximo.
+- Reglas de aplicación del protocolo (decidido 3-nov, a recomendación de Claude; detalle en `docs/contenido/afirmaciones.md` y `partidos.md`): una votación de un paquete de medidas no cuenta para cada medida por separado; si un partido vota dividido sin mayoría, esa votación no le da posición; si hay varias votaciones de la misma medida, prevalece la más reciente; las mociones votadas por puntos solo cuentan tras identificar el punto en el BOCG; Frente Amplio y sus variantes de nombre son una sola entidad (votaciones del grupo SUMAR) y Coalición Canaria, una sola entidad con referencia a CC.
 - Colores de los partidos: los corporativos.
 - Correo de contacto y dominio propio: pendientes (se usa `orientavoto.pages.dev`).
 

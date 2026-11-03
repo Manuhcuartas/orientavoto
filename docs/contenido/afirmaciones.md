@@ -50,11 +50,11 @@ Columnas: PSOE · PP · VOX · FA · POD · ERC · JxC · BIL · PNV · BNG · C
 
 | ID | Afirmación | Fuente | PSOE | PP | VOX | FA | POD | ERC | JxC | BIL | PNV | BNG | CC | UPN | CMP | UPC | Div. | Cob. | Decisión |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| V01 | Prohibir hasta 2030 los desahucios de hogares vulnerables que no tengan una alternativa de vivienda. | D-261002, primer decreto ⏳ ([eldiario.es](https://www.eldiario.es/politica/junts-pp-vox-tumban-decretos-vivienda-congreso_1_13557141.html), [Demócrata](https://www.democrata.es/politica/congreso-y-senado/el-congreso-tumba-el-decreto-de-vivienda-con-los-votos-de-pp-vox-junts-y-upn/)) | F | C | C | F | F | F | C | F | F | F | F | C | F | · | 4 | 13 | **Propuesta, dudosa**: decreto con varias medidas y sin voto nominal (A1, A2) |
+| V01 | Prohibir hasta 2030 los desahucios de hogares vulnerables que no tengan una alternativa de vivienda. | D-261002, primer decreto ⏳ ([eldiario.es](https://www.eldiario.es/politica/junts-pp-vox-tumban-decretos-vivienda-congreso_1_13557141.html), [Demócrata](https://www.democrata.es/politica/congreso-y-senado/el-congreso-tumba-el-decreto-de-vivienda-con-los-votos-de-pp-vox-junts-y-upn/)) | F | C | C | F | F | F | C | F | F | F | F | C | F | · | 4 | 13 | **Propuesta con reserva**: por A1 el decreto de paquete no cuenta como fuente; las posiciones de la fila son solo orientativas (prensa). Queda pendiente de programas |
 | V02 | Permitir que el inquilino prorrogue hasta dos años su contrato de alquiler, con las mismas condiciones, cuando llegue a su fin. | D-261002, segundo decreto ⏳ ([Diario en Positivo](https://www.diarioenpositivo.com/politica/economia-amp-pp-vox-junts-pnv-cc-upn-tumban-segundo-decreto-renovacion-automatica-alquileres/20261002162702093090.html)) | F | C | C | F | F | F | C | F | C | F | C | C | F | · | 6 | 13 | **Propuesta, dudosa**: sin voto nominal (A2); comprobar en el BOE que el segundo decreto trataba solo de la prórroga |
-| V03 | Regular por ley los alquileres de temporada y por habitaciones para que tengan las mismas protecciones que el alquiler de vivienda habitual. | S59-1 ✔ y S86-1 ✔ | F | C | C | F | F | F | dudosa | F | F | F | F | C | F | · | 3 | 12 | **Propuesta**. Junts votó en contra en S59-1 y a favor en S86-1 (A7) |
+| V03 | Regular por ley los alquileres de temporada y por habitaciones para que tengan las mismas protecciones que el alquiler de vivienda habitual. | S59-1 ✔ y S86-1 ✔ | F | C | C | F | F | F | F | F | F | F | F | C | F | · | 3 | 13 | **Propuesta**. Junts: en contra en S59-1 y a favor en S86-1; se toma la más reciente (A7) |
 | V04 | Obligar a quien ocupa ilegalmente una vivienda a dejarla en 24 horas si no demuestra que tiene derecho a estar en ella. | S179-1 ✔ | C | F | F | C | C | C | N | C | N | C | F | F | C | · | 4 | 13 | **Propuesta** |
-| V05 | Prohibir durante unos años que los grandes fondos de inversión compren viviendas. | D-261002, primer decreto ⏳ | F | C | C | F | F | F | C | F | F | F | F | C | F | · | 4 | 13 | **Propuesta, dudosa** (igual que V01) |
+| V05 | Prohibir durante unos años que los grandes fondos de inversión compren viviendas. | D-261002, primer decreto ⏳ | F | C | C | F | F | F | C | F | F | F | F | C | F | · | 4 | 13 | **Propuesta con reserva** (igual que V01, por A1) |
 | V06 | Crear un impuesto del 10 % sobre los pisos turísticos. | D-261002 ⏳ | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada por ahora: no consta en cuál de los dos decretos iba. Reserva |
 | V07 | Bajar al 4 % el IVA de la construcción de vivienda protegida. | D-261002 ⏳ | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada por ahora: ídem. Reserva |
 | V08 | Mantener la Ley de Vivienda de 2023, que permite limitar el precio del alquiler en zonas tensionadas. | Ninguna votación en esta legislatura | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada: sin fuente. Reserva para cuando haya programas |
@@ -67,7 +67,7 @@ Votación examinada y no usada: S99-1 (PL de Junts para agilizar desalojos de vi
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | I01 | Aprobar una regularización extraordinaria de las personas extranjeras que ya viven y trabajan en España sin permiso de residencia. | S34-1 ✔ | F | F | C | F | F | F | F | F | F | F | F | F | F | · | 1 | 13 | **Propuesta** (solo Vox en contra; A6) |
 | I02 | Suprimir el reparto obligatorio entre comunidades de los menores migrantes no acompañados y que cada comunidad decida cuántos acoge. | S106-15 ✔ (redactada al revés: sí al decreto = en contra de la afirmación) | C | F | F | C | C | C | C | C | C | C | C | N | C | · | 2 | 13 | **Propuesta** |
-| I03 | Delegar en Cataluña competencias del Estado en inmigración, como la gestión de permisos de residencia y trabajo. | S133-1 ✔ | F | C | C | F | C | F | F | F | F | F | F | C | dudosa | · | 4 | 12 | **Propuesta**. En el grupo SUMAR votaron en contra Alberto Ibáñez (Compromís) y Jorge Pueyo (CHA); Àgueda Micó (Compromís, Mixto), a favor (A5) |
+| I03 | Delegar en Cataluña competencias del Estado en inmigración, como la gestión de permisos de residencia y trabajo. | S133-1 ✔ | F | C | C | F | C | F | F | F | F | F | F | C | · | · | 4 | 12 | **Propuesta**. En el grupo SUMAR votaron en contra Alberto Ibáñez (Compromís) y Jorge Pueyo (CHA); Àgueda Micó (Compromís, Mixto), a favor (A5) |
 | I04 | Ampliar los casos en que se expulsa a extranjeros en situación irregular y acelerar las expulsiones. | No se ha encontrado una votación específica: la noticia de [The Objective](https://theobjective.com/espana/politica/2025-09-16/congreso-propuesta-vox-expulsar-inmigrantes-pp/) del 16-09-2025 corresponde a la PL de arraigo (S131-1). Hay mociones del PP con varios puntos (18-02-2026) cuyo texto hay que leer | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada por ahora: sin fuente. **Reserva 1** |
 | I05 | Endurecer los requisitos de la residencia por arraigo, la vía para obtener permiso tras varios años viviendo en España. | S131-1 ✔ | C | F | F | C | C | C | C | C | C | C | C | N | C | · | 2 | 13 | **Propuesta** |
 | I06 | Mantener el acceso a la sanidad pública de las personas extranjeras en situación irregular. | Real Decreto 180/2026 (Gobierno, sin votación en el Congreso) | · | · | · | · | · | · | · | · | · | · | · | · | · | · | — | 0 | Descartada: sin fuente. Reserva |
@@ -122,9 +122,9 @@ Por tema, ordenadas por división (entre paréntesis, división y cobertura). �
 **Vivienda**
 1. V02 ⚠ · Permitir que el inquilino prorrogue hasta dos años su contrato de alquiler, con las mismas condiciones, cuando llegue a su fin. (6 · 13, sin voto nominal)
 2. V04 · Obligar a quien ocupa ilegalmente una vivienda a dejarla en 24 horas si no demuestra que tiene derecho a estar en ella. (4 · 13)
-3. V01 ⚠ · Prohibir hasta 2030 los desahucios de hogares vulnerables que no tengan una alternativa de vivienda. (4 · 13, decreto de paquete sin voto nominal)
-4. V05 ⚠ · Prohibir durante unos años que los grandes fondos de inversión compren viviendas. (4 · 13, ídem)
-5. V03 · Regular por ley los alquileres de temporada y por habitaciones para que tengan las mismas protecciones que el alquiler de vivienda habitual. (3 · 12)
+3. V01 ⚠ · Prohibir hasta 2030 los desahucios de hogares vulnerables que no tengan una alternativa de vivienda. (sin fuente válida por A1: pendiente de programas)
+4. V05 ⚠ · Prohibir durante unos años que los grandes fondos de inversión compren viviendas. (sin fuente válida por A1: pendiente de programas)
+5. V03 · Regular por ley los alquileres de temporada y por habitaciones para que tengan las mismas protecciones que el alquiler de vivienda habitual. (3 · 13)
 
 **Inmigración**
 6. I03 · Delegar en Cataluña competencias del Estado en inmigración, como la gestión de permisos de residencia y trabajo. (4 · 12)
@@ -154,14 +154,14 @@ Por tema, ordenadas por división (entre paréntesis, división y cobertura). �
 24. S04 ⚠ · Fijar por ley tiempos máximos de espera para operaciones y consultas, iguales en toda España. (sin datos: pendiente de programas)
 25. S05 ⚠ · Prohibir fumar en las terrazas de bares y restaurantes. (sin datos: pendiente de programas)
 
-**Resumen:** 13 afirmaciones tienen ya fuente oficial suficiente y dividen (V03, V04, I01, I02, I03, I05, E01, E02, E03, E04, L01, L02, S01); 4 dependen de la votación del 2-oct sin voto nominal o de identificar el punto de una moción (V01, V02, V05, E05); S08 tiene fuente oficial pero nadie vota en contra; y 7 no tienen todavía ninguna fuente y quedan como reservas hasta que se publiquen los programas (I04, L03, L04, L05, S02, S04, S05). Las reservas «sin datos» se han elegido en el orden de la lista de candidatas, porque el protocolo no da una regla para elegir entre afirmaciones sin fuente. Si con los programas siguen sin fuente para la mitad de las candidaturas, se descartan.
+**Resumen:** 13 afirmaciones tienen ya fuente oficial suficiente y dividen (V03, V04, I01, I02, I03, I05, E01, E02, E03, E04, L01, L02, S01); 2 dependen del voto nominal del 2-oct o de identificar el punto de una moción (V02, E05); S08 tiene fuente oficial pero nadie vota en contra; y 9 no tienen todavía ninguna fuente válida y quedan como reservas hasta que se publiquen los programas (V01 y V05 por A1, I04, L03, L04, L05, S02, S04, S05). Las reservas «sin datos» se han elegido en el orden de la lista de candidatas, porque el protocolo no da una regla para elegir entre afirmaciones sin fuente. Si con los programas siguen sin fuente para la mitad de las candidaturas, se descartan.
 
 ### Equilibrio «cambiar / mantener» (§2.3)
 
 - Proponen mantener la situación actual o revertir un cambio: I02 (revertir el reparto obligatorio de menores), S01 y L05 (mantener).
 - Con la redacción actual, «de acuerdo» coincide con el voto de PP y Vox en V04, I02, I05, E02, E03 y E05, y con el de PSOE y FA en V01, V02, V03, V05, I01, I03, E01, E04, L01, L02 y S01. **Pendiente:** al redactar el texto final, invertir de forma neutra el sentido de dos o tres afirmaciones (como se ha hecho con I02) para que «de acuerdo» no favorezca a ningún bloque. El responsable decide cuáles.
 
-## Casos dudosos y decisiones pendientes para el responsable
+## Casos dudosos
 
 | # | Caso | Propuesta |
 |---|---|---|
@@ -173,3 +173,18 @@ Por tema, ordenadas por división (entre paréntesis, división y cobertura). �
 | A6 | **I01** reparte poco (solo Vox en contra) y **S08** no tiene ningún voto en contra. | Se mantienen porque no hay alternativas con fuente en su tema. Si los programas aportan otras que dividan más, las sustituyen. |
 | A7 | **Dos votaciones de la misma medida con distinto voto** (V03: Junts votó en contra en septiembre de 2024 y a favor en diciembre de 2024 de una versión con cambios). | El protocolo no dice qué votación prevalece. Propuesta: tomar la más reciente y mencionar la otra en la justificación. Decide el responsable. |
 | A8 | **E02 y E05:** en la PNL de 2024 el grupo SUMAR votó en contra de deflactar el IRPF; en la moción de 2026 votó a favor de uno de los dos puntos fiscales (según la nota del PP, el de deflactar). | Ídem A7, y confirmar con el texto de la moción (A3). |
+
+## Decisiones del responsable (3 de noviembre de 2026)
+
+El responsable pidió que se decidieran los casos A1–A8 según la recomendación de Claude. Se adoptan estas reglas, que se aplican igual a todas las candidaturas:
+
+| # | Decisión | Efecto |
+|---|---|---|
+| A1 | **Una votación de un decreto o ley con varias medidas no cuenta como fuente para cada medida por separado.** Solo cuenta si la iniciativa votada trata sustancialmente de esa medida (§3.1). | V01 y V05 se quedan sin fuente válida: siguen en la lista con reserva hasta que haya programas. V06, V07, E07 y E08 siguen en reserva. |
+| A2 | Para V02 se espera al voto nominal del 2-oct y se comprueba en el BOE que el segundo decreto trataba solo de la prórroga del alquiler. Si el 16-nov no hay voto nominal, V02 solo puede apoyarse en programas o comunicados. | V02 sigue con reserva. |
+| A3 | Antes de codificar una moción votada por puntos se lee su texto en el BOCG y se anota qué punto corresponde a cada medida. Sin ese texto, la votación no cuenta. | E03, E05 e I07 pendientes de esa lectura. |
+| A4 | Cuando se publiquen los programas, antes del 11-nov, se repite la selección con las mismas reglas: una reserva ⚠ se confirma si cumple el §2.2 y, si no, entra la siguiente candidata con fuente de su tema. | Afecta a todas las ⚠. |
+| A5 | **Si los diputados de un partido votan divididos y no hay mayoría, esa votación no da posición** a ese partido; se usa su programa o su comunicado (tabla 3.2). Cuando una coalición toma las posiciones de un partido que tiene diputados propios (CHA en CHA-Frente Amplio), cuenta el voto de esos diputados, no el del grupo. | I03: Compromís, sin posición por votación (Ibáñez no, Micó sí). CHA-Frente Amplio: en contra (voto de Jorge Pueyo), al codificar. |
+| A6 | I01 y S08 se mantienen mientras no haya en su tema otra candidata con fuente que divida más. | Sin cambios. |
+| A7 | **Si hay varias votaciones de la misma medida con distinto voto, prevalece la más reciente** y la justificación cita también la anterior. | V03: Junts a favor (S86-1, 17-12-2024). |
+| A8 | Se aplica A7 junto con A3: para E02 prevalecerá la moción de 2026 cuando se confirme qué punto es deflactar el IRPF; hasta entonces se usa la PNL de 2024. | E02 y E05 se recalculan tras leer la moción. |
