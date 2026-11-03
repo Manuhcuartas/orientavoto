@@ -1,6 +1,6 @@
 # Afirmaciones candidatas y propuesta de 25 (protocolo §2.2 y §2.3)
 
-Documento de trabajo de la tarea 4.0. Preparado por Claude el 3 de noviembre de 2026 aplicando `docs/PROTOCOLO.md` §2.2 y §2.3. **Borrador para que el responsable apruebe la lista** (§2.2.4). Las posiciones de este documento solo sirven para elegir afirmaciones: **no son las posiciones definitivas** ni se codifican en `data/` hasta después de la aprobación.
+Documento de trabajo de la tarea 4.0. Preparado por Claude el 3 de noviembre de 2026 aplicando `docs/PROTOCOLO.md` §2.2 y §2.3. **Lista de 25 aprobada con reservas por el responsable el 3 de noviembre de 2026** (§2.2.4): se aprueba la lista completa tal como figura en «Propuesta de 25», con las reservas marcadas ⚠ y los casos A1–A8 todavía pendientes de decisión. Las afirmaciones ⚠ se confirman o se sustituyen por la siguiente reserva con fuente cuando haya voto nominal, texto de las mociones o programas, aplicando las mismas reglas. Las posiciones de este documento solo sirven para elegir afirmaciones: **no son las posiciones definitivas** ni se codifican en `data/` hasta después de la aprobación.
 
 ## Estado de las fuentes a 3 de noviembre
 
