@@ -64,7 +64,19 @@ Modelo/esfuerzo: **Opus** = arquitectura o lógica compleja · **Sonnet** = impl
 
 **Nunca se recorta:** neutralidad, privacidad, accesibilidad básica, desglose con fuentes, metodología, validación y tests del algoritmo.
 
-**Pendiente legal (lo decide el responsable del proyecto):** ¿se mantiene activa en la jornada de reflexión (28-N) y el 29-N? Hay que consultarlo con asesoría legal o con la JEC.
+**Jornada de reflexión (decidido 3-nov):** se envía una consulta a la Junta Electoral Central (`docs/CONSULTA-JEC.md`, la envía el responsable). Mientras no respondan, la web se pondrá en **pausa** de las 00:00 del 28-N a las 20:00 del 29-N (tarea 4.3).
+
+**Contenido y responsable (decidido 3-nov):**
+- Responsable: **Manuel Hernández Cuartas**, a título personal. Proyecto personal, sin financiación externa y sin vinculación con partidos ni medios: se puede decir «independiente».
+- El contenido real lo prepara Claude con el **protocolo público de `docs/PROTOCOLO.md`** (las reglas deciden, no una persona) y el responsable lo aprueba y verifica por muestreo.
+- Fuentes: votaciones nominales en el Congreso de la legislatura 2023–2026 y programa electoral para el 29-N; comunicados oficiales solo si no hay ninguno de los dos. Se tienen en cuenta ambos; si el voto es **contrario** al programa, manda el voto (tabla 3.2 de `docs/PROTOCOLO.md`).
+- Fecha de corte: votaciones hasta la disolución de las Cortes, programas para estas elecciones y comunicados hasta el 16-nov (congelación de contenido).
+- Partidos incluidos: los que tenían **al menos un escaño en el Congreso al disolverse las Cortes**, en las circunscripciones donde se presentan.
+- Afirmaciones: temas según los principales problemas del último barómetro del CIS; solo afirmaciones que dividen a los partidos; reglas de redacción de `docs/PROTOCOLO.md`.
+- Las posiciones codificadas se envían a cada partido para que las confirme o corrija con fuente en 72 horas (`docs/CORREO-PARTIDOS.md`).
+- Correcciones: respuesta en 24 horas como máximo.
+- Colores de los partidos: los corporativos.
+- Correo de contacto y dominio propio: pendientes (se usa `orientavoto.pages.dev`).
 
 ---
 
@@ -554,10 +566,25 @@ Auditoría de neutralidad (tarea 3.5):
 
 ## Fase 4 — Contenido real y lanzamiento (17–20 nov)
 
-**Plazos de contenido (los cumple el responsable del proyecto):**
+**Plazos de contenido (los prepara Claude con `docs/PROTOCOLO.md`; el responsable aprueba):**
 - Candidaturas oficiales (BOE): antes del 9 nov.
-- Texto final de las afirmaciones: antes del 11 nov.
-- Posiciones y fuentes: antes del 16 nov (congelación de contenido).
+- Texto final de las afirmaciones: antes del 11 nov (el responsable aprueba la lista).
+- Posiciones y fuentes: antes del 16 nov (congelación de contenido), tras la revisión de los partidos.
+
+### [ ] 4.0 · Preparar el contenido real con el protocolo
+- **Modelo:** Opus · **Esfuerzo:** alto · **Requiere:** `docs/PROTOCOLO.md` aprobado
+- **Ficheros:** `data/*.json`, `data/posiciones/*.json`, `docs/contenido/` (documentos de trabajo: candidatas, descartes y motivos, citas).
+- **Qué hacer:**
+  - Lista de partidos incluidos según el criterio (escaño al disolverse las Cortes) y candidaturas oficiales del BOE.
+  - Unas 40 afirmaciones candidatas por los temas del CIS; seleccionar 25 con los criterios y documentar el motivo de cada descarte.
+  - Codificar cada partido × afirmación con cita literal, enlace y fecha; marcar los casos dudosos.
+  - Enviar las posiciones a los partidos (`docs/CORREO-PARTIDOS.md`) y aplicar solo correcciones con fuente.
+- **Aceptación:** `npm run validate` sin errores con `ficticio: false`; cada posición con cita comprobable; lista de casos dudosos entregada al responsable.
+
+### [ ] 4.3 · Pausa en la jornada de reflexión
+- **Modelo:** Sonnet · **Esfuerzo:** medio · **Requiere:** 4.1
+- **Qué hacer:** que la web muestre solo un aviso de pausa de las 00:00 del 28-N a las 20:00 del 29-N (hora peninsular) y vuelva sola después, sin depender de que alguien esté despierto. Se puede anular si la JEC responde que no hace falta.
+- **Aceptación:** probado con fechas simuladas; el aviso no menciona ningún partido.
 
 ### [ ] 4.1 · Integrar el contenido real
 - **Modelo:** Sonnet · **Esfuerzo:** medio · **Requiere:** contenido entregado, 3.x

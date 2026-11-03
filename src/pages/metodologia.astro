@@ -11,6 +11,8 @@ import { dataset } from '../lib/data';
 const locale = Astro.currentLocale ?? defaultLocale;
 const t = createTranslator(locale);
 const { meta } = dataset;
+/** The full, public content protocol (docs/PROTOCOLO.md in the repository). */
+const PROTOCOL_URL = 'https://github.com/Manuhcuartas/orientavoto/blob/main/docs/PROTOCOLO.md';
 const pct = (ratio: number) => Math.round(ratio * 100);
 
 // --- Points table: generated from the same formula ---------------------------
@@ -182,19 +184,38 @@ const example = exampleEntities.map((e) => {
       ))
     }
 
+    <h2>{t('metodologia.afirmacionesTitulo')}</h2>
+    <p>{t('metodologia.afirmacionesTexto')}</p>
+    <p>{t('metodologia.redaccionTexto')}</p>
+
+    <h2>{t('metodologia.partidosTitulo')}</h2>
+    <p>{t('metodologia.partidosTexto')}</p>
+    <p>{t('metodologia.coaliciones')}</p>
+
     <h2>{t('metodologia.posicionesTitulo')}</h2>
     <p>{t('metodologia.posicionesTexto')}</p>
-    <p>{t('metodologia.tiposFuente')}</p>
+    <p>{t('metodologia.fuentesIntro')}</p>
     <ul>
       <li>{t('metodologia.tipoPrograma')}</li>
       <li>{t('metodologia.tipoVotacion')}</li>
       <li>{t('metodologia.tipoDeclaracion')}</li>
-      <li>{t('metodologia.tipoOtro')}</li>
     </ul>
-    <p>{t('metodologia.coaliciones')}</p>
-    <p class="pending">{t('metodologia.pendienteProceso')}</p>
-    <p class="pending">{t('metodologia.pendienteAfirmaciones')}</p>
-    <p class="pending">{t('metodologia.pendientePartidos')}</p>
+    <p>{t('metodologia.noCuentan')}</p>
+    <p>{t('metodologia.combinacion')}</p>
+    <p>{t('metodologia.codificacionIntro')}</p>
+    <ul>
+      <li>{t('metodologia.codAFavor')}</li>
+      <li>{t('metodologia.codEnContra')}</li>
+      <li>{t('metodologia.codNeutral')}</li>
+      <li>{t('metodologia.codSinPosicion')}</li>
+    </ul>
+    <p>{t('metodologia.corte')}</p>
+    <p>{t('metodologia.ia')}</p>
+    <p>
+      <a href={PROTOCOL_URL} target="_blank" rel="noopener noreferrer">
+        {t('metodologia.protocolo')}<span class="visually-hidden"> {t('fuente.nuevaPestana')}</span>
+      </a>
+    </p>
 
     <h2>{t('metodologia.noEsTitulo')}</h2>
     <ul>
@@ -206,9 +227,9 @@ const example = exampleEntities.map((e) => {
     </ul>
 
     <h2>{t('metodologia.quienesTitulo')}</h2>
-    <p class="pending">{t('metodologia.pendienteQuienes')}</p>
+    <p>{t('metodologia.quienesTexto')}</p>
     <p>{t('metodologia.correcciones', { contacto: meta.contactoCorrecciones })}</p>
-    <p class="pending">{t('metodologia.pendienteCorrecciones')}</p>
+    <p>{t('metodologia.plazoCorrecciones')}</p>
   </article>
 </Base>
 

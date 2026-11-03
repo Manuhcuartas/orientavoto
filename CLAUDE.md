@@ -55,9 +55,11 @@ Para verificar, usa el subagente **test-runner** (`.claude/agents/test-runner.md
 ## Reglas no negociables
 
 **Contenido**
-- **Nunca inventes posiciones de partidos ni textos definitivos de afirmaciones, justificaciones o fuentes.** Usa solo datos ficticios marcados como tales («Partido A (ficticio)», «Afirmación de ejemplo 3 (ficticia)», URLs `https://example.org/ficticio/...`).
-- El contenido real lo redacta y verifica el responsable del proyecto. Si un dato real tiene un problema, se le avisa; no se reescribe.
-- No uses nombres de partidos reales en ningún sitio: código, tests, ejemplos ni comentarios.
+- El contenido real (afirmaciones y posiciones) se elabora **solo con el protocolo de `docs/PROTOCOLO.md`**, aprobado por el responsable del proyecto (3-nov-2026). Las reglas deciden, no el criterio de nadie.
+- **Nunca una posición sin cita literal, enlace y fecha de una fuente real.** Si no se encuentra fuente, la posición es `sin_posicion` con el documento consultado como fuente. Nunca se deduce una posición de la ideología general de un partido.
+- Si una cita es dudosa o el protocolo no resuelve un caso, se marca para revisión del responsable; no se improvisa.
+- Las afirmaciones siguen los criterios de selección y redacción de `docs/PROTOCOLO.md` y el responsable aprueba la lista final.
+- Código, tests y ejemplos siguen usando solo datos ficticios: los nombres de partidos reales solo aparecen en `data/` y en los documentos de trabajo del contenido.
 
 **Neutralidad**
 - La app no recomienda voto, no sugiere voto útil ni estratégico y no muestra encuestas ni escaños.

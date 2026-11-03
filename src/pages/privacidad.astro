@@ -24,7 +24,7 @@ const t = createTranslator(Astro.currentLocale);
 
     <h2>{t('privacidad.alojamientoTitulo')}</h2>
     <p>{t('privacidad.alojamiento')}</p>
-    <p class="pending">{t('privacidad.pendienteAlojamiento')}</p>
+    <p>{t('privacidad.alojamientoEncargado')}</p>
 
     <h2>{t('privacidad.enlacesTitulo')}</h2>
     <p>{t('privacidad.enlaces')}</p>
@@ -38,7 +38,8 @@ const t = createTranslator(Astro.currentLocale);
     </ol>
 
     <h2>{t('privacidad.responsableTitulo')}</h2>
-    <p class="pending">{t('privacidad.pendienteResponsable')}</p>
+    <p>{t('privacidad.responsable')}</p>
     <p>{t('privacidad.contacto', { contacto: dataset.meta.contactoCorrecciones })}</p>
+    <p>{t('privacidad.derechos')}</p>
   </article>
 </Base>

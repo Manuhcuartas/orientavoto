@@ -70,7 +70,7 @@ Revisados todos los textos de `src/i18n/es.json`. Búsqueda de «recomend», «d
 - Los resultados se llaman «coincidencia», no «afinidad con tu partido» ni «tu candidatura».
 - No se muestran encuestas, escaños, intención de voto ni probabilidades en ninguna parte.
 
-**Corregido:** el pie de todas las páginas decía «Herramienta independiente de orientación». La independencia es una afirmación que aún no está respaldada (la sección «Quiénes somos» de la metodología está `[PENDIENTE]`), así que se ha quitado: ahora dice «Herramienta de orientación». El responsable del proyecto puede volver a ponerla cuando se publique quién está detrás y cómo se financia.
+**Corregido y resuelto:** el pie decía «Herramienta independiente» sin que nada lo respaldara, y se quitó. El 3 de noviembre el responsable confirmó que es un proyecto personal sin financiación externa ni vinculación con partidos; ahora la sección «Quiénes somos» de la metodología lo explica y el pie vuelve a decir «Proyecto personal e independiente, sin vinculación con partidos».
 
 ## 9. Coaliciones
 
@@ -85,6 +85,6 @@ Revisados todos los textos de `src/i18n/es.json`. Búsqueda de «recomend», «d
 ## Puntos para el responsable del proyecto
 
 1. **Orden de `incluye` en `data/coaliciones.json`:** debe seguir la denominación oficial de cada coalición.
-2. **«Independiente»:** volver a usar la palabra solo cuando «Quiénes somos» esté publicado y lo respalde.
+2. ~~«Independiente»~~: resuelto el 3 de noviembre.
 3. **Colores de los partidos reales:** solo se usan en la marca de 0,75 rem; conviene usar colores reconocibles, ya que no hay otro elemento cromático.
 4. **Orden de las afirmaciones y de los botones de respuesta:** es fijo e igual para todo el mundo («De acuerdo / Neutral / En desacuerdo», a01 → a25). No favorece a ningún partido, pero el orden de las afirmaciones lo decide quien redacta el cuestionario.
