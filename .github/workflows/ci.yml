@@ -32,6 +32,8 @@ jobs:
       - run: npm run build
       # Performance budget per page (scripts/check-size.ts).
       - run: npm run size
+      # Reflection-day pause: a build inside the window carries no party data (scripts/check-pause.ts).
+      - run: npm run check:pausa
 
   e2e:
     runs-on: ubuntu-latest

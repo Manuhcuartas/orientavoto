@@ -245,6 +245,11 @@ Separación de datos reales y de prueba (14-nov):
 - Tests unitarios: siempre las fixtures (alias en `vitest.config.ts`). E2E: build con `ORIENTAVOTO_DATA=tests/fixtures/data` (`playwright.config.ts`), así que las capturas visuales no cambian con el contenido real.
 - CI (`check`): `npm run validate`, `build` y `size` sobre `data/`, el contenido real. `npm run validate` acepta también `ORIENTAVOTO_DATA`.
 
+Pausa de la jornada de reflexión (tarea 4.3):
+- `src/lib/pause.ts`: ventana 00:00 28-N → 20:00 29-N (UTC+1) con 2 h de margen previo. Se decide **en el build**: dentro de la ventana, `Base.astro` muestra solo el aviso neutro y no renderiza el contenido de la página (ni partidos ni la isla con sus datos). Para anularla: `enabled: false`.
+- `.github/workflows/pausa.yml`: commits vacíos programados (3 intentos al empezar y 3 al acabar, en UTC) para que Cloudflare Pages reconstruya la web; solo actúa en 2026. También se puede lanzar a mano (`workflow_dispatch`).
+- `npm run check:pausa` construye la web simulando el 28-N (`ORIENTAVOTO_NOW`) y comprueba que ninguna página menciona partidos ni lleva islas. Corre en CI.
+
 ---
 
 ## Fase 0 — Cimientos (2–3 nov)
@@ -587,7 +592,7 @@ Separación de datos reales y de prueba (14-nov):
   - Enviar las posiciones a los partidos (`docs/CORREO-PARTIDOS.md`) y aplicar solo correcciones con fuente.
 - **Aceptación:** `npm run validate` sin errores con `ficticio: false`; cada posición con cita comprobable; lista de casos dudosos entregada al responsable.
 
-### [ ] 4.3 · Pausa en la jornada de reflexión
+### [x] 4.3 · Pausa en la jornada de reflexión
 - **Modelo:** Sonnet · **Esfuerzo:** medio · **Requiere:** 4.1
 - **Qué hacer:** que la web muestre solo un aviso de pausa de las 00:00 del 28-N a las 20:00 del 29-N (hora peninsular) y vuelva sola después, sin depender de que alguien esté despierto. Se puede anular si la JEC responde que no hace falta.
 - **Aceptación:** probado con fechas simuladas; el aviso no menciona ningún partido.

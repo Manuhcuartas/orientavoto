@@ -5,6 +5,7 @@ import '../styles/base.css';
 import FictitiousBanner from '../components/FictitiousBanner.astro';
 import { createTranslator, defaultLocale, type MessageKey } from '../i18n';
 import { dataset } from '../lib/data';
+import { buildTime, isPaused } from '../lib/pause';
 
 interface Props {
   /** Page title; the site name is appended. Omit on the home page. */
@@ -26,6 +27,9 @@ const withSlash = (path: string) => (path.endsWith('/') ? path : `${path}/`);
 const current = withSlash(Astro.url.pathname);
 
 const { meta } = dataset;
+// Reflection-day pause: built inside the window, every page shows only a neutral notice
+// and the page content (parties, quiz island and its data) is not rendered at all.
+const paused = isPaused(buildTime());
 const updated = new Intl.DateTimeFormat(locale, { dateStyle: 'long', timeZone: 'UTC' }).format(
   new Date(`${meta.actualizado}T00:00:00Z`),
 );
@@ -63,7 +67,17 @@ const updated = new Intl.DateTimeFormat(locale, { dateStyle: 'long', timeZone: '
     </header>
     <main id="contenido" class="site-main" tabindex="-1">
       <div class="container">
-        <slot />
+        {
+          paused ? (
+            <div class="prose">
+              <h1>{t('pausa.titulo')}</h1>
+              <p>{t('pausa.texto')}</p>
+              <p>{t('pausa.vuelta')}</p>
+            </div>
+          ) : (
+            <slot />
+          )
+        }
       </div>
     </main>
     <footer class="site-footer">

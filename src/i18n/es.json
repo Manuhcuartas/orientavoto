@@ -218,5 +218,10 @@
     "titulo": "Página no encontrada",
     "texto": "La dirección que has abierto no existe o ha cambiado.",
     "volver": "Ir al inicio"
+  },
+  "pausa": {
+    "titulo": "Orientavoto está en pausa",
+    "texto": "Durante la jornada de reflexión y el día de la votación, la herramienta no está disponible.",
+    "vuelta": "Volverá a estar disponible el 29 de noviembre a las 20:00, cuando cierren los colegios electorales."
   }
 }

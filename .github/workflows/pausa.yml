@@ -1,0 +1,42 @@
+name: Pausa jornada de reflexión
+
+# The site decides at build time whether it is paused (src/lib/pause.ts). This workflow
+# pushes an empty commit to main at the start and end of the pause so Cloudflare Pages
+# rebuilds the site without anyone awake. Several attempts each time because GitHub's
+# scheduled runs can be late; builds up to 2 h before the start already come out paused.
+# Times are UTC: the pause runs 23:00 UTC 27-N → 19:00 UTC 29-N (00:00 28-N → 20:00 29-N peninsular).
+
+on:
+  schedule:
+    # Start of the pause (inside the 2 h early margin).
+    - cron: '10 21 27 11 *'
+    - cron: '40 21 27 11 *'
+    - cron: '15 22 27 11 *'
+    # End of the pause.
+    - cron: '5 19 29 11 *'
+    - cron: '35 19 29 11 *'
+    - cron: '10 20 29 11 *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      # Only for the 2026 election: the cron dates would otherwise repeat every year.
+      - name: Only in 2026
+        id: year
+        run: echo "ok=$([ "$(date -u +%Y)" = "2026" ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/checkout@v5
+        if: steps.year.outputs.ok == 'true'
+
+      - name: Empty commit to trigger a Cloudflare Pages build
+        if: steps.year.outputs.ok == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit --allow-empty -m "Reconstruir la web (pausa de la jornada de reflexión): $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push
