@@ -17,8 +17,9 @@ Webapp estática y neutral de orientación de voto (estilo Wahl-O-Mat) para las 
 ## Estructura
 
 ```
-data/                    contenido editable a mano (JSON); hoy, solo datos FICTICIOS
+data/                    contenido real (JSON), preparado con docs/PROTOCOLO.md
   posiciones/<id>.json   posiciones de cada partido o coalición
+tests/fixtures/data/     dataset FICTICIO con la misma estructura: lo usan los tests unitarios y e2e
 schemas/                 JSON Schema generados (no editar a mano)
 scripts/                 validate.ts, generate-schemas.ts, check-size.ts
 src/data/                schema.ts (Zod) y validate.ts (validación pura)
@@ -59,7 +60,7 @@ Para verificar, usa el subagente **test-runner** (`.claude/agents/test-runner.md
 - **Nunca una posición sin cita literal, enlace y fecha de una fuente real.** Si no se encuentra fuente, la posición es `sin_posicion` con el documento consultado como fuente. Nunca se deduce una posición de la ideología general de un partido.
 - Si una cita es dudosa o el protocolo no resuelve un caso, se marca para revisión del responsable; no se improvisa.
 - Las afirmaciones siguen los criterios de selección y redacción de `docs/PROTOCOLO.md` y el responsable aprueba la lista final.
-- Código, tests y ejemplos siguen usando solo datos ficticios: los nombres de partidos reales solo aparecen en `data/` y en los documentos de trabajo del contenido.
+- Código, tests y ejemplos siguen usando solo datos ficticios (`tests/fixtures/data/`): los nombres de partidos reales solo aparecen en `data/` y en los documentos de trabajo del contenido.
 
 **Neutralidad**
 - La app no recomienda voto, no sugiere voto útil ni estratégico y no muestra encuestas ni escaños.

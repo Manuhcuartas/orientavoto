@@ -1,0 +1,26 @@
+[
+  {
+    "id": "coalicion-a-x",
+    "nombre": {
+      "es": "Coalición de ejemplo A + X (ficticia)"
+    },
+    "siglas": "CFAX",
+    "partidoReferencia": "partido-a",
+    "incluye": [
+      "partido-a",
+      "partido-regional-x"
+    ]
+  },
+  {
+    "id": "coalicion-b-y",
+    "nombre": {
+      "es": "Coalición de ejemplo B + Y (ficticia)"
+    },
+    "siglas": "CFBY",
+    "partidoReferencia": "partido-b",
+    "incluye": [
+      "partido-b",
+      "partido-regional-y"
+    ]
+  }
+]

@@ -2,6 +2,10 @@
  * The contents of `data/`, imported at build time (embedded in the bundle, no
  * network requests) and parsed with the Zod schemas. Cross-file consistency is
  * guaranteed by `npm run validate`, which runs before every build.
+ *
+ * `@data` is an alias (astro.config.mjs, vitest.config.ts): `data/` (real content)
+ * by default, or the fictitious fixtures in `tests/fixtures/data/` for unit tests and
+ * e2e (`ORIENTAVOTO_DATA=tests/fixtures/data`).
  */
 import {
   candidaciesSchema,
@@ -19,14 +23,14 @@ import {
   type PositionsFile,
   type Statement,
 } from '../data/schema';
-import rawCandidacies from '../../data/candidaturas.json';
-import rawCoalitions from '../../data/coaliciones.json';
-import rawConstituencies from '../../data/circunscripciones.json';
-import rawMeta from '../../data/meta.json';
-import rawParties from '../../data/partidos.json';
-import rawStatements from '../../data/afirmaciones.json';
+import rawCandidacies from '@data/candidaturas.json';
+import rawCoalitions from '@data/coaliciones.json';
+import rawConstituencies from '@data/circunscripciones.json';
+import rawMeta from '@data/meta.json';
+import rawParties from '@data/partidos.json';
+import rawStatements from '@data/afirmaciones.json';
 
-const rawPositions = import.meta.glob<unknown>('../../data/posiciones/*.json', { eager: true, import: 'default' });
+const rawPositions = import.meta.glob<unknown>('@data/posiciones/*.json', { eager: true, import: 'default' });
 
 export interface Dataset {
   meta: Meta;

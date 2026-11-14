@@ -1,10 +1,18 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import preact from '@astrojs/preact';
+import { resolve } from 'node:path';
+
+// Content folder: `data/` (real content) unless ORIENTAVOTO_DATA points elsewhere.
+// E2E builds use the fictitious fixtures: ORIENTAVOTO_DATA=tests/fixtures/data.
+const dataDir = resolve(process.env.ORIENTAVOTO_DATA ?? 'data');
 
 export default defineConfig({
   output: 'static',
   integrations: [preact()],
+  vite: {
+    resolve: { alias: { '@data': dataDir } },
+  },
   // No code blocks on the site; Shiki's inline styles are incompatible with the CSP.
   markdown: { syntaxHighlight: false },
   i18n: {

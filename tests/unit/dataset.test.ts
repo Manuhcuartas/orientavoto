@@ -2,22 +2,23 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { fileSchemas, type LocalizedText } from '../../src/data/schema';
 
-// Quick check that every file in data/ matches its Zod schema. Cross-file rules
-// are covered by src/data/validate.ts (task 0.4).
+// Quick check that every file of the fictitious fixtures (tests/fixtures/data/, the
+// dataset unit tests and e2e run on) matches its Zod schema and is marked as fictitious.
+// The real content in data/ is checked by `npm run validate` in CI.
 
-const dataDir = new URL('../../data/', import.meta.url);
+const dataDir = new URL('../fixtures/data/', import.meta.url);
 const readJson = (rel: string): unknown => JSON.parse(readFileSync(new URL(rel, dataDir), 'utf8'));
 
 const topLevelFiles = ['meta', 'circunscripciones', 'afirmaciones', 'partidos', 'coaliciones', 'candidaturas'] as const;
 const positionFiles = readdirSync(new URL('posiciones/', dataDir)).filter((f) => f.endsWith('.json'));
 
-describe('data/ files match their schema', () => {
-  it.each(topLevelFiles)('data/%s.json', (name) => {
+describe('fixture files match their schema', () => {
+  it.each(topLevelFiles)('%s.json', (name) => {
     const result = fileSchemas[name].safeParse(readJson(`${name}.json`));
     expect(result.error?.issues).toBeUndefined();
   });
 
-  it.each(positionFiles)('data/posiciones/%s', (file) => {
+  it.each(positionFiles)('posiciones/%s', (file) => {
     const result = fileSchemas.posiciones.safeParse(readJson(`posiciones/${file}`));
     expect(result.error?.issues).toBeUndefined();
     expect(result.data?.entidad).toBe(file.replace(/\.json$/, ''));

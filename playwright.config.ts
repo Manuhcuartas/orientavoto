@@ -22,7 +22,8 @@ export default defineConfig({
   webServer: {
     // `exec` so the preview server is the process Playwright stops. `--ignore-lock` keeps it in the
     // foreground: Astro otherwise backgrounds `preview` when it detects an AI agent, leaving an orphan.
-    command: `npm run build && exec ./node_modules/.bin/astro preview --port ${PORT} --ignore-lock`,
+    // E2E always runs on the fictitious fixtures, never on the real content in data/.
+    command: `ORIENTAVOTO_DATA=tests/fixtures/data npm run build && exec ./node_modules/.bin/astro preview --port ${PORT} --ignore-lock`,
     url: `http://localhost:${PORT}`,
     // Always a fresh build: reusing a server left on the port would test stale code.
     reuseExistingServer: false,

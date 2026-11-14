@@ -240,6 +240,11 @@ Auditoría de neutralidad (tarea 3.5):
 - Los e2e que abren `/cuestionario/` directamente esperan a que la isla esté hidratada (`tests/e2e/helpers.ts`, `openQuiz`): antes podían elegir provincia antes de la hidratación.
 - **Para el responsable del proyecto:** orden oficial de `incluye`, volver a usar «independiente» solo si procede, colores de partidos reales y orden de las afirmaciones.
 
+Separación de datos reales y de prueba (14-nov):
+- El dataset ficticio se copia a `tests/fixtures/data/` y `data/` queda para el contenido real. `src/lib/data.ts` importa por el alias `@data`: `data/` por defecto, o la carpeta de `ORIENTAVOTO_DATA`.
+- Tests unitarios: siempre las fixtures (alias en `vitest.config.ts`). E2E: build con `ORIENTAVOTO_DATA=tests/fixtures/data` (`playwright.config.ts`), así que las capturas visuales no cambian con el contenido real.
+- CI (`check`): `npm run validate`, `build` y `size` sobre `data/`, el contenido real. `npm run validate` acepta también `ORIENTAVOTO_DATA`.
+
 ---
 
 ## Fase 0 — Cimientos (2–3 nov)

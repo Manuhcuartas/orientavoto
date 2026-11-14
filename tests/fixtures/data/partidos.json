@@ -1,0 +1,82 @@
+[
+  {
+    "id": "partido-a",
+    "nombre": {
+      "es": "Partido A (ficticio)"
+    },
+    "siglas": "PFA",
+    "ambito": "estatal",
+    "color": "#5B6C8F",
+    "web": "https://example.org/ficticio/partido-a"
+  },
+  {
+    "id": "partido-b",
+    "nombre": {
+      "es": "Partido B (ficticio)"
+    },
+    "siglas": "PFB",
+    "ambito": "estatal",
+    "color": "#8F5B5B",
+    "web": "https://example.org/ficticio/partido-b"
+  },
+  {
+    "id": "partido-c",
+    "nombre": {
+      "es": "Partido C (ficticio)"
+    },
+    "siglas": "PFC",
+    "ambito": "estatal",
+    "color": "#5B8F6A",
+    "web": "https://example.org/ficticio/partido-c"
+  },
+  {
+    "id": "partido-d",
+    "nombre": {
+      "es": "Partido D (ficticio)"
+    },
+    "siglas": "PFD",
+    "ambito": "estatal",
+    "color": "#8F7F5B",
+    "web": "https://example.org/ficticio/partido-d"
+  },
+  {
+    "id": "partido-e",
+    "nombre": {
+      "es": "Partido E (ficticio)"
+    },
+    "siglas": "PFE",
+    "ambito": "estatal",
+    "color": "#7A5B8F",
+    "web": "https://example.org/ficticio/partido-e"
+  },
+  {
+    "id": "partido-f",
+    "nombre": {
+      "es": "Partido F (ficticio)"
+    },
+    "siglas": "PFF",
+    "ambito": "estatal",
+    "color": "#5B8A8F",
+    "web": "https://example.org/ficticio/partido-f"
+  },
+  {
+    "id": "partido-regional-x",
+    "nombre": {
+      "es": "Partido Regional X (ficticio)"
+    },
+    "siglas": "PRFX",
+    "ambito": "autonomico",
+    "color": "#8F5B7F",
+    "web": "https://example.org/ficticio/partido-regional-x"
+  },
+  {
+    "id": "partido-regional-y",
+    "nombre": {
+      "es": "Partido Regional Y (ficticio)"
+    },
+    "siglas": "PRFY",
+    "ambito": "autonomico",
+    "color": "#6F8F5B",
+    "web": "https://example.org/ficticio/partido-regional-y"
+  }
+]

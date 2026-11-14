@@ -7,6 +7,9 @@
     "jsxImportSource": "preact",
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "@data/*": ["./data/*"]
+    }
   }
 }

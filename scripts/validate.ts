@@ -5,6 +5,7 @@
  * Usage: npm run validate                      (DEPLOY_ENV=production also blocks fictitious data)
  */
 import { readdirSync, readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
   dataFile,
@@ -15,7 +16,9 @@ import {
   type RawDataset,
 } from '../src/data/validate';
 
-const dataDir = fileURLToPath(new URL('../data/', import.meta.url));
+// `data/` by default; ORIENTAVOTO_DATA=tests/fixtures/data validates the fictitious fixtures (e2e builds).
+const projectRoot = fileURLToPath(new URL('../', import.meta.url));
+const dataDir = `${resolve(projectRoot, process.env.ORIENTAVOTO_DATA ?? 'data')}/`;
 const readErrors: Issue[] = [];
 
 /** Reads and parses a JSON file; a missing or malformed file becomes an error. */
@@ -33,10 +36,15 @@ const topLevel = ['meta', 'circunscripciones', 'afirmaciones', 'partidos', 'coal
 const raw = { posiciones: {} } as RawDataset;
 for (const name of topLevel) raw[name] = readJson(`${name}.json`, dataFile(name));
 
-const positionNames = readdirSync(`${dataDir}posiciones`)
-  .filter((f) => f.endsWith('.json'))
-  .map((f) => f.slice(0, -'.json'.length))
-  .sort();
+let positionNames: string[] = [];
+try {
+  positionNames = readdirSync(`${dataDir}posiciones`)
+    .filter((f) => f.endsWith('.json'))
+    .map((f) => f.slice(0, -'.json'.length))
+    .sort();
+} catch {
+  readErrors.push({ file: 'data/posiciones/', path: [], message: `no existe la carpeta (${dataDir}posiciones)` });
+}
 for (const name of positionNames) raw.posiciones[name] = readJson(`posiciones/${name}.json`, positionsFile(name));
 
 const production = process.env.DEPLOY_ENV === 'production';

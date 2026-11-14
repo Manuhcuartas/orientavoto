@@ -306,8 +306,8 @@ describe('validateDataset', () => {
   });
 });
 
-describe('real data/', () => {
-  const dataDir = new URL('../../data/', import.meta.url);
+describe('fictitious fixtures (tests/fixtures/data/)', () => {
+  const dataDir = new URL('../fixtures/data/', import.meta.url);
   const readJson = (rel: string): unknown => JSON.parse(readFileSync(new URL(rel, dataDir), 'utf8'));
   const raw: RawDataset = {
     meta: readJson('meta.json'),

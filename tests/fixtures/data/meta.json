@@ -1,0 +1,12 @@
+{
+  "ficticio": true,
+  "eleccion": {
+    "es": "Elecciones generales de ejemplo (datos ficticios)"
+  },
+  "version": "0.0.1-ficticio",
+  "actualizado": "2026-11-02",
+  "umbralAvisoCobertura": 0.75,
+  "umbralCoberturaMinima": 0.5,
+  "minimoRespuestas": 5,
+  "contactoCorrecciones": "correcciones@example.org"
+}
