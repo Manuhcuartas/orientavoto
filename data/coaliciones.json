@@ -1,26 +1,160 @@
 [
   {
-    "id": "coalicion-a-x",
+    "id": "frente-amplio-andaluz",
     "nombre": {
-      "es": "Coalición de ejemplo A + X (ficticia)"
+      "es": "Frente Amplio Andaluz"
     },
-    "siglas": "CFAX",
-    "partidoReferencia": "partido-a",
+    "siglas": "FA",
+    "partidoReferencia": "frente-amplio",
     "incluye": [
-      "partido-a",
-      "partido-regional-x"
+      "frente-amplio"
     ]
   },
   {
-    "id": "coalicion-b-y",
+    "id": "frente-ampliu-por-asturies",
     "nombre": {
-      "es": "Coalición de ejemplo B + Y (ficticia)"
+      "es": "Frente Ampliu por Asturies"
     },
-    "siglas": "CFBY",
-    "partidoReferencia": "partido-b",
+    "siglas": "FA",
+    "partidoReferencia": "frente-amplio",
     "incluye": [
-      "partido-b",
-      "partido-regional-y"
+      "frente-amplio"
+    ]
+  },
+  {
+    "id": "frente-amplio-fronte-ampla",
+    "nombre": {
+      "es": "Frente Amplio-Fronte Ampla"
+    },
+    "siglas": "FRENTE AMPLIO-FRONTE AMPLA",
+    "partidoReferencia": "frente-amplio",
+    "incluye": [
+      "frente-amplio"
+    ]
+  },
+  {
+    "id": "frente-amplio-fronte-zabala",
+    "nombre": {
+      "es": "Frente Amplio-Fronte Zabala"
+    },
+    "siglas": "FRENTE AMPLIO-FRONTE ZABALA",
+    "partidoReferencia": "frente-amplio",
+    "incluye": [
+      "frente-amplio"
+    ]
+  },
+  {
+    "id": "comuns-front-ampli",
+    "nombre": {
+      "es": "Comuns-Front Ampli"
+    },
+    "siglas": "COMUNS-FRONT AMPLI",
+    "partidoReferencia": "comuns",
+    "incluye": [
+      "comuns",
+      "frente-amplio"
+    ]
+  },
+  {
+    "id": "cha-frente-amplio",
+    "nombre": {
+      "es": "Chunta Aragonesista-Frente Amplio Aragón"
+    },
+    "siglas": "CHA-IU-MS-FRENTE AMPLIO",
+    "partidoReferencia": "cha",
+    "incluye": [
+      "cha",
+      "izquierda-unida",
+      "movimiento-sumar",
+      "frente-amplio"
+    ]
+  },
+  {
+    "id": "arames-front-ampli",
+    "nombre": {
+      "es": "Aramés-Front Ampli"
+    },
+    "siglas": "ARAMÉS-EU-MS",
+    "partidoReferencia": "frente-amplio",
+    "incluye": [
+      "izquierda-unida",
+      "movimiento-sumar",
+      "frente-amplio"
+    ]
+  },
+  {
+    "id": "compromis-front-valencia",
+    "nombre": {
+      "es": "Compromís: Front Valencià"
+    },
+    "siglas": "COMPROMIS-EUPV-PODEM-ERPV",
+    "partidoReferencia": "compromis",
+    "incluye": [
+      "compromis",
+      "izquierda-unida",
+      "podemos"
+    ]
+  },
+  {
+    "id": "unidad-del-pueblo-canario",
+    "nombre": {
+      "es": "Unidad del Pueblo Canario"
+    },
+    "siglas": "UPC",
+    "partidoReferencia": "nc-bc",
+    "incluye": [
+      "nc-bc",
+      "podemos",
+      "izquierda-unida",
+      "movimiento-sumar"
+    ]
+  },
+  {
+    "id": "cc-primero-canarias",
+    "nombre": {
+      "es": "Coalición Canaria-Municipalistas Primero Canarias"
+    },
+    "siglas": "CCa-1.ºCAN",
+    "partidoReferencia": "cc",
+    "incluye": [
+      "cc",
+      "primero-canarias"
+    ]
+  },
+  {
+    "id": "primero-canarias-cc",
+    "nombre": {
+      "es": "Municipalistas Primero Canarias-Coalición Canaria"
+    },
+    "siglas": "1.ºCAN-CCa",
+    "partidoReferencia": "cc",
+    "incluye": [
+      "primero-canarias",
+      "cc"
+    ]
+  },
+  {
+    "id": "upn-pp",
+    "nombre": {
+      "es": "Unión del Pueblo Navarro en coalición con el Partido Popular"
+    },
+    "siglas": "UPN-PP",
+    "partidoReferencia": "upn",
+    "incluye": [
+      "upn",
+      "pp"
+    ]
+  },
+  {
+    "id": "eh-bildu-erc",
+    "nombre": {
+      "es": "Euskal Herria Bildu-Esquerra Republicana de Catalunya"
+    },
+    "siglas": "EH BILDU-ERC",
+    "partidoReferencia": "eh-bildu",
+    "incluye": [
+      "eh-bildu",
+      "erc"
     ]
   }
 ]

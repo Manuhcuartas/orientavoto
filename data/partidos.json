@@ -1,82 +1,186 @@
 [
   {
-    "id": "partido-a",
+    "id": "psoe",
     "nombre": {
-      "es": "Partido A (ficticio)"
+      "es": "Partido Socialista Obrero Español"
     },
-    "siglas": "PFA",
+    "siglas": "PSOE",
     "ambito": "estatal",
-    "color": "#5B6C8F",
-    "web": "https://example.org/ficticio/partido-a"
+    "color": "#E1001A",
+    "web": "https://www.psoe.es"
   },
   {
-    "id": "partido-b",
+    "id": "pp",
     "nombre": {
-      "es": "Partido B (ficticio)"
+      "es": "Partido Popular"
     },
-    "siglas": "PFB",
+    "siglas": "PP",
     "ambito": "estatal",
-    "color": "#8F5B5B",
-    "web": "https://example.org/ficticio/partido-b"
+    "color": "#1D84CE",
+    "web": "https://www.pp.es"
   },
   {
-    "id": "partido-c",
+    "id": "vox",
     "nombre": {
-      "es": "Partido C (ficticio)"
+      "es": "Vox"
     },
-    "siglas": "PFC",
+    "siglas": "VOX",
     "ambito": "estatal",
-    "color": "#5B8F6A",
-    "web": "https://example.org/ficticio/partido-c"
+    "color": "#63BE21",
+    "web": "https://www.voxespana.es"
   },
   {
-    "id": "partido-d",
+    "id": "frente-amplio",
     "nombre": {
-      "es": "Partido D (ficticio)"
+      "es": "Frente Amplio"
     },
-    "siglas": "PFD",
+    "siglas": "FA",
     "ambito": "estatal",
-    "color": "#8F7F5B",
-    "web": "https://example.org/ficticio/partido-d"
+    "color": "#E51C55",
+    "web": "https://frenteamplio.es"
   },
   {
-    "id": "partido-e",
+    "id": "podemos",
     "nombre": {
-      "es": "Partido E (ficticio)"
+      "es": "Podemos"
     },
-    "siglas": "PFE",
+    "siglas": "PODEMOS",
     "ambito": "estatal",
-    "color": "#7A5B8F",
-    "web": "https://example.org/ficticio/partido-e"
+    "color": "#6B2E68",
+    "web": "https://podemos.info"
   },
   {
-    "id": "partido-f",
+    "id": "erc",
     "nombre": {
-      "es": "Partido F (ficticio)"
+      "es": "Esquerra Republicana de Catalunya"
     },
-    "siglas": "PFF",
-    "ambito": "estatal",
-    "color": "#5B8A8F",
-    "web": "https://example.org/ficticio/partido-f"
-  },
-  {
-    "id": "partido-regional-x",
-    "nombre": {
-      "es": "Partido Regional X (ficticio)"
-    },
-    "siglas": "PRFX",
+    "siglas": "ERC",
     "ambito": "autonomico",
-    "color": "#8F5B7F",
-    "web": "https://example.org/ficticio/partido-regional-x"
+    "color": "#FFB232",
+    "web": "https://www.esquerra.cat"
   },
   {
-    "id": "partido-regional-y",
+    "id": "junts",
     "nombre": {
-      "es": "Partido Regional Y (ficticio)"
+      "es": "Junts per Catalunya"
     },
-    "siglas": "PRFY",
+    "siglas": "JxCat",
     "ambito": "autonomico",
-    "color": "#6F8F5B",
-    "web": "https://example.org/ficticio/partido-regional-y"
+    "color": "#00C3B2",
+    "web": "https://junts.cat"
+  },
+  {
+    "id": "eh-bildu",
+    "nombre": {
+      "es": "Euskal Herria Bildu"
+    },
+    "siglas": "EH Bildu",
+    "ambito": "autonomico",
+    "color": "#A6CE39",
+    "web": "https://ehbildu.eus"
+  },
+  {
+    "id": "pnv",
+    "nombre": {
+      "es": "Euzko Alderdi Jeltzalea-Partido Nacionalista Vasco"
+    },
+    "siglas": "EAJ-PNV",
+    "ambito": "autonomico",
+    "color": "#008135",
+    "web": "https://www.eaj-pnv.eus"
+  },
+  {
+    "id": "bng",
+    "nombre": {
+      "es": "Bloque Nacionalista Galego"
+    },
+    "siglas": "BNG",
+    "ambito": "autonomico",
+    "color": "#ADCFEF",
+    "web": "https://www.bng.gal"
+  },
+  {
+    "id": "cc",
+    "nombre": {
+      "es": "Coalición Canaria"
+    },
+    "siglas": "CC",
+    "ambito": "autonomico",
+    "color": "#FFD700"
+  },
+  {
+    "id": "upn",
+    "nombre": {
+      "es": "Unión del Pueblo Navarro"
+    },
+    "siglas": "UPN",
+    "ambito": "autonomico",
+    "color": "#2A52BE",
+    "web": "https://www.upn.org"
+  },
+  {
+    "id": "compromis",
+    "nombre": {
+      "es": "Compromís"
+    },
+    "siglas": "Compromís",
+    "ambito": "autonomico",
+    "color": "#F18E00",
+    "web": "https://compromis.net"
+  },
+  {
+    "id": "comuns",
+    "nombre": {
+      "es": "Catalunya en Comú"
+    },
+    "siglas": "Comuns",
+    "ambito": "autonomico",
+    "color": "#C3113B"
+  },
+  {
+    "id": "cha",
+    "nombre": {
+      "es": "Chunta Aragonesista"
+    },
+    "siglas": "CHA",
+    "ambito": "autonomico",
+    "color": "#008A3F"
+  },
+  {
+    "id": "nc-bc",
+    "nombre": {
+      "es": "Nueva Canarias-Bloque Canarista"
+    },
+    "siglas": "NC-BC",
+    "ambito": "autonomico",
+    "color": "#7AB800"
+  },
+  {
+    "id": "izquierda-unida",
+    "nombre": {
+      "es": "Izquierda Unida"
+    },
+    "siglas": "IU",
+    "ambito": "estatal",
+    "color": "#A9272F"
+  },
+  {
+    "id": "movimiento-sumar",
+    "nombre": {
+      "es": "Movimiento Sumar"
+    },
+    "siglas": "MS",
+    "ambito": "estatal",
+    "color": "#E51C55"
+  },
+  {
+    "id": "primero-canarias",
+    "nombre": {
+      "es": "Municipalistas Primero Canarias"
+    },
+    "siglas": "1.ºCAN",
+    "ambito": "autonomico",
+    "color": "#0098D8",
+    "web": "https://primerocanarias.com"
   }
 ]

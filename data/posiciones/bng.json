@@ -1,0 +1,422 @@
+{
+  "entidad": "bng",
+  "posiciones": [
+    {
+      "afirmacion": "a01",
+      "posicion": "a_favor",
+      "justificacion": {
+        "es": "El programa y la votación coinciden (a favor). Cita del programa (p. 12): «estabelecendo a renovación automática dos alugueiros, blindando por lei o carácter indefinido dos contratos de alugueiro»"
+      },
+      "fuentes": [
+        {
+          "url": "https://www.bng.gal/media/bnggaliza/files/2026/11/03/26_bng_xerais_documentos_programa_electoral.pdf",
+          "tipo": "programa_electoral",
+          "titulo": "29N. Xerais 2026. Programa electoral do BNG, p. 12",
+          "fecha": "2026-11-03"
+        },
+        {
+          "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion175/20260428/Votacion003/VOT_20260428200330.json",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación nominal del Congreso: Convalidación del Real Decreto-ley 8/2026, de 20 de marzo, de medidas en el alquiler en respuesta a las consecuencias económicas y sociales de la Guerra de Irán",
+          "fecha": "2026-04-28"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a02",
+      "posicion": "en_contra",
+      "justificacion": {
+        "es": "Solo hay votación: votó No."
+      },
+      "fuentes": [
+        {
+          "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion179/20260519/Votacion001/VOT_20260519203502.json",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación nominal del Congreso: Toma en consideración de la Proposición de Ley del GP Popular, Orgánica contra la ocupación ilegal de inmuebles y para la convivencia vecinal",
+          "fecha": "2026-05-19"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a03",
+      "posicion": "a_favor",
+      "justificacion": {
+        "es": "Solo hay votación: votó Sí."
+      },
+      "fuentes": [
+        {
+          "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion197/20260915/Votacion002/VOT_20260915204523.json",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación nominal del Congreso: Toma en consideración de la Proposición de Ley del GP Plurinacional SUMAR para la modificación de la Ley 12/2023, por el derecho a la vivienda (expte. 122/000251)",
+          "fecha": "2026-09-15"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a04",
+      "posicion": "a_favor",
+      "justificacion": {
+        "es": "El programa y la votación coinciden (a favor). Cita del programa (p. 12): «Estabelecer mecanismos eficaces para frear a fuxida de vivenda habitual cara o alugueiro de tempada, por habitacións e de uso turístico.»"
+      },
+      "fuentes": [
+        {
+          "url": "https://www.bng.gal/media/bnggaliza/files/2026/11/03/26_bng_xerais_documentos_programa_electoral.pdf",
+          "tipo": "programa_electoral",
+          "titulo": "29N. Xerais 2026. Programa electoral do BNG, p. 12",
+          "fecha": "2026-11-03"
+        },
+        {
+          "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion086/20241217/Votacion001/VOT_20241217205720.json",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación nominal del Congreso: Toma en consideración de la Proposición de Ley de los GP SUMAR, Republicano, EH Bildu y Mixto para la regulación de los contratos de alquiler temporales y alquiler de habitaciones",
+          "fecha": "2024-12-17"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a05",
+      "posicion": "a_favor",
+      "justificacion": {
+        "es": "Solo hay votación: votó Sí."
+      },
+      "fuentes": [
+        {
+          "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion135/20251007/Votacion002/VOT_20251007214330.json",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación nominal del Congreso: Toma en consideración de la Proposición de Ley del GP EH Bildu sobre control y regulación de la publicidad y contratación de los pisos turísticos",
+          "fecha": "2025-10-07"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a06",
+      "posicion": "a_favor",
+      "justificacion": {
+        "es": "Solo hay votación: votó Sí."
+      },
+      "fuentes": [
+        {
+          "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion133/20250923/Votacion001/VOT_20250923211048.json",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación nominal del Congreso: Toma en consideración de la Proposición de Ley de los GP Socialista y Junts, Orgánica de delegación en Cataluña de competencias estatales en materia de inmigración",
+          "fecha": "2025-09-23"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a07",
+      "posicion": "en_contra",
+      "justificacion": {
+        "es": "Solo hay votación: votó No."
+      },
+      "fuentes": [
+        {
+          "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion164/20260226/Votacion002/VOT_20260226153358.json",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación nominal del Congreso: Proposición no de Ley del GP Popular para la ejecución efectiva de las órdenes de expulsión de extranjeros, punto 1",
+          "fecha": "2026-02-26"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a08",
+      "posicion": "en_contra",
+      "justificacion": {
+        "es": "Solo hay votación: votó Sí. La afirmación va en sentido contrario a la iniciativa votada: votar sí equivale a estar en contra de la afirmación."
+      },
+      "fuentes": [
+        {
+          "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion106/20250410/Votacion015/VOT_20250410155154.json",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación nominal del Congreso: Convalidación del Real Decreto-ley 2/2025 (reubicación de menores migrantes no acompañados entre comunidades)",
+          "fecha": "2025-04-10"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a09",
+      "posicion": "en_contra",
+      "justificacion": {
+        "es": "Solo hay votación: votó No."
+      },
+      "fuentes": [
+        {
+          "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion131/20250916/Votacion001/VOT_20250916211204.json",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación nominal del Congreso: Toma en consideración de la Proposición de Ley del GP VOX para restringir la regularización de inmigrantes a través del arraigo",
+          "fecha": "2025-09-16"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a10",
+      "posicion": "a_favor",
+      "justificacion": {
+        "es": "El programa y la votación coinciden (a favor). Cita del programa (p. 23): «favorecer e facilitar os procesos de regularización administrativa.»"
+      },
+      "fuentes": [
+        {
+          "url": "https://www.bng.gal/media/bnggaliza/files/2026/11/03/26_bng_xerais_documentos_programa_electoral.pdf",
+          "tipo": "programa_electoral",
+          "titulo": "29N. Xerais 2026. Programa electoral do BNG, p. 23",
+          "fecha": "2026-11-03"
+        },
+        {
+          "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion034/20240409/Votacion001/VOT_20240409210631.json",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación nominal del Congreso: Toma en consideración de la Proposición de Ley para una regularización extraordinaria para personas extranjeras en España (ILP)",
+          "fecha": "2024-04-09"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a11",
+      "posicion": "a_favor",
+      "justificacion": {
+        "es": "Solo hay votación: votó Sí."
+      },
+      "fuentes": [
+        {
+          "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion089/20250122/Votacion002/VOT_20250122154427.json",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación nominal del Congreso: Convalidación del Real Decreto-ley 10/2024, para el establecimiento de un gravamen temporal energético durante el año 2025",
+          "fecha": "2025-01-22"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a12",
+      "posicion": "en_contra",
+      "justificacion": {
+        "es": "El programa está a favor y en la votación el partido votó No. Por la tabla 3.2, manda la votación. Cita del programa (p. 43): «Axustar os tramos estatais do IRPF en función do incremento anual do Índice de Prezos de Consumo en Galiza.»"
+      },
+      "fuentes": [
+        {
+          "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion174/20260422/Votacion014/VOT_20260422152001.json",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación nominal del Congreso: Moción del GP Popular sobre el «infierno fiscal», punto 1: deflactar el IRPF",
+          "fecha": "2026-04-22"
+        },
+        {
+          "url": "https://www.bng.gal/media/bnggaliza/files/2026/11/03/26_bng_xerais_documentos_programa_electoral.pdf",
+          "tipo": "programa_electoral",
+          "titulo": "29N. Xerais 2026. Programa electoral do BNG, p. 43",
+          "fecha": "2026-11-03"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a13",
+      "posicion": "a_favor",
+      "justificacion": {
+        "es": "El programa y la votación coinciden (a favor). Cita del programa (p. 44): «Estabelecer a rebaixa permanente do IVE de produtos de alimentación básica»"
+      },
+      "fuentes": [
+        {
+          "url": "https://www.bng.gal/media/bnggaliza/files/2026/11/03/26_bng_xerais_documentos_programa_electoral.pdf",
+          "tipo": "programa_electoral",
+          "titulo": "29N. Xerais 2026. Programa electoral do BNG, p. 44",
+          "fecha": "2026-11-03"
+        },
+        {
+          "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion098/20250313/Votacion010/VOT_20250313133902.json",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación nominal del Congreso: Moción del GP Popular sobre el «infierno fiscal», punto 1: recuperar la rebaja del IVA de los alimentos básicos al 2 %",
+          "fecha": "2025-03-13"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a14",
+      "posicion": "a_favor",
+      "justificacion": {
+        "es": "Solo hay votación: votó No. La afirmación va en sentido contrario a la iniciativa votada: votar sí equivale a estar en contra de la afirmación."
+      },
+      "fuentes": [
+        {
+          "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion193/20260723/Votacion019/VOT_20260723212000.json",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación nominal del Congreso: Enmiendas a la totalidad de devolución del Proyecto de LO de medidas excepcionales de sostenibilidad financiera para las comunidades autónomas (condonación de deuda)",
+          "fecha": "2026-07-23"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a15",
+      "posicion": "a_favor",
+      "justificacion": {
+        "es": "Solo hay votación: votó Sí."
+      },
+      "fuentes": [
+        {
+          "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion174/20260422/Votacion015/VOT_20260422152002.json",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación nominal del Congreso: Moción del GP Popular sobre el «infierno fiscal», punto 2: franquicia de IVA para autónomos que facturen menos de 85.000 euros",
+          "fecha": "2026-04-22"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a16",
+      "posicion": "a_favor",
+      "justificacion": {
+        "es": "El programa y la votación coinciden (a favor). La afirmación va en sentido contrario a la iniciativa votada: votar sí equivale a estar en contra de la afirmación. Cita del programa (p. 15): «Promover a implantación da xornada laboral de 35 horas semanais sen redución salarial»"
+      },
+      "fuentes": [
+        {
+          "url": "https://www.bng.gal/media/bnggaliza/files/2026/11/03/26_bng_xerais_documentos_programa_electoral.pdf",
+          "tipo": "programa_electoral",
+          "titulo": "29N. Xerais 2026. Programa electoral do BNG, p. 15",
+          "fecha": "2026-11-03"
+        },
+        {
+          "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion130/20250910/Votacion010/VOT_20250910213544.json",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación nominal del Congreso: Enmiendas a la totalidad de devolución del Proyecto de Ley para la reducción de la duración máxima de la jornada ordinaria de trabajo",
+          "fecha": "2025-09-10"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a17",
+      "posicion": "a_favor",
+      "justificacion": {
+        "es": "Solo hay votación: votó Sí."
+      },
+      "fuentes": [
+        {
+          "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion162/20260224/Votacion001/VOT_20260224201927.json",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación nominal del Congreso: Toma en consideración de la Proposición de Ley del GP SUMAR para la garantía de los derechos de las personas trabajadoras en procesos de deslocalización",
+          "fecha": "2026-02-24"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a18",
+      "posicion": "a_favor",
+      "justificacion": {
+        "es": "El programa y la votación coinciden (a favor). Cita del programa (p. 15): «Os 45 días de indemnización e un máximo de 42 mensualidades por despedimento improcedente.»"
+      },
+      "fuentes": [
+        {
+          "url": "https://www.bng.gal/media/bnggaliza/files/2026/11/03/26_bng_xerais_documentos_programa_electoral.pdf",
+          "tipo": "programa_electoral",
+          "titulo": "29N. Xerais 2026. Programa electoral do BNG, p. 15",
+          "fecha": "2026-11-03"
+        },
+        {
+          "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion132/20250917/Votacion003/VOT_20250917194022.json",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación nominal del Congreso: Proposición no de Ley del GP SUMAR relativa al establecimiento por ley de un despido realmente restaurativo y disuasorio",
+          "fecha": "2025-09-17"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a19",
+      "posicion": "a_favor",
+      "justificacion": {
+        "es": "Solo hay votación: votó Sí."
+      },
+      "fuentes": [
+        {
+          "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion098/20250313/Votacion008/VOT_20250313133859.json",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación nominal del Congreso: Moción de la Sra. Belarra (Mixto) sobre la retribución del permiso parental de cuidados de 8 semanas",
+          "fecha": "2025-03-13"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a20",
+      "posicion": "a_favor",
+      "justificacion": {
+        "es": "Solo hay votación: votó Sí."
+      },
+      "fuentes": [
+        {
+          "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion129/20250909/Votacion002/VOT_20250909221800.json",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación nominal del Congreso: Toma en consideración de la Proposición de Ley del GP Socialista para el impulso de la inclusión laboral de las personas con discapacidad a través de la cuota de reserva",
+          "fecha": "2025-09-09"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a21",
+      "posicion": "a_favor",
+      "justificacion": {
+        "es": "Solo hay votación: votó Sí."
+      },
+      "fuentes": [
+        {
+          "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion181/20260526/Votacion001/VOT_20260526210640.json",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación nominal del Congreso: Toma en consideración de la Proposición de Ley del GP SUMAR para la promoción del consumo de alimentos y bebidas saludables",
+          "fecha": "2026-05-26"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a22",
+      "posicion": "en_contra",
+      "justificacion": {
+        "es": "Solo hay votación: votó No."
+      },
+      "fuentes": [
+        {
+          "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion090/20250211/Votacion002/VOT_20250211202649.json",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación nominal del Congreso: Toma en consideración de la Proposición de Ley del GP Popular relativa a la violencia en el ámbito sanitario",
+          "fecha": "2025-02-11"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a23",
+      "posicion": "a_favor",
+      "justificacion": {
+        "es": "Solo hay votación: votó Sí."
+      },
+      "fuentes": [
+        {
+          "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion183/20260528/Votacion012/VOT_20260528125351.json",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación nominal del Congreso: Convalidación del Real Decreto-ley 11/2026, por el que se modifica la aportación de los usuarios en la prestación farmacéutica ambulatoria",
+          "fecha": "2026-05-28"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a24",
+      "posicion": "a_favor",
+      "justificacion": {
+        "es": "Solo hay votación: votó Sí."
+      },
+      "fuentes": [
+        {
+          "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion083/20241210/Votacion001/VOT_20241210202031.json",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación nominal del Congreso: Toma en consideración de la Proposición de Ley (ILP) sobre ratios de enfermeras para garantizar la seguridad del paciente",
+          "fecha": "2024-12-10"
+        }
+      ]
+    },
+    {
+      "afirmacion": "a25",
+      "posicion": "en_contra",
+      "justificacion": {
+        "es": "Solo hay votación: votó No."
+      },
+      "fuentes": [
+        {
+          "url": "https://www.congreso.es/webpublica/opendata/votaciones/Leg15/Sesion080/20241126/Votacion003/VOT_20241126173408.json",
+          "tipo": "votacion_congreso",
+          "titulo": "Votación nominal del Congreso: Toma en consideración de la Proposición de Ley del GP VOX para la garantía estatal de la tarjeta sanitaria individual y la interoperabilidad de las historias clínicas",
+          "fecha": "2024-11-26"
+        }
+      ]
+    }
+  ]
+}

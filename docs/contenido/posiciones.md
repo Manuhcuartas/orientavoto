@@ -79,6 +79,14 @@ Las coaliciones toman las posiciones de su partido de referencia (§1 y `partido
 | NC-BC (UPC) | todas | Sin diputados ni programa localizado | Sin posición; UPC aparecerá en «No hay datos suficientes» salvo que publique programa antes del 16-11 |
 | PSOE | todas | Programa anunciado para el 15-11 | Revisar su tabla con el programa antes del 16-11 |
 
+## Volcado a `data/`
+
+- `data/posiciones/<id>.json`: una entrada por afirmación con la posición, la justificación (con la cita del programa cuando la hay) y sus fuentes con enlace y fecha. Las coaliciones no tienen fichero propio: heredan las de su partido de referencia.
+- `data/partidos.json`, `coaliciones.json` y `candidaturas.json` siguen `partidos.md`: candidaturas proclamadas en el BOE del 3-nov. Sin «Podemos (Paz, Casa y Trabajo)» en Ceuta (D6). Los nombres del PSOE en cada federación (PSC, PSdeG, PSE-EE…) no se muestran porque el modelo de datos solo tiene un nombre por partido.
+- Partidos que solo aparecen dentro de coaliciones: Izquierda Unida (también por EUPV y EU), Movimiento Sumar y Municipalistas Primero Canarias.
+- **Colores:** aproximados al color corporativo de cada partido. Pendientes de comprobar con su manual de marca. Solo se usan como marca pequeña junto a las siglas.
+- `meta.json` sigue con `ficticio: true` (el cambio es de la tarea 4.2). `npm run validate`: 0 errores y 2 avisos de cobertura (CHA-Frente Amplio, 64 %; UPC, 0 %).
+
 ## Pendiente
 
 1. Programa del PSOE (15-11) y de cualquier otra candidatura que publique antes del 16-11: repetir su tabla.

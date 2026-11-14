@@ -1,10 +1,10 @@
 {
   "ficticio": true,
   "eleccion": {
-    "es": "Elecciones generales de ejemplo (datos ficticios)"
+    "es": "Elecciones generales del 29 de noviembre de 2026"
   },
-  "version": "0.0.1-ficticio",
-  "actualizado": "2026-11-02",
+  "version": "1.0.0-borrador",
+  "actualizado": "2026-11-14",
   "umbralAvisoCobertura": 0.75,
   "umbralCoberturaMinima": 0.5,
   "minimoRespuestas": 5,

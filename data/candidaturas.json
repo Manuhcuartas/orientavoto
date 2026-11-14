@@ -1,1036 +1,904 @@
 {
-  "10": [
-    {
-      "partido": "partido-a"
-    },
-    {
-      "coalicion": "coalicion-b-y"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
-  "11": [
-    {
-      "partido": "partido-a"
-    },
-    {
-      "partido": "partido-b"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
-  "12": [
-    {
-      "partido": "partido-a"
-    },
-    {
-      "partido": "partido-b"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
-  "13": [
-    {
-      "partido": "partido-a"
-    },
-    {
-      "partido": "partido-b"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
-  "14": [
-    {
-      "partido": "partido-a"
-    },
-    {
-      "partido": "partido-b"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
-  "15": [
-    {
-      "partido": "partido-a"
-    },
-    {
-      "partido": "partido-b"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
-  "16": [
-    {
-      "partido": "partido-a"
-    },
-    {
-      "partido": "partido-b"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
-  "17": [
-    {
-      "partido": "partido-a"
-    },
-    {
-      "partido": "partido-b"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
-  "18": [
-    {
-      "partido": "partido-a"
-    },
-    {
-      "partido": "partido-b"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
-  "19": [
-    {
-      "partido": "partido-a"
-    },
-    {
-      "partido": "partido-b"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
-  "20": [
-    {
-      "partido": "partido-a"
-    },
-    {
-      "partido": "partido-b"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
-  "21": [
-    {
-      "partido": "partido-a"
-    },
-    {
-      "partido": "partido-b"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
-  "22": [
-    {
-      "coalicion": "coalicion-a-x"
-    },
-    {
-      "partido": "partido-b"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
-  "23": [
-    {
-      "partido": "partido-a"
-    },
-    {
-      "partido": "partido-b"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
-  "24": [
-    {
-      "partido": "partido-a"
-    },
-    {
-      "partido": "partido-b"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
-  "25": [
-    {
-      "partido": "partido-a"
-    },
-    {
-      "partido": "partido-b"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
-  "26": [
-    {
-      "partido": "partido-a"
-    },
-    {
-      "partido": "partido-b"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
-  "27": [
-    {
-      "partido": "partido-a"
-    },
-    {
-      "partido": "partido-b"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
-  "28": [
-    {
-      "partido": "partido-a"
-    },
-    {
-      "partido": "partido-b"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
-  "29": [
-    {
-      "partido": "partido-a"
-    },
-    {
-      "partido": "partido-b"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
-  "30": [
-    {
-      "partido": "partido-a"
-    },
-    {
-      "partido": "partido-b"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
-  "31": [
-    {
-      "partido": "partido-a"
-    },
-    {
-      "partido": "partido-b"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
-  "32": [
-    {
-      "partido": "partido-a"
-    },
-    {
-      "partido": "partido-b"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
-  "33": [
-    {
-      "partido": "partido-a"
-    },
-    {
-      "partido": "partido-b"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
-  "34": [
-    {
-      "partido": "partido-a"
-    },
-    {
-      "partido": "partido-b"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
-  "35": [
-    {
-      "partido": "partido-a"
-    },
-    {
-      "partido": "partido-b"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
-  "36": [
-    {
-      "partido": "partido-a"
-    },
-    {
-      "partido": "partido-b"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
-  "37": [
-    {
-      "partido": "partido-a"
-    },
-    {
-      "partido": "partido-b"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
-  "38": [
-    {
-      "partido": "partido-a"
-    },
-    {
-      "partido": "partido-b"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
-  "39": [
-    {
-      "partido": "partido-a"
-    },
-    {
-      "partido": "partido-b"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
-  "40": [
-    {
-      "partido": "partido-a"
-    },
-    {
-      "partido": "partido-b"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
-  "41": [
-    {
-      "partido": "partido-a"
-    },
-    {
-      "partido": "partido-b"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
-  "42": [
-    {
-      "partido": "partido-a"
-    },
-    {
-      "partido": "partido-b"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
-  "43": [
-    {
-      "partido": "partido-a"
-    },
-    {
-      "partido": "partido-b"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
-  "44": [
-    {
-      "coalicion": "coalicion-a-x"
-    },
-    {
-      "partido": "partido-b"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
-  "45": [
-    {
-      "partido": "partido-a"
-    },
-    {
-      "partido": "partido-b"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
-  "46": [
-    {
-      "partido": "partido-a"
-    },
-    {
-      "partido": "partido-b"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
-  "47": [
-    {
-      "partido": "partido-a"
-    },
-    {
-      "partido": "partido-b"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
-  "48": [
-    {
-      "partido": "partido-a"
-    },
-    {
-      "partido": "partido-b"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
-  "49": [
-    {
-      "partido": "partido-a"
-    },
-    {
-      "partido": "partido-b"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
-  "50": [
-    {
-      "coalicion": "coalicion-a-x"
-    },
-    {
-      "partido": "partido-b"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
-  "51": [
-    {
-      "partido": "partido-a"
-    },
-    {
-      "partido": "partido-b"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
-  "52": [
-    {
-      "partido": "partido-a"
-    },
-    {
-      "partido": "partido-b"
-    },
-    {
-      "partido": "partido-c"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
-    }
-  ],
   "01": [
     {
-      "partido": "partido-a"
+      "partido": "psoe"
     },
     {
-      "partido": "partido-b"
+      "partido": "pp"
     },
     {
-      "partido": "partido-c"
+      "partido": "vox"
     },
     {
-      "partido": "partido-d"
+      "partido": "podemos"
     },
     {
-      "partido": "partido-e"
+      "coalicion": "frente-amplio-fronte-zabala"
     },
     {
-      "partido": "partido-f"
+      "partido": "eh-bildu"
+    },
+    {
+      "partido": "pnv"
     }
   ],
   "02": [
     {
-      "partido": "partido-a"
+      "partido": "psoe"
     },
     {
-      "partido": "partido-b"
+      "partido": "pp"
     },
     {
-      "partido": "partido-c"
+      "partido": "vox"
     },
     {
-      "partido": "partido-d"
+      "partido": "podemos"
     },
     {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
+      "partido": "frente-amplio"
     }
   ],
   "03": [
     {
-      "partido": "partido-a"
+      "partido": "psoe"
     },
     {
-      "partido": "partido-b"
+      "partido": "pp"
     },
     {
-      "partido": "partido-c"
+      "partido": "vox"
     },
     {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
+      "coalicion": "compromis-front-valencia"
     }
   ],
   "04": [
     {
-      "partido": "partido-a"
+      "partido": "psoe"
     },
     {
-      "partido": "partido-b"
+      "partido": "pp"
     },
     {
-      "partido": "partido-c"
+      "partido": "vox"
     },
     {
-      "partido": "partido-d"
+      "partido": "podemos"
     },
     {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
+      "partido": "frente-amplio"
     }
   ],
   "05": [
     {
-      "partido": "partido-a"
+      "partido": "psoe"
     },
     {
-      "partido": "partido-b"
+      "partido": "pp"
     },
     {
-      "partido": "partido-c"
+      "partido": "vox"
     },
     {
-      "partido": "partido-d"
+      "partido": "podemos"
     },
     {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
+      "partido": "frente-amplio"
     }
   ],
   "06": [
     {
-      "partido": "partido-a"
+      "partido": "psoe"
     },
     {
-      "coalicion": "coalicion-b-y"
+      "partido": "pp"
     },
     {
-      "partido": "partido-c"
+      "partido": "vox"
     },
     {
-      "partido": "partido-d"
+      "partido": "podemos"
     },
     {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
+      "partido": "frente-amplio"
     }
   ],
   "07": [
     {
-      "partido": "partido-a"
+      "partido": "psoe"
     },
     {
-      "partido": "partido-b"
+      "partido": "pp"
     },
     {
-      "partido": "partido-c"
+      "partido": "vox"
     },
     {
-      "partido": "partido-d"
-    },
-    {
-      "partido": "partido-e"
-    },
-    {
-      "partido": "partido-f"
+      "coalicion": "arames-front-ampli"
     }
   ],
   "08": [
     {
-      "partido": "partido-a"
+      "partido": "psoe"
     },
     {
-      "partido": "partido-b"
+      "partido": "pp"
     },
     {
-      "partido": "partido-c"
+      "partido": "vox"
     },
     {
-      "partido": "partido-d"
+      "coalicion": "comuns-front-ampli"
     },
     {
-      "partido": "partido-e"
+      "partido": "erc"
     },
     {
-      "partido": "partido-f"
+      "partido": "junts"
     }
   ],
   "09": [
     {
-      "partido": "partido-a"
+      "partido": "psoe"
     },
     {
-      "partido": "partido-b"
+      "partido": "pp"
     },
     {
-      "partido": "partido-c"
+      "partido": "vox"
     },
     {
-      "partido": "partido-d"
+      "partido": "podemos"
     },
     {
-      "partido": "partido-e"
+      "partido": "frente-amplio"
+    }
+  ],
+  "10": [
+    {
+      "partido": "psoe"
     },
     {
-      "partido": "partido-f"
+      "partido": "pp"
+    },
+    {
+      "partido": "vox"
+    },
+    {
+      "partido": "podemos"
+    },
+    {
+      "partido": "frente-amplio"
+    }
+  ],
+  "11": [
+    {
+      "partido": "psoe"
+    },
+    {
+      "partido": "pp"
+    },
+    {
+      "partido": "vox"
+    },
+    {
+      "partido": "podemos"
+    },
+    {
+      "coalicion": "frente-amplio-andaluz"
+    }
+  ],
+  "12": [
+    {
+      "partido": "psoe"
+    },
+    {
+      "partido": "pp"
+    },
+    {
+      "partido": "vox"
+    },
+    {
+      "coalicion": "compromis-front-valencia"
+    }
+  ],
+  "13": [
+    {
+      "partido": "psoe"
+    },
+    {
+      "partido": "pp"
+    },
+    {
+      "partido": "vox"
+    },
+    {
+      "partido": "podemos"
+    },
+    {
+      "partido": "frente-amplio"
+    }
+  ],
+  "14": [
+    {
+      "partido": "psoe"
+    },
+    {
+      "partido": "pp"
+    },
+    {
+      "partido": "vox"
+    },
+    {
+      "partido": "podemos"
+    },
+    {
+      "coalicion": "frente-amplio-andaluz"
+    }
+  ],
+  "15": [
+    {
+      "partido": "psoe"
+    },
+    {
+      "partido": "pp"
+    },
+    {
+      "partido": "vox"
+    },
+    {
+      "partido": "podemos"
+    },
+    {
+      "coalicion": "frente-amplio-fronte-ampla"
+    },
+    {
+      "partido": "bng"
+    }
+  ],
+  "16": [
+    {
+      "partido": "psoe"
+    },
+    {
+      "partido": "pp"
+    },
+    {
+      "partido": "vox"
+    },
+    {
+      "partido": "podemos"
+    },
+    {
+      "partido": "frente-amplio"
+    }
+  ],
+  "17": [
+    {
+      "partido": "psoe"
+    },
+    {
+      "partido": "pp"
+    },
+    {
+      "partido": "vox"
+    },
+    {
+      "coalicion": "comuns-front-ampli"
+    },
+    {
+      "partido": "erc"
+    },
+    {
+      "partido": "junts"
+    }
+  ],
+  "18": [
+    {
+      "partido": "psoe"
+    },
+    {
+      "partido": "pp"
+    },
+    {
+      "partido": "vox"
+    },
+    {
+      "partido": "podemos"
+    },
+    {
+      "coalicion": "frente-amplio-andaluz"
+    }
+  ],
+  "19": [
+    {
+      "partido": "psoe"
+    },
+    {
+      "partido": "pp"
+    },
+    {
+      "partido": "vox"
+    },
+    {
+      "partido": "podemos"
+    },
+    {
+      "partido": "frente-amplio"
+    }
+  ],
+  "20": [
+    {
+      "partido": "psoe"
+    },
+    {
+      "partido": "pp"
+    },
+    {
+      "partido": "vox"
+    },
+    {
+      "partido": "podemos"
+    },
+    {
+      "partido": "frente-amplio"
+    },
+    {
+      "partido": "eh-bildu"
+    },
+    {
+      "partido": "pnv"
+    }
+  ],
+  "21": [
+    {
+      "partido": "psoe"
+    },
+    {
+      "partido": "pp"
+    },
+    {
+      "partido": "vox"
+    },
+    {
+      "partido": "podemos"
+    },
+    {
+      "coalicion": "frente-amplio-andaluz"
+    }
+  ],
+  "22": [
+    {
+      "partido": "psoe"
+    },
+    {
+      "partido": "pp"
+    },
+    {
+      "partido": "vox"
+    },
+    {
+      "partido": "podemos"
+    },
+    {
+      "coalicion": "cha-frente-amplio"
+    }
+  ],
+  "23": [
+    {
+      "partido": "psoe"
+    },
+    {
+      "partido": "pp"
+    },
+    {
+      "partido": "vox"
+    },
+    {
+      "partido": "podemos"
+    },
+    {
+      "partido": "frente-amplio"
+    }
+  ],
+  "24": [
+    {
+      "partido": "psoe"
+    },
+    {
+      "partido": "pp"
+    },
+    {
+      "partido": "vox"
+    },
+    {
+      "partido": "podemos"
+    },
+    {
+      "partido": "frente-amplio"
+    }
+  ],
+  "25": [
+    {
+      "partido": "psoe"
+    },
+    {
+      "partido": "pp"
+    },
+    {
+      "partido": "vox"
+    },
+    {
+      "coalicion": "comuns-front-ampli"
+    },
+    {
+      "partido": "erc"
+    },
+    {
+      "partido": "junts"
+    }
+  ],
+  "26": [
+    {
+      "partido": "psoe"
+    },
+    {
+      "partido": "pp"
+    },
+    {
+      "partido": "vox"
+    },
+    {
+      "partido": "podemos"
+    },
+    {
+      "partido": "frente-amplio"
+    }
+  ],
+  "27": [
+    {
+      "partido": "psoe"
+    },
+    {
+      "partido": "pp"
+    },
+    {
+      "partido": "vox"
+    },
+    {
+      "partido": "podemos"
+    },
+    {
+      "coalicion": "frente-amplio-fronte-ampla"
+    },
+    {
+      "partido": "bng"
+    }
+  ],
+  "28": [
+    {
+      "partido": "psoe"
+    },
+    {
+      "partido": "pp"
+    },
+    {
+      "partido": "vox"
+    },
+    {
+      "partido": "podemos"
+    },
+    {
+      "partido": "frente-amplio"
+    }
+  ],
+  "29": [
+    {
+      "partido": "psoe"
+    },
+    {
+      "partido": "pp"
+    },
+    {
+      "partido": "vox"
+    },
+    {
+      "partido": "podemos"
+    },
+    {
+      "partido": "frente-amplio"
+    }
+  ],
+  "30": [
+    {
+      "partido": "psoe"
+    },
+    {
+      "partido": "pp"
+    },
+    {
+      "partido": "vox"
+    },
+    {
+      "partido": "podemos"
+    },
+    {
+      "partido": "frente-amplio"
+    }
+  ],
+  "31": [
+    {
+      "partido": "psoe"
+    },
+    {
+      "partido": "vox"
+    },
+    {
+      "partido": "podemos"
+    },
+    {
+      "coalicion": "frente-amplio-fronte-zabala"
+    },
+    {
+      "coalicion": "upn-pp"
+    },
+    {
+      "coalicion": "eh-bildu-erc"
+    }
+  ],
+  "32": [
+    {
+      "partido": "psoe"
+    },
+    {
+      "partido": "pp"
+    },
+    {
+      "partido": "vox"
+    },
+    {
+      "partido": "podemos"
+    },
+    {
+      "coalicion": "frente-amplio-fronte-ampla"
+    },
+    {
+      "partido": "bng"
+    }
+  ],
+  "33": [
+    {
+      "partido": "psoe"
+    },
+    {
+      "partido": "pp"
+    },
+    {
+      "partido": "vox"
+    },
+    {
+      "partido": "podemos"
+    },
+    {
+      "coalicion": "frente-ampliu-por-asturies"
+    }
+  ],
+  "34": [
+    {
+      "partido": "psoe"
+    },
+    {
+      "partido": "pp"
+    },
+    {
+      "partido": "vox"
+    },
+    {
+      "partido": "podemos"
+    },
+    {
+      "partido": "frente-amplio"
+    }
+  ],
+  "35": [
+    {
+      "partido": "psoe"
+    },
+    {
+      "partido": "pp"
+    },
+    {
+      "partido": "vox"
+    },
+    {
+      "coalicion": "unidad-del-pueblo-canario"
+    },
+    {
+      "coalicion": "primero-canarias-cc"
+    }
+  ],
+  "36": [
+    {
+      "partido": "psoe"
+    },
+    {
+      "partido": "pp"
+    },
+    {
+      "partido": "vox"
+    },
+    {
+      "partido": "podemos"
+    },
+    {
+      "coalicion": "frente-amplio-fronte-ampla"
+    },
+    {
+      "partido": "bng"
+    }
+  ],
+  "37": [
+    {
+      "partido": "psoe"
+    },
+    {
+      "partido": "pp"
+    },
+    {
+      "partido": "vox"
+    },
+    {
+      "partido": "podemos"
+    },
+    {
+      "partido": "frente-amplio"
+    }
+  ],
+  "38": [
+    {
+      "partido": "psoe"
+    },
+    {
+      "partido": "pp"
+    },
+    {
+      "partido": "vox"
+    },
+    {
+      "coalicion": "unidad-del-pueblo-canario"
+    },
+    {
+      "coalicion": "cc-primero-canarias"
+    }
+  ],
+  "39": [
+    {
+      "partido": "psoe"
+    },
+    {
+      "partido": "pp"
+    },
+    {
+      "partido": "vox"
+    },
+    {
+      "partido": "podemos"
+    },
+    {
+      "partido": "frente-amplio"
+    }
+  ],
+  "40": [
+    {
+      "partido": "psoe"
+    },
+    {
+      "partido": "pp"
+    },
+    {
+      "partido": "vox"
+    },
+    {
+      "partido": "podemos"
+    },
+    {
+      "partido": "frente-amplio"
+    }
+  ],
+  "41": [
+    {
+      "partido": "psoe"
+    },
+    {
+      "partido": "pp"
+    },
+    {
+      "partido": "vox"
+    },
+    {
+      "partido": "podemos"
+    },
+    {
+      "coalicion": "frente-amplio-andaluz"
+    }
+  ],
+  "42": [
+    {
+      "partido": "psoe"
+    },
+    {
+      "partido": "pp"
+    },
+    {
+      "partido": "vox"
+    },
+    {
+      "partido": "podemos"
+    },
+    {
+      "partido": "frente-amplio"
+    }
+  ],
+  "43": [
+    {
+      "partido": "psoe"
+    },
+    {
+      "partido": "pp"
+    },
+    {
+      "partido": "vox"
+    },
+    {
+      "coalicion": "comuns-front-ampli"
+    },
+    {
+      "partido": "erc"
+    },
+    {
+      "partido": "junts"
+    }
+  ],
+  "44": [
+    {
+      "partido": "psoe"
+    },
+    {
+      "partido": "pp"
+    },
+    {
+      "partido": "vox"
+    },
+    {
+      "partido": "podemos"
+    }
+  ],
+  "45": [
+    {
+      "partido": "psoe"
+    },
+    {
+      "partido": "pp"
+    },
+    {
+      "partido": "vox"
+    },
+    {
+      "partido": "podemos"
+    },
+    {
+      "partido": "frente-amplio"
+    }
+  ],
+  "46": [
+    {
+      "partido": "psoe"
+    },
+    {
+      "partido": "pp"
+    },
+    {
+      "partido": "vox"
+    },
+    {
+      "coalicion": "compromis-front-valencia"
+    }
+  ],
+  "47": [
+    {
+      "partido": "psoe"
+    },
+    {
+      "partido": "pp"
+    },
+    {
+      "partido": "vox"
+    },
+    {
+      "partido": "podemos"
+    },
+    {
+      "partido": "frente-amplio"
+    }
+  ],
+  "48": [
+    {
+      "partido": "psoe"
+    },
+    {
+      "partido": "pp"
+    },
+    {
+      "partido": "vox"
+    },
+    {
+      "partido": "podemos"
+    },
+    {
+      "partido": "frente-amplio"
+    },
+    {
+      "partido": "eh-bildu"
+    },
+    {
+      "partido": "pnv"
+    }
+  ],
+  "49": [
+    {
+      "partido": "psoe"
+    },
+    {
+      "partido": "pp"
+    },
+    {
+      "partido": "vox"
+    },
+    {
+      "partido": "podemos"
+    },
+    {
+      "partido": "frente-amplio"
+    }
+  ],
+  "50": [
+    {
+      "partido": "psoe"
+    },
+    {
+      "partido": "pp"
+    },
+    {
+      "partido": "vox"
+    },
+    {
+      "partido": "podemos"
+    },
+    {
+      "coalicion": "cha-frente-amplio"
+    }
+  ],
+  "51": [
+    {
+      "partido": "psoe"
+    },
+    {
+      "partido": "pp"
+    },
+    {
+      "partido": "vox"
+    }
+  ],
+  "52": [
+    {
+      "partido": "psoe"
+    },
+    {
+      "partido": "pp"
+    },
+    {
+      "partido": "vox"
     }
   ]
 }
